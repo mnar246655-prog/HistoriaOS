@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#183c35">
-    <meta name="description" content="HistoriaOS موسوعة تاريخية عربية لاستكشاف الكتب والشخصيات والأحداث والخرائط والخط الزمني.">
+    <meta name="description" content="HistoriaOS موسوعة تاريخية عربية لاستكشاف الحضارات والشخصيات والأحداث والخرائط والمصادر.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:title" content="HistoriaOS | موسوعة التاريخ">
-    <meta property="og:description" content="اكتشف كتب التاريخ وشخصياته وأحداثه في منصة عربية تفاعلية.">
-    <title>HistoriaOS | الرئيسية</title>
+    <meta property="og:description" content="اقرأ التاريخ في سياقه، واستكشف الحضارات والشخصيات والأحداث عبر مصادر واضحة.">
+    <title>HistoriaOS | موسوعة التاريخ</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
-<body data-page="home">
+<body class="home-page" data-page="home">
     <header class="site-header">
-        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <a class="brand" href="index.html" aria-label="HistoriaOS — الصفحة الرئيسية"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
         <nav class="site-nav" aria-label="التنقل الرئيسي">
             <a href="index.html" aria-current="page">الرئيسية</a>
             <a href="books.html">الكتب</a>
@@ -24,52 +24,211 @@
             <a href="maps.html">الخرائط</a>
             <a href="timeline.html">الخط الزمني</a>
             <a href="umayyad.html">الدولة الأموية</a>
+            <a href="references.html">المراجع</a>
             <a href="about.html">عن المنصة</a>
             <a href="pricing.html">الخطط</a>
-            <a href="contact.html">تواصل</a>
         </nav>
     </header>
 
-    <main class="page-shell">
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">رحلة عبر صفحات الزمن</p>
-                <h1>التاريخ، أقرب إليك</h1>
-                <p>اكتشف الكتب والشخصيات والأحداث التي صنعت التاريخ، في موسوعة عربية تجمع المعرفة في مكان واحد.</p>
-                <a class="button button-light" href="books.html">ابدأ الاستكشاف <span aria-hidden="true">←</span></a>
+    <main>
+        <div class="page-shell home-shell">
+            <section class="hero home-hero" aria-labelledby="home-title">
+                <div class="home-hero-copy">
+                    <div class="home-hero-brand">
+                        <span class="home-brand-mark" aria-hidden="true">هـ</span>
+                        <span>HistoriaOS</span>
+                    </div>
+                    <p class="eyebrow">موسوعة التاريخ العربي والعالمي</p>
+                    <h1 id="home-title">التاريخ ليس ماضيًا بعيدًا؛ إنه مفتاح فهم عالمنا.</h1>
+                    <p class="home-hero-description">استكشف الحضارات والأفكار والشخصيات والأحداث في سياقها، من خلال مادة عربية منظمة ومراجع تساعدك على مواصلة القراءة.</p>
+                    <div class="home-hero-actions">
+                        <a class="button button-light" href="#explore-civilizations">ابدأ الاستكشاف <span aria-hidden="true">←</span></a>
+                        <a class="button button-outline-light" href="references.html">تعرّف على منهج المصادر</a>
+                    </div>
+                    <p class="home-hero-note"><span aria-hidden="true">✦</span> معرفة مترابطة، وقراءة تحترم اختلاف الروايات.</p>
+                </div>
+                <div class="home-hero-art" aria-hidden="true">
+                    <div class="hero-orbit hero-orbit-outer"></div>
+                    <div class="hero-orbit hero-orbit-inner"></div>
+                    <div class="hero-disc"><span>هـ</span></div>
+                    <div class="hero-artifact hero-artifact-top"><span>الحضارات</span><strong>تاريخ متصل</strong></div>
+                    <div class="hero-artifact hero-artifact-bottom"><span>منهج الموسوعة</span><strong>سياق · مصادر · روابط</strong></div>
+                </div>
+            </section>
+
+            <section class="home-stats-section" aria-labelledby="home-stats-title">
+                <div class="home-stats-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-dark">من قاعدة بيانات الموسوعة</p>
+                        <h2 id="home-stats-title">محتوى الدولة الأموية</h2>
+                    </div>
+                    <p>إحصاءات مباشرة من ملفات القسم، لا أرقام ثابتة في تصميم الصفحة.</p>
+                </div>
+                <div class="stats-grid home-stats-grid">
+                    <a class="stat-card home-stat-card" href="umayyad.html#umayyad-people-section">
+                        <span class="stat-icon" aria-hidden="true">ش</span>
+                        <span><span class="stat-label">شخصية تاريخية</span><strong data-umayyad-stat="people">—</strong></span>
+                    </a>
+                    <a class="stat-card home-stat-card" href="umayyad.html#umayyad-events-section">
+                        <span class="stat-icon" aria-hidden="true">ح</span>
+                        <span><span class="stat-label">حدث موثق بالمراجع</span><strong data-umayyad-stat="events">—</strong></span>
+                    </a>
+                    <a class="stat-card home-stat-card" href="umayyad.html#umayyad-map-section">
+                        <span class="stat-icon" aria-hidden="true">م</span>
+                        <span><span class="stat-label">مدينة مرتبطة بالأحداث</span><strong data-umayyad-stat="cities">—</strong></span>
+                    </a>
+                    <a class="stat-card home-stat-card" href="umayyad.html#umayyad-battles-section">
+                        <span class="stat-icon" aria-hidden="true">✦</span>
+                        <span><span class="stat-label">معركة تاريخية</span><strong data-umayyad-stat="battles">—</strong></span>
+                    </a>
+                </div>
+                <p id="home-stats-status" class="home-stats-status" role="status" aria-live="polite">جارٍ تحميل الإحصاءات من بيانات الموسوعة الأموية.</p>
+            </section>
+            <p class="home-data-note">تُعرض المختارات في هذه الصفحة من سجلات ذات إحالة مصدرية؛ وقد تتضمن صفحات القوائم العامة سجلات تطوير موسومة «تجريبي» بوضوح.</p>
+        </div>
+
+        <section id="explore-civilizations" class="home-section home-section-light" aria-labelledby="civilizations-title">
+            <div class="home-section-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow eyebrow-dark">مسارات عبر الزمن</p><h2 id="civilizations-title">استكشف الحضارات</h2></div>
+                    <p>ابدأ من دولة أو حقبة، ثم تابع الشخصيات والأحداث التي تصل بينها.</p>
+                </div>
+                <div class="civilization-grid">
+                    <a class="civilization-card civilization-card-rashidun" href="events.html?q=الفتنة%20الأولى">
+                        <span class="civilization-era">القرن السابع الميلادي</span><span class="civilization-mark" aria-hidden="true">١</span>
+                        <h3>الخلفاء الراشدون</h3><p>بدايات الدولة الإسلامية وتحولاتها السياسية المبكرة.</p><span class="card-action">ابدأ من الفتنة الأولى <span aria-hidden="true">←</span></span>
+                    </a>
+                    <a class="civilization-card civilization-card-umayyad" href="umayyad.html">
+                        <span class="civilization-era">661–750م</span><span class="civilization-mark" aria-hidden="true">٢</span>
+                        <h3>الدولة الأموية</h3><p>موسوعة مترابطة للخلفاء والولاة والأحداث والمدن.</p><span class="card-action">افتح القسم الموسوعي <span aria-hidden="true">←</span></span>
+                    </a>
+                    <a class="civilization-card civilization-card-abbasid" href="events.html?q=تأسيس%20بغداد">
+                        <span class="civilization-era">منذ 750م</span><span class="civilization-mark" aria-hidden="true">٣</span>
+                        <h3>الدولة العباسية</h3><p>مدخل إلى التحول السياسي ومراكز الحكم والمعرفة.</p><span class="card-action">ابدأ من تأسيس بغداد <span aria-hidden="true">←</span></span>
+                    </a>
+                    <a class="civilization-card civilization-card-andalus" href="events.html?q=سقوط%20غرناطة">
+                        <span class="civilization-era">711–1492م · نطاق تقريبي</span><span class="civilization-mark" aria-hidden="true">٤</span>
+                        <h3>الأندلس</h3><p>قرون من التغير السياسي والتفاعل الثقافي في أيبيريا.</p><span class="card-action">استكشف محطاتها <span aria-hidden="true">←</span></span>
+                    </a>
+                    <a class="civilization-card civilization-card-ottoman" href="events.html?q=فتح%20القسطنطينية">
+                        <span class="civilization-era">1299–1922م · نطاق تقريبي</span><span class="civilization-mark" aria-hidden="true">٥</span>
+                        <h3>الدولة العثمانية</h3><p>إمبراطورية متعددة الأقاليم واتصالات واسعة عبر القارات.</p><span class="card-action">ابدأ من فتح القسطنطينية <span aria-hidden="true">←</span></span>
+                    </a>
+                </div>
+                <p class="editorial-caveat home-caveat">تختلف حدود الحقب في الدراسات؛ وتعرض البطاقات مسارات دخول إلى السجلات المتاحة، لا ادعاءً باكتمال كل قسم.</p>
             </div>
-            <div class="hero-seal" aria-hidden="true"><span>هـ</span><i></i><i></i><i></i></div>
         </section>
 
-        <section class="stats-grid" aria-label="ملخص الموسوعة">
-            <a class="stat-card" href="books.html"><span class="stat-icon">📚</span><span><span class="stat-label">كتاب تاريخي</span><strong id="books-count">—</strong></span></a>
-            <a class="stat-card" href="people.html"><span class="stat-icon">🏛️</span><span><span class="stat-label">شخصية تاريخية</span><strong id="people-count">—</strong></span></a>
-            <a class="stat-card" href="events.html"><span class="stat-icon">⌛</span><span><span class="stat-label">حدث تاريخي</span><strong id="events-count">—</strong></span></a>
-        </section>
-        <p class="sample-disclosure">بعض السجلات المعروضة بيانات تجريبية موسومة بوضوح وليست معلومات تاريخية موثقة.</p>
-
-        <section class="content-section">
-            <div class="section-top">
-                <div><p class="eyebrow eyebrow-dark">مكتبة المعرفة</p><h2>استكشف الموسوعة</h2><p class="section-description">ابحث في الكتب والشخصيات والأحداث التاريخية.</p></div>
-                <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث في الموسوعة" aria-label="ابحث في الموسوعة"></label>
+        <section id="featured-people" class="home-section home-section-paper" aria-labelledby="featured-people-title">
+            <div class="home-section-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow eyebrow-dark">سير في سياقها</p><h2 id="featured-people-title">أبرز الشخصيات التاريخية</h2></div>
+                    <a class="text-link" href="people.html">كل الشخصيات <span aria-hidden="true">←</span></a>
+                </div>
+                <p class="section-description">مختارات من السجلات ذات مصدر مرفق؛ تظهر السجلات التجريبية في صفحاتها بعلامة واضحة.</p>
+                <div class="card-grid home-feature-grid" data-collection="people" data-limit="5" data-search-limit="30" data-curated-only="true" data-featured-ids="verified-person-11,verified-person-21,verified-person-36,verified-person-41,verified-person-48" aria-live="polite">
+                    <div class="empty-state">جارٍ تحميل الشخصيات...</div>
+                </div>
             </div>
-
-            <section class="collection-block" aria-labelledby="books-heading">
-                <div class="collection-heading"><div><h3 id="books-heading">المكتبة التاريخية</h3><p>مصادر وكتب من عصور مختلفة</p></div><a class="text-link" href="books.html">عرض الكل <span aria-hidden="true">←</span></a></div>
-                <div class="card-grid" data-collection="books" data-limit="3" data-search-limit="30" aria-live="polite"><div class="empty-state">جارٍ تحميل الكتب...</div></div>
-            </section>
-
-            <section class="collection-block" aria-labelledby="people-heading">
-                <div class="collection-heading"><div><h3 id="people-heading">شخصيات صنعت التاريخ</h3><p>تعرّف على أصحاب الأثر</p></div><a class="text-link" href="people.html">عرض الكل <span aria-hidden="true">←</span></a></div>
-                <div class="card-grid" data-collection="people" data-limit="3" data-search-limit="30" aria-live="polite"><div class="empty-state">جارٍ تحميل الشخصيات...</div></div>
-            </section>
-
-            <section class="collection-block" aria-labelledby="events-heading">
-                <div class="collection-heading"><div><h3 id="events-heading">أحداث عبر الزمن</h3><p>محطات غيّرت مجرى التاريخ</p></div><a class="text-link" href="events.html">عرض الكل <span aria-hidden="true">←</span></a></div>
-                <div class="card-grid" data-collection="events" data-limit="3" data-search-limit="30" aria-live="polite"><div class="empty-state">جارٍ تحميل الأحداث...</div></div>
-            </section>
         </section>
-        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+
+        <section id="featured-events" class="home-section home-section-light" aria-labelledby="featured-events-title">
+            <div class="home-section-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow eyebrow-dark">محطات مفصلية</p><h2 id="featured-events-title">أهم الأحداث التاريخية</h2></div>
+                    <a class="text-link" href="events.html">كل الأحداث <span aria-hidden="true">←</span></a>
+                </div>
+                <p class="section-description">الأحداث التالية مختارة من قاعدة البيانات، مع إتاحة المصدر التمهيدي في بطاقة كل سجل.</p>
+                <div class="card-grid home-feature-grid" data-collection="events" data-limit="6" data-search-limit="30" data-curated-only="true" data-featured-ids="verified-event-006,verified-event-010,verified-event-026,verified-event-038,verified-event-088,verified-event-100" aria-live="polite">
+                    <div class="empty-state">جارٍ تحميل الأحداث...</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historical-maps" class="home-section home-section-paper" aria-labelledby="historical-maps-title">
+            <div class="home-section-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow eyebrow-dark">الجغرافيا تصنع السياق</p><h2 id="historical-maps-title">خرائط تاريخية تفاعلية</h2></div>
+                    <a class="text-link" href="maps.html">افتح خريطة الموقع <span aria-hidden="true">←</span></a>
+                </div>
+                <div class="map-feature-grid">
+                    <a class="map-feature-card map-feature-global" href="maps.html">
+                        <span class="map-feature-label">خريطة تفاعلية</span><h3>مدن عبر العصور</h3>
+                        <p>استكشف مواقع المدن الثماني المتاحة، واقرأ وصفها التاريخي من الخريطة أو القائمة.</p>
+                        <span class="card-action">استكشف الخريطة <span aria-hidden="true">←</span></span>
+                    </a>
+                    <a class="map-feature-card map-feature-umayyad" href="umayyad.html#umayyad-map-section">
+                        <span class="map-feature-label">قسم موسوعي</span><h3>مدن الدولة الأموية ومعاركها</h3>
+                        <p>خريطة متصلة ببيانات المدن والأحداث والمعارك الأموية، مع التنبيه إلى المواضع التقريبية.</p>
+                        <span class="card-action">افتح خريطة القسم <span aria-hidden="true">←</span></span>
+                    </a>
+                </div>
+                <p class="editorial-caveat home-caveat">الخرائط التعليمية لا تحل محل الخرائط الأثرية أو الحدود السياسية التاريخية المحققة؛ تظهر درجة دقة الموقع في صفحة كل خريطة.</p>
+            </div>
+        </section>
+
+        <section id="civilization-timeline" class="home-section home-timeline-section" aria-labelledby="timeline-title">
+            <div class="home-section-inner home-timeline-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow">زمن متصل، ومسارات متعددة</p><h2 id="timeline-title">الخط الزمني للحضارات</h2></div>
+                    <a class="button button-outline-light" href="timeline.html">افتح الخط الزمني <span aria-hidden="true">←</span></a>
+                </div>
+                <div class="era-ribbon" aria-label="مسارات الخط الزمني">
+                    <a href="timeline.html"><span>قبل التاريخ</span><strong>البدايات</strong></a>
+                    <a href="timeline.html"><span>العالم القديم</span><strong>المدن والإمبراطوريات</strong></a>
+                    <a href="timeline.html"><span>العصور الوسطى</span><strong>دول وشبكات اتصال</strong></a>
+                    <a href="timeline.html"><span>العصر الحديث</span><strong>تحولات العالم</strong></a>
+                </div>
+                <p>تصفّح الأحداث حسب التاريخ، ثم انتقل من المحطة إلى الشخصيات والأماكن والمراجع المرتبطة بها.</p>
+            </div>
+        </section>
+
+        <section id="featured-topics" class="home-section home-section-light" aria-labelledby="featured-topics-title">
+            <div class="home-section-inner">
+                <div class="section-heading">
+                    <div><p class="eyebrow eyebrow-dark">قراءات مختارة</p><h2 id="featured-topics-title">موضوعات مميزة</h2></div>
+                    <a class="text-link" href="references.html">ابدأ من المصادر <span aria-hidden="true">←</span></a>
+                </div>
+                <div class="topic-grid">
+                    <a class="topic-card" href="events.html?q=معركة%20عين%20جالوت"><span>1258م</span><h3>عين جالوت وتحولات المشرق</h3><p>حدث في سياق الغزو المغولي وصعود دولة المماليك.</p><span class="card-action">اقرأ السجل <span aria-hidden="true">←</span></span></a>
+                    <a class="topic-card" href="events.html?q=الثورة%20الهايتية"><span>1791–1804م</span><h3>الثورة الهايتية</h3><p>ثورة العبيد والاستقلال في سياق الإمبراطوريات الأطلسية.</p><span class="card-action">اقرأ السجل <span aria-hidden="true">←</span></span></a>
+                    <a class="topic-card" href="events.html?q=افتتاح%20قناة%20السويس"><span>1869م</span><h3>قناة السويس وشبكات التجارة</h3><p>ممر بحري أعاد تشكيل طرق النقل والتنافس الإمبراطوري.</p><span class="card-action">اقرأ السجل <span aria-hidden="true">←</span></span></a>
+                    <a class="topic-card" href="events.html?q=الربيع%20العربي"><span>منذ 2010م</span><h3>احتجاجات الربيع العربي</h3><p>حركات وتحولات سياسية تختلف نتائجها باختلاف البلدان.</p><span class="card-action">اقرأ السجل <span aria-hidden="true">←</span></span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="trusted-references" class="home-section home-section-paper" aria-labelledby="trusted-references-title">
+            <div class="home-section-inner">
+                <div class="references-spotlight">
+                    <div class="references-spotlight-copy">
+                        <p class="eyebrow eyebrow-dark">التوثيق جزء من القراءة</p>
+                        <h2 id="trusted-references-title">المراجع والمصادر المعتمدة</h2>
+                        <p>نستعين بالمصادر التاريخية وبالدراسات والموسوعات الحديثة، مع بيان نوع المرجع وحدود استخدامه. تختلف قيمة المصدر باختلاف السؤال والطبعة والرواية.</p>
+                        <a class="button button-green" href="references.html">تصفح صفحة المصادر <span aria-hidden="true">←</span></a>
+                    </div>
+                    <ul class="reference-shortlist">
+                        <li><span>مصادر تاريخية عربية</span><strong>الطبري · البلاذري · ابن الأثير</strong></li>
+                        <li><span>دراسات ومراجع حديثة</span><strong>Oxford History of Islam · Encyclopaedia of Islam</strong></li>
+                        <li><span>قراءة تمهيدية</span><strong>World History Encyclopedia</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="home-footer">
+        <div class="home-footer-inner">
+            <div class="footer-about">
+                <a class="footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+                <p>موسوعة عربية تربط الحضارات والأحداث والشخصيات بالمكان والزمن والمصادر.</p>
+                <a class="footer-text-link" href="about.html">عن HistoriaOS <span aria-hidden="true">←</span></a>
+            </div>
+            <div class="footer-column"><h2>استكشف</h2><a href="books.html">المكتبة التاريخية</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="timeline.html">الخط الزمني</a></div>
+            <div class="footer-column"><h2>الأدوات والأقسام</h2><a href="maps.html">الخرائط التفاعلية</a><a href="umayyad.html">موسوعة الدولة الأموية</a><a href="pricing.html">الخطط والمنتجات</a><a href="contact.html">التواصل والتصحيحات</a></div>
+            <div class="footer-column"><h2>المنهج والمراجع</h2><a href="references.html">المصادر المعتمدة</a><a href="references.html#primary-sources">المصادر التاريخية</a><a href="references.html#editorial-method">منهج التوثيق</a></div>
+        </div>
+        <div class="home-footer-bottom"><span>© <span data-current-year>2026</span> HistoriaOS</span><span>تُذكر تراخيص المواد المرجعية بجوار استخدامها.</span><a href="references.html">المراجع وحقوق الاستخدام</a></div>
+    </footer>
 </body>
 </html>

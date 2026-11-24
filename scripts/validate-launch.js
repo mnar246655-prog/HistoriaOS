@@ -14,6 +14,7 @@ const requiredFiles = [
     "website/maps.html",
     "website/timeline.html",
     "website/umayyad.html",
+    "website/references.html",
     "website/about.html",
     "website/pricing.html",
     "website/contact.html",
@@ -52,6 +53,26 @@ for (const htmlPath of listFiles(path.join(root, "website"), ".html")) {
     const navEnd = html.indexOf("</nav>", navStart);
     if (!html.slice(navStart, navEnd).includes('href="umayyad.html"')) {
         errors.push(`Missing Umayyad link in navigation: ${path.relative(root, htmlPath)}`);
+    }
+}
+for (const relativePath of ["website/index.html", "website/references.html"]) {
+    const absolutePath = path.join(root, relativePath);
+    if (!fs.existsSync(absolutePath)) continue;
+    const page = fs.readFileSync(absolutePath, "utf8");
+    if (!page.includes('href="references.html"')) errors.push(`${relativePath}: missing link to references.html.`);
+}
+const referencesPagePath = path.join(root, "website/references.html");
+if (fs.existsSync(referencesPagePath)) {
+    const referencesPage = fs.readFileSync(referencesPagePath, "utf8");
+    for (const source of ["تاريخ الرسل والملوك", "البداية والنهاية", "الكامل في التاريخ", "تاريخ الخلفاء", "فتوح البلدان", "The Oxford History of Islam", "Encyclopaedia of Islam", "World History Encyclopedia"]) {
+        if (!referencesPage.includes(source)) errors.push(`website/references.html: missing reference ${source}.`);
+    }
+}
+const homePagePath = path.join(root, "website/index.html");
+if (fs.existsSync(homePagePath)) {
+    const homePage = fs.readFileSync(homePagePath, "utf8");
+    for (const sectionId of ["explore-civilizations", "featured-people", "featured-events", "historical-maps", "civilization-timeline", "featured-topics", "trusted-references"]) {
+        if (!homePage.includes(`id="${sectionId}"`)) errors.push(`website/index.html: missing home section ${sectionId}.`);
     }
 }
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
@@ -136,6 +157,37 @@ for (const check of dataChecks) {
         errors.push(`${check.file}: curated records require attributed Wikipedia source URLs.`);
     }
     dataSets.set(check.file, records);
+}
+
+if (fs.existsSync(homePagePath)) {
+    const homePage = fs.readFileSync(homePagePath, "utf8");
+    const statKeys = [...homePage.matchAll(/data-umayyad-stat="([^"]+)"/g)].map(([, key]) => key);
+    if (statKeys.length !== 4
+        || new Set(statKeys).size !== 4
+        || ["people", "events", "cities", "battles"].some(key => !statKeys.includes(key))) {
+        errors.push("website/index.html: live statistics must cover Umayyad people, events, cities, and battles.");
+    }
+
+    const featuredCollections = new Map([
+        ["people", dataSets.get("people/people.json") || []],
+        ["events", dataSets.get("events/events.json") || []]
+    ]);
+    const featuredIds = new Map();
+    for (const [, collection, ids] of homePage.matchAll(/<div class="card-grid home-feature-grid" data-collection="(people|events)"[^>]*data-curated-only="true"[^>]*data-featured-ids="([^"]+)"/g)) {
+        const items = featuredCollections.get(collection);
+        const recordsById = new Map(items.map(item => [item.id, item]));
+        const idsForCollection = ids.split(",");
+        featuredIds.set(collection, idsForCollection);
+        if (idsForCollection.some(id => {
+            const record = recordsById.get(id);
+            return !record || record.isSample || !record.sourceUrl;
+        })) {
+            errors.push(`website/index.html: ${collection} highlights must link to source-attributed, non-sample records.`);
+        }
+    }
+    if (!featuredIds.has("people") || !featuredIds.has("events")) {
+        errors.push("website/index.html: expected curated people and event highlights.");
+    }
 }
 
 const events = dataSets.get("events/events.json");

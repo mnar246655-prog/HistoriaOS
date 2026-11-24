@@ -375,9 +375,19 @@ function renderTimeline(items, container) {
 function renderCollection(key, items, container) {
     const query = searchInput ? normalizeSearchText(searchInput.value) : "";
     const searchFields = collections[key].searchFields;
-    const matchingItems = items.filter(item =>
+    const availableItems = container.dataset.curatedOnly === "true"
+        ? items.filter(item => !item.isSample && item.sourceUrl)
+        : items;
+    let matchingItems = availableItems.filter(item =>
         searchFields.some(field => normalizeSearchText(item[field] ?? "").includes(query))
     );
+    const featuredIds = (container.dataset.featuredIds || "").split(",").filter(Boolean);
+    if (!query && featuredIds.length) {
+        const itemsById = new Map(matchingItems.map(item => [item.id, item]));
+        const missingIds = featuredIds.filter(id => !itemsById.has(id));
+        if (missingIds.length) console.error(`Missing featured ${key} records:`, missingIds);
+        matchingItems = featuredIds.map(id => itemsById.get(id)).filter(Boolean);
+    }
 
     if (container.dataset.display === "timeline") {
         renderTimeline(matchingItems, container);
@@ -457,6 +467,40 @@ function refreshVisibleCollections() {
     });
 }
 
+async function loadHomepageStats() {
+    const statElements = Array.from(document.querySelectorAll("[data-umayyad-stat]"));
+    if (!statElements.length) return;
+
+    const status = document.getElementById("home-stats-status");
+    try {
+        const response = await fetch("../umayyad/data.json");
+        if (!response.ok) throw new Error(`تعذّر تحميل بيانات الإحصاءات (HTTP ${response.status})`);
+        const data = await response.json();
+        const expectedGroups = ["people", "events", "cities", "battles"];
+        if (expectedGroups.some(group => !Array.isArray(data[group]))) {
+            throw new Error("ملف الموسوعة الأموية لا يحتوي مجموعات إحصائية صالحة.");
+        }
+
+        statElements.forEach(element => {
+            const records = data[element.dataset.umayyadStat];
+            if (!Array.isArray(records)) {
+                throw new Error(`مجموعة إحصائية غير معروفة: ${element.dataset.umayyadStat}`);
+            }
+            element.textContent = records.length.toLocaleString("ar");
+        });
+        if (status) status.textContent = "الأعداد محدثة من ملف بيانات الموسوعة الأموية.";
+    } catch (error) {
+        console.error("تعذّر تحميل إحصاءات الصفحة الرئيسية:", error);
+        statElements.forEach(element => {
+            element.textContent = "—";
+        });
+        if (status) {
+            status.textContent = "تعذّر تحميل الإحصاءات. أعد المحاولة بعد التحقق من اتصال الموقع بملف البيانات.";
+            status.classList.add("load-error");
+        }
+    }
+}
+
 document.querySelectorAll("[data-collection]").forEach(container => {
     const key = container.dataset.collection;
     const collection = collections[key];
@@ -469,6 +513,12 @@ document.querySelectorAll("[data-collection]").forEach(container => {
 if (searchInput) searchInput.addEventListener("input", () => {
     updateTimelineControls();
     refreshVisibleCollections();
+});
+
+loadHomepageStats();
+
+document.querySelectorAll("[data-current-year]").forEach(element => {
+    element.textContent = String(new Date().getFullYear());
 });
 
 function createMapPopup(place) {

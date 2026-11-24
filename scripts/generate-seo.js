@@ -13,6 +13,7 @@ const pages = [
     { path: "website/maps.html", changeFrequency: "monthly", priority: "0.7" },
     { path: "website/timeline.html", changeFrequency: "weekly", priority: "0.7" },
     { path: "website/umayyad.html", changeFrequency: "monthly", priority: "0.9" },
+    { path: "website/references.html", changeFrequency: "monthly", priority: "0.7" },
     { path: "website/about.html", changeFrequency: "monthly", priority: "0.5" },
     { path: "website/pricing.html", changeFrequency: "monthly", priority: "0.5" },
     { path: "website/contact.html", changeFrequency: "monthly", priority: "0.4" }
