@@ -1,0 +1,3649 @@
+{
+  "people": [
+    {
+      "id": "um-person-muawiya",
+      "name": "معاوية بن أبي سفيان",
+      "role": "خليفة ومؤسس الدولة الأموية",
+      "period": "العصر الأموي",
+      "description": "تولى الخلافة سنة 661م بعد تنازل الحسن بن علي، واتخذ دمشق مركزًا للحكم.",
+      "eventIds": [
+        "um-event-001",
+        "um-event-002",
+        "um-event-003",
+        "um-event-004",
+        "um-event-007",
+        "um-event-008"
+      ],
+      "sourceTitle": "معاوية بن أبي سفيان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muawiyah_I"
+    },
+    {
+      "id": "um-person-hasan",
+      "name": "الحسن بن علي",
+      "role": "خليفة سابق ووسيط سياسي",
+      "period": "العصر الأموي",
+      "description": "تنازل عن الخلافة لمعاوية سنة 661م في تسوية أنهت المرحلة الأولى من الحرب الأهلية.",
+      "eventIds": [
+        "um-event-001",
+        "um-event-002"
+      ],
+      "sourceTitle": "الحسن بن علي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hasan_ibn_Ali"
+    },
+    {
+      "id": "um-person-amr",
+      "name": "عمرو بن العاص",
+      "role": "قائد ووالي مصر",
+      "period": "العصر الأموي",
+      "description": "صحابي وقائد ارتبط بإدارة مصر وبالصراع السياسي في العقود الأولى من الدولة الأموية.",
+      "eventIds": [
+        "um-event-004",
+        "um-event-005"
+      ],
+      "sourceTitle": "عمرو بن العاص",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Amr_ibn_al-As"
+    },
+    {
+      "id": "um-person-ziyad",
+      "name": "زياد بن أبيه",
+      "role": "والٍ وإداري",
+      "period": "العصر الأموي",
+      "description": "ولاه معاوية على البصرة ثم جمع له إدارة العراق؛ عُرف بتشديده في ضبط الإقليم.",
+      "eventIds": [
+        "um-event-004"
+      ],
+      "sourceTitle": "زياد بن أبيه",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ziyad_ibn_Abihi"
+    },
+    {
+      "id": "um-person-yazid1",
+      "name": "يزيد بن معاوية",
+      "role": "الخليفة الثاني",
+      "period": "العصر الأموي",
+      "description": "خلف أباه سنة 680م، وشهد عهده كربلاء ووقعة الحرة وحصار مكة ضمن الفتنة الثانية.",
+      "eventIds": [
+        "um-event-007",
+        "um-event-008",
+        "um-event-009",
+        "um-event-010",
+        "um-event-011",
+        "um-event-013",
+        "um-event-014",
+        "um-event-015",
+        "um-event-016"
+      ],
+      "sourceTitle": "يزيد بن معاوية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_I"
+    },
+    {
+      "id": "um-person-husayn",
+      "name": "الحسين بن علي",
+      "role": "شخصية معارضة",
+      "period": "العصر الأموي",
+      "description": "رفض مبايعة يزيد، وقُتل مع جماعة من أهل بيته وأنصاره في كربلاء سنة 680م.",
+      "eventIds": [
+        "um-event-010",
+        "um-event-011",
+        "um-event-012"
+      ],
+      "sourceTitle": "الحسين بن علي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Husayn_ibn_Ali"
+    },
+    {
+      "id": "um-person-ubaydullah",
+      "name": "عبيد الله بن زياد",
+      "role": "والٍ وقائد",
+      "period": "العصر الأموي",
+      "description": "تولى ولايات شرقية وعراقية، وارتبط اسمه بأحداث كربلاء وبالصراع في العراق.",
+      "eventIds": [
+        "um-event-011",
+        "um-event-012",
+        "um-event-022",
+        "um-event-024",
+        "um-event-026"
+      ],
+      "sourceTitle": "عبيد الله بن زياد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ubayd_Allah_ibn_Ziyad"
+    },
+    {
+      "id": "um-person-marwan1",
+      "name": "مروان بن الحكم",
+      "role": "الخليفة الرابع",
+      "period": "العصر الأموي",
+      "description": "بويع في الجابية سنة 684م، وأعاد تثبيت حكم البيت الأموي بعد اضطراب الخلافة.",
+      "eventIds": [
+        "um-event-017",
+        "um-event-018",
+        "um-event-019",
+        "um-event-020",
+        "um-event-021"
+      ],
+      "sourceTitle": "مروان بن الحكم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_I"
+    },
+    {
+      "id": "um-person-ibn_zubayr",
+      "name": "عبد الله بن الزبير",
+      "role": "منافس للخلافة",
+      "period": "العصر الأموي",
+      "description": "أعلن خلافته من الحجاز، وظلت سلطته منافسة للأمويين حتى مقتله في مكة سنة 692م.",
+      "eventIds": [
+        "um-event-013",
+        "um-event-014",
+        "um-event-015",
+        "um-event-017",
+        "um-event-018",
+        "um-event-019",
+        "um-event-028",
+        "um-event-030"
+      ],
+      "sourceTitle": "عبد الله بن الزبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_Allah_ibn_al-Zubayr"
+    },
+    {
+      "id": "um-person-abdmalik",
+      "name": "عبد الملك بن مروان",
+      "role": "الخليفة الخامس",
+      "period": "العصر الأموي",
+      "description": "أعاد توحيد معظم أقاليم الدولة، وعُرف بإصلاحات نقدية وإدارية وبناء قبة الصخرة.",
+      "eventIds": [
+        "um-event-021",
+        "um-event-022",
+        "um-event-023",
+        "um-event-024",
+        "um-event-025",
+        "um-event-026",
+        "um-event-027",
+        "um-event-028",
+        "um-event-029",
+        "um-event-030",
+        "um-event-031",
+        "um-event-032",
+        "um-event-034",
+        "um-event-036",
+        "um-event-041"
+      ],
+      "sourceTitle": "عبد الملك بن مروان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Malik_ibn_Marwan"
+    },
+    {
+      "id": "um-person-hajjaj",
+      "name": "الحجاج بن يوسف الثقفي",
+      "role": "والٍ وقائد",
+      "period": "العصر الأموي",
+      "description": "كان والي العراق في عهد عبد الملك والوليد، وأشرف على تأسيس واسط وحملات شرقية.",
+      "eventIds": [
+        "um-event-030",
+        "um-event-032",
+        "um-event-034",
+        "um-event-035",
+        "um-event-037",
+        "um-event-038",
+        "um-event-039",
+        "um-event-040",
+        "um-event-050",
+        "um-event-051",
+        "um-event-052",
+        "um-event-065"
+      ],
+      "sourceTitle": "الحجاج بن يوسف الثقفي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Hajjaj_ibn_Yusuf"
+    },
+    {
+      "id": "um-person-walid1",
+      "name": "الوليد بن عبد الملك",
+      "role": "الخليفة السادس",
+      "period": "العصر الأموي",
+      "description": "شهد عهده توسعًا في المشرق والمغرب والأندلس، وبدأ فيه بناء الجامع الأموي بدمشق.",
+      "eventIds": [
+        "um-event-041",
+        "um-event-042",
+        "um-event-043",
+        "um-event-044",
+        "um-event-045",
+        "um-event-046",
+        "um-event-050",
+        "um-event-053",
+        "um-event-056"
+      ],
+      "sourceTitle": "الوليد بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Walid_I"
+    },
+    {
+      "id": "um-person-sulayman",
+      "name": "سليمان بن عبد الملك",
+      "role": "الخليفة السابع",
+      "period": "العصر الأموي",
+      "description": "تولى الخلافة سنة 715م، وارتبط عهده بحملة مسلمة بن عبد الملك على القسطنطينية.",
+      "eventIds": [
+        "um-event-056",
+        "um-event-057",
+        "um-event-058",
+        "um-event-059"
+      ],
+      "sourceTitle": "سليمان بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sulayman_ibn_Abd_al-Malik"
+    },
+    {
+      "id": "um-person-umar2",
+      "name": "عمر بن عبد العزيز",
+      "role": "الخليفة الثامن",
+      "period": "العصر الأموي",
+      "description": "حكم بين 717 و720م، وتذكر المصادر إصلاحاته المالية ومساعيه لتخفيف المظالم.",
+      "eventIds": [
+        "um-event-045",
+        "um-event-059",
+        "um-event-060",
+        "um-event-061",
+        "um-event-062"
+      ],
+      "sourceTitle": "عمر بن عبد العزيز",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umar_II"
+    },
+    {
+      "id": "um-person-yazid2",
+      "name": "يزيد بن عبد الملك",
+      "role": "الخليفة التاسع",
+      "period": "العصر الأموي",
+      "description": "تولى الخلافة بعد عمر بن عبد العزيز سنة 720م، وحكم حتى وفاته سنة 724م.",
+      "eventIds": [
+        "um-event-062",
+        "um-event-063",
+        "um-event-064",
+        "um-event-066",
+        "um-event-067"
+      ],
+      "sourceTitle": "يزيد بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_II"
+    },
+    {
+      "id": "um-person-hisham",
+      "name": "هشام بن عبد الملك",
+      "role": "الخليفة العاشر",
+      "period": "العصر الأموي",
+      "description": "امتد حكمه من 724 إلى 743م، وشهد حملات على الحدود وثورات في أقاليم الدولة.",
+      "eventIds": [
+        "um-event-067",
+        "um-event-068",
+        "um-event-069",
+        "um-event-070",
+        "um-event-072",
+        "um-event-074",
+        "um-event-078",
+        "um-event-079",
+        "um-event-080",
+        "um-event-081",
+        "um-event-082",
+        "um-event-083"
+      ],
+      "sourceTitle": "هشام بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hisham_ibn_Abd_al-Malik"
+    },
+    {
+      "id": "um-person-walid2",
+      "name": "الوليد بن يزيد",
+      "role": "الخليفة الحادي عشر",
+      "period": "العصر الأموي",
+      "description": "تولى الخلافة سنة 743م، وأدى مقتله سنة 744م إلى مرحلة سريعة من تنازع السلطة.",
+      "eventIds": [
+        "um-event-083",
+        "um-event-084",
+        "um-event-085",
+        "um-event-086"
+      ],
+      "sourceTitle": "الوليد بن يزيد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Walid_II"
+    },
+    {
+      "id": "um-person-yazid3",
+      "name": "يزيد بن الوليد",
+      "role": "الخليفة الثاني عشر",
+      "period": "العصر الأموي",
+      "description": "بويع سنة 744م بعد الثورة على الوليد بن يزيد، وحكم بضعة أشهر.",
+      "eventIds": [
+        "um-event-086",
+        "um-event-087",
+        "um-event-088",
+        "um-event-090"
+      ],
+      "sourceTitle": "يزيد بن الوليد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_III"
+    },
+    {
+      "id": "um-person-ibrahim",
+      "name": "إبراهيم بن الوليد",
+      "role": "خليفة متنازع عليه",
+      "period": "العصر الأموي",
+      "description": "بويع لفترة وجيزة سنة 744م قبل أن ينتزع مروان بن محمد السلطة.",
+      "eventIds": [
+        "um-event-088",
+        "um-event-089",
+        "um-event-091"
+      ],
+      "sourceTitle": "إبراهيم بن الوليد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ibrahim_ibn_al-Walid"
+    },
+    {
+      "id": "um-person-marwan2",
+      "name": "مروان بن محمد",
+      "role": "آخر خلفاء بني أمية في المشرق",
+      "period": "العصر الأموي",
+      "description": "تولى الخلافة سنة 744م، ونقل مركز الحكم إلى حران، وقُتل في مصر سنة 750م.",
+      "eventIds": [
+        "um-event-089",
+        "um-event-091",
+        "um-event-092",
+        "um-event-095",
+        "um-event-097",
+        "um-event-098",
+        "um-event-099",
+        "um-event-100"
+      ],
+      "sourceTitle": "مروان بن محمد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_II"
+    },
+    {
+      "id": "um-person-abdaziz",
+      "name": "عبد العزيز بن مروان",
+      "role": "والٍ على مصر",
+      "period": "العصر الأموي",
+      "description": "أخو عبد الملك ووالي مصر سنوات طويلة؛ أسهمت إدارته في تثبيت الحكم الأموي في الإقليم.",
+      "eventIds": [
+        "um-event-023"
+      ],
+      "sourceTitle": "عبد العزيز بن مروان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Aziz_ibn_Marwan"
+    },
+    {
+      "id": "um-person-maslama",
+      "name": "مسلمة بن عبد الملك",
+      "role": "قائد عسكري",
+      "period": "العصر الأموي",
+      "description": "أمير أموي قاد حملات على الجبهة البيزنطية، ومن أبرزها الحملة على القسطنطينية في عهد سليمان.",
+      "eventIds": [
+        "um-event-058",
+        "um-event-060"
+      ],
+      "sourceTitle": "مسلمة بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Maslama_ibn_Abd_al-Malik"
+    },
+    {
+      "id": "um-person-musa",
+      "name": "موسى بن نصير",
+      "role": "والٍ وقائد في إفريقية",
+      "period": "العصر الأموي",
+      "description": "قاد إدارة إفريقية في أواخر عهد عبد الملك والوليد، وشارك في فتح الأندلس.",
+      "eventIds": [
+        "um-event-047",
+        "um-event-048",
+        "um-event-049",
+        "um-event-054",
+        "um-event-057"
+      ],
+      "sourceTitle": "موسى بن نصير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Musa_ibn_Nusayr"
+    },
+    {
+      "id": "um-person-tariq",
+      "name": "طارق بن زياد",
+      "role": "قائد في فتح الأندلس",
+      "period": "العصر الأموي",
+      "description": "قاد عبور الجيش إلى الأندلس سنة 711م، وترتبط به معركة وادي لكة في الروايات التاريخية.",
+      "eventIds": [
+        "um-event-047",
+        "um-event-048",
+        "um-event-049",
+        "um-event-054"
+      ],
+      "sourceTitle": "طارق بن زياد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tariq_ibn_Ziyad"
+    },
+    {
+      "id": "um-person-qutayba",
+      "name": "قتيبة بن مسلم",
+      "role": "والٍ وقائد في خراسان",
+      "period": "العصر الأموي",
+      "description": "قاد حملات الدولة في ما وراء النهر في عهد الوليد، ووصلت حملاته إلى بخارى وسمرقند.",
+      "eventIds": [
+        "um-event-042",
+        "um-event-046",
+        "um-event-053",
+        "um-event-055"
+      ],
+      "sourceTitle": "قتيبة بن مسلم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Qutayba_ibn_Muslim"
+    },
+    {
+      "id": "um-person-muhammad_qasim",
+      "name": "محمد بن القاسم الثقفي",
+      "role": "قائد في السند",
+      "period": "العصر الأموي",
+      "description": "قاد حملة الدولة إلى السند في عهد الوليد، وارتبط اسمه بفتح الديبل وملتان.",
+      "eventIds": [
+        "um-event-050",
+        "um-event-051",
+        "um-event-052"
+      ],
+      "sourceTitle": "محمد بن القاسم الثقفي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muhammad_ibn_al-Qasim"
+    },
+    {
+      "id": "um-person-uqba",
+      "name": "عقبة بن نافع",
+      "role": "قائد ووالي إفريقية",
+      "period": "العصر الأموي",
+      "description": "قاد حملات في شمال إفريقيا، وينسب إليه تأسيس القيروان نحو سنة 670م.",
+      "eventIds": [
+        "um-event-006"
+      ],
+      "sourceTitle": "عقبة بن نافع",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Uqba_ibn_Nafi"
+    },
+    {
+      "id": "um-person-hasan_basri",
+      "name": "الحسن البصري",
+      "role": "عالم وواعظ",
+      "period": "العصر الأموي",
+      "description": "من أبرز علماء البصرة في القرن الأول الهجري، وعاصر عددًا من الخلفاء والولاة الأمويين.",
+      "eventIds": [
+        "um-event-071"
+      ],
+      "sourceTitle": "الحسن البصري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hasan_al-Basri"
+    },
+    {
+      "id": "um-person-zuhri",
+      "name": "محمد بن شهاب الزهري",
+      "role": "محدّث ومؤرخ",
+      "period": "العصر الأموي",
+      "description": "من أوائل من جمعوا الحديث والسيرة، واتصل ببلاط هشام بن عبد الملك.",
+      "eventIds": [
+        "um-event-069"
+      ],
+      "sourceTitle": "محمد بن شهاب الزهري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ibn_Shihab_al-Zuhri"
+    },
+    {
+      "id": "um-person-raja",
+      "name": "رجاء بن حيوة",
+      "role": "فقيه ومستشار",
+      "period": "العصر الأموي",
+      "description": "فقيه من فلسطين ومستشار للخلفاء، وتذكر الروايات دوره في انتقال الحكم إلى عمر بن عبد العزيز.",
+      "eventIds": [
+        "um-event-059"
+      ],
+      "sourceTitle": "رجاء بن حيوة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Raja_ibn_Haywa"
+    },
+    {
+      "id": "um-person-john",
+      "name": "يوحنا الدمشقي",
+      "role": "لاهوتي وكاتب",
+      "period": "العصر الأموي",
+      "description": "كاتب مسيحي من دمشق عاش في العصر الأموي، وتُعد أعماله شاهدًا على بيئة التفاعل الديني في الشام.",
+      "eventIds": [
+        "um-event-073"
+      ],
+      "sourceTitle": "يوحنا الدمشقي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/John_of_Damascus"
+    },
+    {
+      "id": "um-person-akhtal",
+      "name": "الأخطل",
+      "role": "شاعر",
+      "period": "العصر الأموي",
+      "description": "شاعر نصراني من تغلب، مدح خلفاء بني أمية، ولا سيما عبد الملك بن مروان.",
+      "eventIds": [
+        "um-event-027"
+      ],
+      "sourceTitle": "الأخطل",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Akhtal"
+    },
+    {
+      "id": "um-person-jarir",
+      "name": "جرير بن عطية",
+      "role": "شاعر",
+      "period": "العصر الأموي",
+      "description": "شاعر أموي بارز عُرف بالنقائض والهجاء والمديح، وعاصر الفرزدق والأخطل.",
+      "eventIds": [
+        "um-event-027"
+      ],
+      "sourceTitle": "جرير بن عطية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jarir_ibn_Atiyah"
+    },
+    {
+      "id": "um-person-farazdaq",
+      "name": "الفرزدق",
+      "role": "شاعر",
+      "period": "العصر الأموي",
+      "description": "شاعر من تميم اشتهر بالنقائض، وعاش في البصرة خلال الحكم الأموي.",
+      "eventIds": [
+        "um-event-027"
+      ],
+      "sourceTitle": "الفرزدق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Farazdaq"
+    },
+    {
+      "id": "um-person-muhallab",
+      "name": "المهلّب بن أبي صفرة",
+      "role": "قائد ووالي",
+      "period": "العصر الأموي",
+      "description": "قاد حملات شرقية ضد الخوارج، وأدار خراسان في أواخر عهد عبد الملك.",
+      "eventIds": [
+        "um-event-025"
+      ],
+      "sourceTitle": "المهلّب بن أبي صفرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Muhallab_ibn_Abi_Sufra"
+    },
+    {
+      "id": "um-person-yazid_muhallab",
+      "name": "يزيد بن المهلّب",
+      "role": "والٍ وقائد متمرّد",
+      "period": "العصر الأموي",
+      "description": "تولى ولاية خراسان ثم العراق، وقاد تمردًا على يزيد بن عبد الملك انتهى بهزيمته سنة 720م.",
+      "eventIds": [
+        "um-event-063",
+        "um-event-064"
+      ],
+      "sourceTitle": "يزيد بن المهلّب",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_ibn_al-Muhallab"
+    },
+    {
+      "id": "um-person-ibn_ashath",
+      "name": "عبد الرحمن بن الأشعث",
+      "role": "قائد ثائر",
+      "period": "العصر الأموي",
+      "description": "قاد حركة واسعة في العراق ضد الحجاج بن يوسف بين نحو 700 و702م.",
+      "eventIds": [
+        "um-event-037",
+        "um-event-038",
+        "um-event-039"
+      ],
+      "sourceTitle": "عبد الرحمن بن الأشعث",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Hajjaj_ibn_Yusuf"
+    },
+    {
+      "id": "um-person-ghafiqi",
+      "name": "عبد الرحمن الغافقي",
+      "role": "والٍ وقائد في الأندلس",
+      "period": "العصر الأموي",
+      "description": "تولى الأندلس وقاد الحملة التي انتهت بمعركة بلاط الشهداء سنة 732م.",
+      "eventIds": [
+        "um-event-075",
+        "um-event-076",
+        "um-event-077"
+      ],
+      "sourceTitle": "عبد الرحمن الغافقي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Rahman_al-Ghafiqi"
+    },
+    {
+      "id": "um-person-habib",
+      "name": "حبيب بن مسلمة الفهري",
+      "role": "قائد عسكري",
+      "period": "العصر الأموي",
+      "description": "قائد أموي شارك في حملات الشام والجزيرة وأرمينيا في القرن الأول الهجري.",
+      "eventIds": [
+        "um-event-078"
+      ],
+      "sourceTitle": "حبيب بن مسلمة الفهري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Habib_ibn_Maslama_al-Fihri"
+    },
+    {
+      "id": "um-person-khalid_yazid",
+      "name": "خالد بن يزيد",
+      "role": "أمير أموي وراعي علم",
+      "period": "العصر الأموي",
+      "description": "أمير من البيت الأموي، اشتهر في كتب التراث باهتمامه بالكيمياء والعلوم، مع اختلاف الروايات حول ذلك.",
+      "eventIds": [
+        "um-event-033"
+      ],
+      "sourceTitle": "خالد بن يزيد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_ibn_Yazid"
+    },
+    {
+      "id": "um-person-nasr",
+      "name": "نصر بن سيار",
+      "role": "آخر ولاة خراسان الأمويين",
+      "period": "العصر الأموي",
+      "description": "حاول إدارة خراسان في ظل تصاعد الدعوة العباسية، وطلب الدعم من مروان الثاني.",
+      "eventIds": [
+        "um-event-093",
+        "um-event-094"
+      ],
+      "sourceTitle": "نصر بن سيار",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Nasr_ibn_Sayyar"
+    },
+    {
+      "id": "um-person-umar_hubayra",
+      "name": "عمر بن هبيرة",
+      "role": "والٍ",
+      "period": "العصر الأموي",
+      "description": "تولى العراق في عهد يزيد بن عبد الملك وهشام، وكان من أبرز رجال الإدارة الأموية.",
+      "eventIds": [
+        "um-event-066"
+      ],
+      "sourceTitle": "عمر بن هبيرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umar_ibn_Hubayra"
+    },
+    {
+      "id": "um-person-khalid_qasri",
+      "name": "خالد القسري",
+      "role": "والٍ على العراق",
+      "period": "العصر الأموي",
+      "description": "تولى العراق في عهد هشام بن عبد الملك، وارتبط اسمه بإدارة الكوفة والبصرة.",
+      "eventIds": [
+        "um-event-068",
+        "um-event-084",
+        "um-event-090"
+      ],
+      "sourceTitle": "خالد القسري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_al-Qasri"
+    },
+    {
+      "id": "um-person-salih",
+      "name": "صالح بن عبد الرحمن",
+      "role": "كاتب ومحاسب",
+      "period": "العصر الأموي",
+      "description": "كاتب إداري ارتبط اسمه بتعريب الدواوين في العراق في عهد الحجاج.",
+      "eventIds": [
+        "um-event-034",
+        "um-event-035"
+      ],
+      "sourceTitle": "صالح بن عبد الرحمن",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Salih_ibn_Abd_al-Rahman"
+    },
+    {
+      "id": "um-person-qurra",
+      "name": "قرة بن شريك العبسي",
+      "role": "والٍ على مصر",
+      "period": "العصر الأموي",
+      "description": "تولى مصر في عهد الوليد بن عبد الملك، وتوثق البرديات جانبًا من مراسلات إدارته.",
+      "eventIds": [
+        "um-event-044"
+      ],
+      "sourceTitle": "قرة بن شريك العبسي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate"
+    },
+    {
+      "id": "um-person-asad",
+      "name": "أسد بن عبد الله القسري",
+      "role": "والٍ وقائد في خراسان",
+      "period": "العصر الأموي",
+      "description": "تولى خراسان في عهد هشام، وقاد حملات على حدود ما وراء النهر.",
+      "eventIds": [
+        "um-event-070",
+        "um-event-072",
+        "um-event-074"
+      ],
+      "sourceTitle": "أسد بن عبد الله القسري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Asad_ibn_Abd_Allah_al-Qasri"
+    },
+    {
+      "id": "um-person-hisham_ismail",
+      "name": "هشام بن إسماعيل المخزومي",
+      "role": "والٍ على المدينة",
+      "period": "العصر الأموي",
+      "description": "والٍ أموي على المدينة في عهد عبد الملك، وارتبطت ولايته بإدارة الحجاز.",
+      "eventIds": [
+        "um-event-031"
+      ],
+      "sourceTitle": "هشام بن إسماعيل المخزومي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate"
+    },
+    {
+      "id": "um-person-said_jubayr",
+      "name": "سعيد بن جبير",
+      "role": "عالم ومفسر",
+      "period": "العصر الأموي",
+      "description": "تابعي ومفسر من الكوفة، عاصر الحكم الأموي وقُتل في عهد الحجاج بحسب الروايات.",
+      "eventIds": [
+        "um-event-065"
+      ],
+      "sourceTitle": "سعيد بن جبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Said_ibn_Jubayr"
+    },
+    {
+      "id": "um-person-maysara",
+      "name": "ميسرة المطغري",
+      "role": "قائد ثورة بربرية",
+      "period": "العصر الأموي",
+      "description": "تذكر مصادر العصور الوسطى قيادته لبداية الثورة البربرية الكبرى في المغرب سنة 740م.",
+      "eventIds": [
+        "um-event-079",
+        "um-event-081"
+      ],
+      "sourceTitle": "ميسرة المطغري",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Maysara_al-Matghari"
+    },
+    {
+      "id": "um-person-abu_muslim",
+      "name": "أبو مسلم الخراساني",
+      "role": "قائد الثورة العباسية",
+      "period": "العصر الأموي",
+      "description": "قاد الدعوة العباسية في خراسان، وأسهمت حركته في إسقاط الحكم الأموي في المشرق.",
+      "eventIds": [
+        "um-event-093",
+        "um-event-094",
+        "um-event-095",
+        "um-event-096",
+        "um-event-097",
+        "um-event-098",
+        "um-event-099"
+      ],
+      "sourceTitle": "أبو مسلم الخراساني",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abu_Muslim_al-Khurasani"
+    }
+  ],
+  "events": [
+    {
+      "year": 661,
+      "title": "تنازل الحسن بن علي عن الخلافة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "انتهى التنافس على الخلافة بتنازل الحسن لمعاوية؛ وتختلف الروايات في شروط التسوية وتفاصيلها.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-hasan",
+        "um-person-muawiya"
+      ],
+      "battleId": null,
+      "sourceTitle": "تنازل الحسن بن علي عن الخلافة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hasan_ibn_Ali",
+      "id": "um-event-001"
+    },
+    {
+      "year": 661,
+      "title": "تولي معاوية الخلافة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "بدأ حكم معاوية بوصفه أول خلفاء بني أمية في دمشق، مؤسسًا مرحلة سياسية جديدة بعد الفتنة الأولى.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-muawiya",
+        "um-person-hasan"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي معاوية الخلافة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-002"
+    },
+    {
+      "year": 661,
+      "title": "اتخاذ دمشق مركزًا للحكم",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "استقر مركز الخلافة في دمشق، مستفيدًا من موقع الشام الإداري والعسكري.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-muawiya"
+      ],
+      "battleId": null,
+      "sourceTitle": "اتخاذ دمشق مركزًا للحكم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-003"
+    },
+    {
+      "year": 661,
+      "title": "إعادة تنظيم الولايات في الشام والعراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "اعتمدت الإدارة على ولاة ذوي صلاحيات واسعة، مع استمرار استقلال بعض أقاليم الدولة في إدارة شؤونها.",
+      "cityIds": [
+        "um-city-damascus",
+        "um-city-aleppo",
+        "um-city-homs"
+      ],
+      "personIds": [
+        "um-person-muawiya",
+        "um-person-amr",
+        "um-person-ziyad"
+      ],
+      "battleId": null,
+      "sourceTitle": "إعادة تنظيم الولايات في الشام والعراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-004"
+    },
+    {
+      "year": 664,
+      "title": "وفاة عمرو بن العاص في مصر",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "توفي عمرو بن العاص في مصر نحو سنة 43هـ/664م، بعد أن كان واليًا عليها في عهد معاوية.",
+      "cityIds": [
+        "um-city-fustat",
+        "um-city-alexandria"
+      ],
+      "personIds": [
+        "um-person-amr"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة عمرو بن العاص في مصر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Amr_ibn_al-As",
+      "id": "um-event-005"
+    },
+    {
+      "year": 670,
+      "title": "إنشاء قاعدة القيروان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "أنشأ عقبة بن نافع قاعدة القيروان في إفريقية؛ وتختلف المصادر في تأريخ مراحل التأسيس والتوسع.",
+      "cityIds": [
+        "um-city-kairouan"
+      ],
+      "personIds": [
+        "um-person-uqba"
+      ],
+      "battleId": null,
+      "sourceTitle": "إنشاء قاعدة القيروان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kairouan",
+      "id": "um-event-006"
+    },
+    {
+      "year": 674,
+      "title": "الحملة البحرية على القسطنطينية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "بدأت سلسلة من الحملات والحصار البحري ضد العاصمة البيزنطية، واستمرت المواجهات إلى أواخر العقد.",
+      "cityIds": [
+        "um-city-constantinople"
+      ],
+      "personIds": [
+        "um-person-muawiya",
+        "um-person-yazid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "الحملة البحرية على القسطنطينية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Siege_of_Constantinople_(674-678)",
+      "id": "um-event-007"
+    },
+    {
+      "year": 676,
+      "title": "إعلان ولاية العهد ليزيد",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "أخذت البيعة ليزيد في حياة معاوية، في انتقال نحو توريث الحكم أثار معارضة سياسية.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-muawiya",
+        "um-person-yazid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "إعلان ولاية العهد ليزيد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Second_Fitna",
+      "id": "um-event-008"
+    },
+    {
+      "year": 680,
+      "title": "تولي يزيد بن معاوية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "خلف يزيد أباه سنة 680م؛ ورفضت شخصيات بارزة في الحجاز والعراق الاعتراف الفوري بخلافته.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-yazid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي يزيد بن معاوية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_I",
+      "id": "um-event-009"
+    },
+    {
+      "year": 680,
+      "title": "خروج الحسين من المدينة إلى مكة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "غادر الحسين المدينة بعد وصول أخبار البيعة ليزيد، ثم اتجه إلى مكة قبل تحركه نحو العراق.",
+      "cityIds": [
+        "um-city-medina"
+      ],
+      "personIds": [
+        "um-person-husayn",
+        "um-person-yazid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "خروج الحسين من المدينة إلى مكة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Husayn_ibn_Ali",
+      "id": "um-event-010"
+    },
+    {
+      "year": 680,
+      "title": "واقعة كربلاء",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "قُتل الحسين بن علي وأصحابه في كربلاء؛ وتعد الواقعة من أكثر أحداث العصر الأموي أثرًا في الذاكرة الإسلامية.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-husayn",
+        "um-person-yazid1",
+        "um-person-ubaydullah"
+      ],
+      "battleId": "um-battle-karbala",
+      "sourceTitle": "واقعة كربلاء",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Karbala",
+      "id": "um-event-011"
+    },
+    {
+      "year": 680,
+      "title": "مقتل مسلم بن عقيل في الكوفة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "سبق مقتل مسلم بن عقيل، مبعوث الحسين إلى الكوفة، وصول الحسين إلى العراق وأسهم في تغير مسار الأحداث.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-husayn",
+        "um-person-ubaydullah"
+      ],
+      "battleId": null,
+      "sourceTitle": "مقتل مسلم بن عقيل في الكوفة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muslim_ibn_Aqil",
+      "id": "um-event-012"
+    },
+    {
+      "year": 683,
+      "title": "انتفاضة المدينة على يزيد",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "أعلن أهل المدينة خلع يزيد، في تطور من أحداث الفتنة الثانية.",
+      "cityIds": [
+        "um-city-medina"
+      ],
+      "personIds": [
+        "um-person-yazid1",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": null,
+      "sourceTitle": "انتفاضة المدينة على يزيد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_al-Harra",
+      "id": "um-event-013"
+    },
+    {
+      "year": 683,
+      "title": "وقعة الحرة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "تقريبية",
+      "description": "واجه جيش أرسله يزيد أهل المدينة قرب الحرة؛ وتختلف المصادر في أعداد القتلى وتفاصيل الوقعة.",
+      "cityIds": [
+        "um-city-medina"
+      ],
+      "personIds": [
+        "um-person-yazid1",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": "um-battle-harra",
+      "sourceTitle": "وقعة الحرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_al-Harra",
+      "id": "um-event-014"
+    },
+    {
+      "year": 683,
+      "title": "بدء حصار مكة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "حاصرت قوات أموية مكة حيث أقام عبد الله بن الزبير مركزًا لمعارضة يزيد.",
+      "cityIds": [
+        "um-city-mecca"
+      ],
+      "personIds": [
+        "um-person-yazid1",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": null,
+      "sourceTitle": "بدء حصار مكة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Siege_of_Mecca_(683)",
+      "id": "um-event-015"
+    },
+    {
+      "year": 683,
+      "title": "وفاة يزيد وتولي معاوية الثاني",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "توفي يزيد سنة 683م، وتولى ابنه معاوية الثاني لفترة قصيرة خلال أزمة خلافة حادة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-yazid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة يزيد وتولي معاوية الثاني",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muawiyah_II",
+      "id": "um-event-016"
+    },
+    {
+      "year": 684,
+      "title": "مبايعة مروان بن الحكم في الجابية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "عُقد اجتماع الجابية الذي أفضى إلى مبايعة مروان، مع اختلاف الروايات حول ترتيب ولاية العهد.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan1",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": null,
+      "sourceTitle": "مبايعة مروان بن الحكم في الجابية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_I",
+      "id": "um-event-017"
+    },
+    {
+      "year": 684,
+      "title": "وقعة مرج راهط",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "انتهت المواجهة قرب دمشق بانتصار أنصار مروان على خصومه، ورسخت نفوذ البيت المرواني.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan1",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": "um-battle-marj-rahit",
+      "sourceTitle": "وقعة مرج راهط",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Marj_Rahit_(684)",
+      "id": "um-event-018"
+    },
+    {
+      "year": 684,
+      "title": "ترسيخ سلطة ابن الزبير في الحجاز",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "استمرت مكة والمدينة خارج السيطرة الأموية المباشرة، فيما اتسع الاعتراف بابن الزبير في أقاليم أخرى.",
+      "cityIds": [
+        "um-city-mecca"
+      ],
+      "personIds": [
+        "um-person-ibn_zubayr",
+        "um-person-marwan1"
+      ],
+      "battleId": null,
+      "sourceTitle": "ترسيخ سلطة ابن الزبير في الحجاز",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Second_Fitna",
+      "id": "um-event-019"
+    },
+    {
+      "year": 684,
+      "title": "مقتل عمرو بن سعيد الأشدق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "قضى مروان على تمرد عمرو بن سعيد الأشدق في دمشق بعد صراع على الخلافة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan1"
+      ],
+      "battleId": null,
+      "sourceTitle": "مقتل عمرو بن سعيد الأشدق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_I",
+      "id": "um-event-020"
+    },
+    {
+      "year": 685,
+      "title": "تولي عبد الملك بن مروان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "خلف عبد الملك أباه وسط انقسام سياسي واسع، وبدأ مسارًا طويلًا لإعادة توحيد الدولة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-marwan1"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي عبد الملك بن مروان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Malik_ibn_Marwan",
+      "id": "um-event-021"
+    },
+    {
+      "year": 685,
+      "title": "ثورة المختار الثقفي في الكوفة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "سيطر المختار على الكوفة رافعًا شعار الثأر للحسين، ودخل في صراع مع خصومه ومع القوى الأموية.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-ubaydullah",
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "ثورة المختار الثقفي في الكوفة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mukhtar_al-Thaqafi",
+      "id": "um-event-022"
+    },
+    {
+      "year": 685,
+      "title": "تولي عبد العزيز بن مروان مصر",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "ولى عبد الملك أخاه عبد العزيز مصر، فاستمر في إدارتها حتى وفاته سنة 705م.",
+      "cityIds": [
+        "um-city-fustat"
+      ],
+      "personIds": [
+        "um-person-abdaziz",
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي عبد العزيز بن مروان مصر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Aziz_ibn_Marwan",
+      "id": "um-event-023"
+    },
+    {
+      "year": 686,
+      "title": "وقعة الخازر ومقتل عبيد الله بن زياد",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "هُزمت قوات عبيد الله بن زياد في معركة الخازر أمام جيش إبراهيم بن الأشتر الموالي للمختار.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-ubaydullah",
+        "um-person-abdmalik"
+      ],
+      "battleId": "um-battle-khazir",
+      "sourceTitle": "وقعة الخازر ومقتل عبيد الله بن زياد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Khazir",
+      "id": "um-event-024"
+    },
+    {
+      "year": 686,
+      "title": "تولي المهلّب قيادة قتال الأزارقة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "كلف عبد الملك المهلّب بمواجهة الأزارقة في العراق وفارس، واستمرت حملاته سنوات.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-muhallab",
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي المهلّب قيادة قتال الأزارقة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Muhallab_ibn_Abi_Sufra",
+      "id": "um-event-025"
+    },
+    {
+      "year": 687,
+      "title": "انتهاء حركة المختار في الكوفة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "قُتل المختار بعد حصار مصعب بن الزبير للكوفة، فعادت المدينة إلى نفوذ الزبيريين.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-ubaydullah"
+      ],
+      "battleId": null,
+      "sourceTitle": "انتهاء حركة المختار في الكوفة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mukhtar_al-Thaqafi",
+      "id": "um-event-026"
+    },
+    {
+      "year": 690,
+      "title": "ازدهار المدح والنقائض في العصر الأموي",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "برز الأخطل في مدح عبد الملك، وعاصر جرير والفرزدق في تقليد النقائض؛ ولا يعني جمعهم في هذا السجل اجتماعهم في مناسبة واحدة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-akhtal",
+        "um-person-jarir",
+        "um-person-farazdaq"
+      ],
+      "battleId": null,
+      "sourceTitle": "ازدهار المدح والنقائض في العصر الأموي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Arabic_poetry",
+      "id": "um-event-027"
+    },
+    {
+      "year": 691,
+      "title": "وقعة مسكن",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "هزم عبد الملك جيش مصعب بن الزبير عند مسكن، فاتسع الطريق لاستعادة العراق.",
+      "cityIds": [
+        "um-city-wasit"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": "um-battle-maskin",
+      "sourceTitle": "وقعة مسكن",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Maskin",
+      "id": "um-event-028"
+    },
+    {
+      "year": 691,
+      "title": "اكتمال قبة الصخرة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "أُنجز بناء قبة الصخرة في القدس في عهد عبد الملك، وفق التأريخ المنقوش على المبنى.",
+      "cityIds": [
+        "um-city-jerusalem"
+      ],
+      "personIds": [
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "اكتمال قبة الصخرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Dome_of_the_Rock",
+      "id": "um-event-029"
+    },
+    {
+      "year": 692,
+      "title": "حصار مكة ومقتل عبد الله بن الزبير",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "حاصر جيش الحجاج مكة وانتهى الحصار بمقتل ابن الزبير؛ وتورد المصادر تفاصيل متفاوتة عن أضرار الحصار.",
+      "cityIds": [
+        "um-city-mecca"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-hajjaj",
+        "um-person-ibn_zubayr"
+      ],
+      "battleId": null,
+      "sourceTitle": "حصار مكة ومقتل عبد الله بن الزبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Siege_of_Mecca_(692)",
+      "id": "um-event-030"
+    },
+    {
+      "year": 692,
+      "title": "تعيين هشام بن إسماعيل على المدينة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "تولى هشام بن إسماعيل إدارة المدينة في عهد عبد الملك ضمن إعادة تنظيم ولاية الحجاز.",
+      "cityIds": [
+        "um-city-medina"
+      ],
+      "personIds": [
+        "um-person-hisham_ismail",
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "تعيين هشام بن إسماعيل على المدينة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-031"
+    },
+    {
+      "year": 694,
+      "title": "تعيين الحجاج واليًا على العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "كلف عبد الملك الحجاج بإدارة العراق، حيث عمل على إخضاع المعارضة وإعادة ضبط الإدارة.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-hajjaj"
+      ],
+      "battleId": null,
+      "sourceTitle": "تعيين الحجاج واليًا على العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Hajjaj_ibn_Yusuf",
+      "id": "um-event-032"
+    },
+    {
+      "year": 695,
+      "title": "نشاط خالد بن يزيد في مجال العلوم",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "تربط كتب التراث خالد بن يزيد باهتمام مبكر بالكيمياء والترجمة؛ وتحتاج تفاصيل هذه الروايات إلى قراءة نقدية.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-khalid_yazid"
+      ],
+      "battleId": null,
+      "sourceTitle": "نشاط خالد بن يزيد في مجال العلوم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_ibn_Yazid",
+      "id": "um-event-033"
+    },
+    {
+      "year": 696,
+      "title": "إصلاح النقد وتعريب الكتابات الرسمية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "أصدر عبد الملك نقودًا إسلامية مستقلة، وتوسعت عملية تعريب الدواوين تدريجيًا باختلاف توقيتها بين الأقاليم.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-hajjaj",
+        "um-person-salih"
+      ],
+      "battleId": null,
+      "sourceTitle": "إصلاح النقد وتعريب الكتابات الرسمية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Malik_ibn_Marwan",
+      "id": "um-event-034"
+    },
+    {
+      "year": 697,
+      "title": "بدء تعريب دواوين العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "تُنسب إلى الحجاج وصالح بن عبد الرحمن خطوة تعريب الدواوين في العراق، مع اختلاف المصادر في تاريخ بدء العملية.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-hajjaj",
+        "um-person-salih"
+      ],
+      "battleId": null,
+      "sourceTitle": "بدء تعريب دواوين العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Salih_ibn_Abd_al-Rahman",
+      "id": "um-event-035"
+    },
+    {
+      "year": 698,
+      "title": "استعادة قرطاج",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "استعادت الجيوش الأموية قرطاج من البيزنطيين، ما عزز السيطرة على ساحل إفريقية.",
+      "cityIds": [
+        "um-city-carthage"
+      ],
+      "personIds": [
+        "um-person-abdmalik"
+      ],
+      "battleId": null,
+      "sourceTitle": "استعادة قرطاج",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Carthage",
+      "id": "um-event-036"
+    },
+    {
+      "year": 700,
+      "title": "بداية تمرد عبد الرحمن بن الأشعث",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 7,
+      "datePrecision": "سنة",
+      "description": "بدأ التمرد بعد خلاف حول حملة سجستان، ثم امتد إلى العراق وأصبح من أخطر تحديات ولاية الحجاج.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-hajjaj",
+        "um-person-ibn_ashath"
+      ],
+      "battleId": null,
+      "sourceTitle": "بداية تمرد عبد الرحمن بن الأشعث",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Hajjaj_ibn_Yusuf",
+      "id": "um-event-037"
+    },
+    {
+      "year": 701,
+      "title": "وقعة دير الجماجم",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "انتهت المعركة بانتصار قوات الحجاج على جيش ابن الأشعث قرب الكوفة، مع استمرار المقاومة بعدها.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-hajjaj",
+        "um-person-ibn_ashath"
+      ],
+      "battleId": "um-battle-dayr-jamajim",
+      "sourceTitle": "وقعة دير الجماجم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Dayr_al-Jamajim",
+      "id": "um-event-038"
+    },
+    {
+      "year": 702,
+      "title": "انتهاء تمرد ابن الأشعث",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تفرقت قوات ابن الأشعث بعد سلسلة هزائم، وانتهت الحركة الواسعة التي بدأت في العراق وسجستان.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-hajjaj",
+        "um-person-ibn_ashath"
+      ],
+      "battleId": null,
+      "sourceTitle": "انتهاء تمرد ابن الأشعث",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Hajjaj_ibn_Yusuf",
+      "id": "um-event-039"
+    },
+    {
+      "year": 702,
+      "title": "إنشاء مدينة واسط",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "أنشأ الحجاج واسط بين الكوفة والبصرة مركزًا إداريًا وعسكريًا؛ وتختلف المصادر في ضبط سنة بدء البناء.",
+      "cityIds": [
+        "um-city-wasit"
+      ],
+      "personIds": [
+        "um-person-hajjaj"
+      ],
+      "battleId": null,
+      "sourceTitle": "إنشاء مدينة واسط",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wasit",
+      "id": "um-event-040"
+    },
+    {
+      "year": 705,
+      "title": "وفاة عبد الملك وتولي الوليد",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "انتقلت الخلافة إلى الوليد بن عبد الملك بعد وفاة أبيه عبد الملك.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة عبد الملك وتولي الوليد",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Walid_I",
+      "id": "um-event-041"
+    },
+    {
+      "year": 705,
+      "title": "تعيين قتيبة بن مسلم على خراسان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "بدأ قتيبة ولايته على خراسان في عهد الوليد، وقاد منها حملات شرقية متتابعة.",
+      "cityIds": [
+        "um-city-merv"
+      ],
+      "personIds": [
+        "um-person-walid1",
+        "um-person-qutayba"
+      ],
+      "battleId": null,
+      "sourceTitle": "تعيين قتيبة بن مسلم على خراسان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Qutayba_ibn_Muslim",
+      "id": "um-event-042"
+    },
+    {
+      "year": 706,
+      "title": "بدء بناء الجامع الأموي بدمشق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "أمر الوليد بتحويل الكنيسة الكبرى في دمشق إلى جامع أموي، واكتمل المشروع في عهده.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "بدء بناء الجامع الأموي بدمشق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Mosque",
+      "id": "um-event-043"
+    },
+    {
+      "year": 706,
+      "title": "تولي قرة بن شريك ولاية مصر",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تولى قرة مصر في عهد الوليد، وتُظهر الوثائق البردية أسلوب الإدارة والمراسلات في ولايته.",
+      "cityIds": [
+        "um-city-fustat"
+      ],
+      "personIds": [
+        "um-person-qurra",
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي قرة بن شريك ولاية مصر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-044"
+    },
+    {
+      "year": 707,
+      "title": "إعادة بناء المسجد النبوي",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "أمر الوليد بتوسعة المسجد النبوي في المدينة، وتولى عمر بن عبد العزيز تنفيذ المشروع حين كان واليًا على الحجاز.",
+      "cityIds": [
+        "um-city-medina"
+      ],
+      "personIds": [
+        "um-person-walid1",
+        "um-person-umar2"
+      ],
+      "battleId": null,
+      "sourceTitle": "إعادة بناء المسجد النبوي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Prophet's_Mosque",
+      "id": "um-event-045"
+    },
+    {
+      "year": 709,
+      "title": "حملة قتيبة على بخارى",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "تذكر المصادر حملات قتيبة المتكررة على بخارى حتى خضوعها، وتختلف في تأريخ مراحل السيطرة.",
+      "cityIds": [
+        "um-city-bukhara"
+      ],
+      "personIds": [
+        "um-person-qutayba",
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "حملة قتيبة على بخارى",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Qutayba_ibn_Muslim",
+      "id": "um-event-046"
+    },
+    {
+      "year": 711,
+      "title": "عبور طارق بن زياد إلى الأندلس",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "عبر طارق المضيق بجيش من إفريقية إلى شبه الجزيرة الإيبيرية في حملة أُرسلت في عهد الوليد.",
+      "cityIds": [
+        "um-city-tangier"
+      ],
+      "personIds": [
+        "um-person-tariq",
+        "um-person-musa"
+      ],
+      "battleId": null,
+      "sourceTitle": "عبور طارق بن زياد إلى الأندلس",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_conquest_of_Hispania",
+      "id": "um-event-047"
+    },
+    {
+      "year": 711,
+      "title": "معركة وادي لكة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "هُزم جيش الملك القوطي رودريك في المعركة التي فتحت الطريق أمام التوسع الأموي في أيبيريا؛ وموقعها الدقيق موضع نقاش.",
+      "cityIds": [
+        "um-city-toledo"
+      ],
+      "personIds": [
+        "um-person-tariq",
+        "um-person-musa"
+      ],
+      "battleId": "um-battle-guadalete",
+      "sourceTitle": "معركة وادي لكة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Guadalete",
+      "id": "um-event-048"
+    },
+    {
+      "year": 712,
+      "title": "وصول موسى بن نصير إلى الأندلس",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "عبر موسى بن نصير إلى الأندلس بجيش آخر، ثم التقى طارقًا وتابعت القوات التوسع شمالًا.",
+      "cityIds": [
+        "um-city-cordoba"
+      ],
+      "personIds": [
+        "um-person-musa",
+        "um-person-tariq"
+      ],
+      "battleId": null,
+      "sourceTitle": "وصول موسى بن نصير إلى الأندلس",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Musa_ibn_Nusayr",
+      "id": "um-event-049"
+    },
+    {
+      "year": 712,
+      "title": "حملة محمد بن القاسم إلى السند",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قاد محمد بن القاسم حملة من العراق إلى السند في عهد الوليد، بإشراف إداري من الحجاج.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-muhammad_qasim",
+        "um-person-hajjaj",
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "حملة محمد بن القاسم إلى السند",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muhammad_ibn_al-Qasim",
+      "id": "um-event-050"
+    },
+    {
+      "year": 712,
+      "title": "فتح الديبل في حملة السند",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "استولى جيش محمد بن القاسم على ميناء الديبل، ضمن مراحل التوسع الأموي في السند.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-muhammad_qasim",
+        "um-person-hajjaj"
+      ],
+      "battleId": null,
+      "sourceTitle": "فتح الديبل في حملة السند",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muhammad_ibn_al-Qasim",
+      "id": "um-event-051"
+    },
+    {
+      "year": 712,
+      "title": "وصول الحملة الأموية إلى ملتان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "توسعت حملة محمد بن القاسم شمالًا في السند ووصلت إلى ملتان وفق روايات الفتوح.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-muhammad_qasim",
+        "um-person-hajjaj"
+      ],
+      "battleId": null,
+      "sourceTitle": "وصول الحملة الأموية إلى ملتان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Muhammad_ibn_al-Qasim",
+      "id": "um-event-052"
+    },
+    {
+      "year": 713,
+      "title": "دخول سمرقند في نطاق النفوذ الأموي",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تذكر المصادر إخضاع سمرقند في حملات قتيبة، ضمن سياق متدرج من الاتفاقات والقتال.",
+      "cityIds": [
+        "um-city-bukhara"
+      ],
+      "personIds": [
+        "um-person-qutayba",
+        "um-person-walid1"
+      ],
+      "battleId": null,
+      "sourceTitle": "دخول سمرقند في نطاق النفوذ الأموي",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Qutayba_ibn_Muslim",
+      "id": "um-event-053"
+    },
+    {
+      "year": 713,
+      "title": "دخول إشبيلية ضمن السيطرة الإسلامية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "توسعت السيطرة في مدن الأندلس خلال الحملات المشتركة لقادة إفريقية، مع اختلاف التواريخ التفصيلية.",
+      "cityIds": [
+        "um-city-cordoba"
+      ],
+      "personIds": [
+        "um-person-musa",
+        "um-person-tariq"
+      ],
+      "battleId": null,
+      "sourceTitle": "دخول إشبيلية ضمن السيطرة الإسلامية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_conquest_of_Hispania",
+      "id": "um-event-054"
+    },
+    {
+      "year": 714,
+      "title": "حملة قتيبة باتجاه فرغانة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "وصلت حملات قتيبة إلى فرغانة في أقصى الشرق، قبل توقف التوسع بعد مقتله.",
+      "cityIds": [
+        "um-city-bukhara"
+      ],
+      "personIds": [
+        "um-person-qutayba"
+      ],
+      "battleId": null,
+      "sourceTitle": "حملة قتيبة باتجاه فرغانة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Qutayba_ibn_Muslim",
+      "id": "um-event-055"
+    },
+    {
+      "year": 715,
+      "title": "وفاة الوليد وتولي سليمان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "خلف سليمان أخاه الوليد، وغيّر عددًا من التعيينات في الإدارة والقيادة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-walid1",
+        "um-person-sulayman"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة الوليد وتولي سليمان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Sulayman_ibn_Abd_al-Malik",
+      "id": "um-event-056"
+    },
+    {
+      "year": 715,
+      "title": "وفاة موسى بن نصير",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "توفي موسى بن نصير بعد استدعائه إلى المشرق في أواخر عهد الوليد أو بداية عهد سليمان بحسب الروايات.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-musa",
+        "um-person-sulayman"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة موسى بن نصير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Musa_ibn_Nusayr",
+      "id": "um-event-057"
+    },
+    {
+      "year": 717,
+      "title": "بدء حصار القسطنطينية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قاد مسلمة بن عبد الملك الحملة الكبرى على القسطنطينية، لكنها واجهت مقاومة بيزنطية وظروفًا قاسية.",
+      "cityIds": [
+        "um-city-constantinople"
+      ],
+      "personIds": [
+        "um-person-sulayman",
+        "um-person-maslama"
+      ],
+      "battleId": null,
+      "sourceTitle": "بدء حصار القسطنطينية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Siege_of_Constantinople_(717-718)",
+      "id": "um-event-058"
+    },
+    {
+      "year": 717,
+      "title": "تولي عمر بن عبد العزيز الخلافة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تولى عمر الخلافة بعد سليمان، وتُنسب إلى رجاء بن حيوة مساهمة في ترتيب انتقال الحكم.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-umar2",
+        "um-person-sulayman",
+        "um-person-raja"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي عمر بن عبد العزيز الخلافة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umar_II",
+      "id": "um-event-059"
+    },
+    {
+      "year": 718,
+      "title": "انتهاء حصار القسطنطينية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "انسحبت القوات الأموية بعد حصار استمر خلال 717–718م؛ وتختلف المصادر في تقدير الخسائر وأسباب الانسحاب.",
+      "cityIds": [
+        "um-city-constantinople"
+      ],
+      "personIds": [
+        "um-person-umar2",
+        "um-person-maslama"
+      ],
+      "battleId": null,
+      "sourceTitle": "انتهاء حصار القسطنطينية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Siege_of_Constantinople_(717-718)",
+      "id": "um-event-060"
+    },
+    {
+      "year": 718,
+      "title": "مراجعة جباية الخراج والجزية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تذكر الروايات إصلاح عمر بن عبد العزيز لبعض الممارسات المالية المتعلقة بالمسلمين الجدد، مع اختلاف التطبيق الإقليمي.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-umar2"
+      ],
+      "battleId": null,
+      "sourceTitle": "مراجعة جباية الخراج والجزية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umar_II",
+      "id": "um-event-061"
+    },
+    {
+      "year": 720,
+      "title": "وفاة عمر بن عبد العزيز وتولي يزيد الثاني",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "انتهى حكم عمر سنة 720م وخلفه يزيد بن عبد الملك.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-umar2",
+        "um-person-yazid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة عمر بن عبد العزيز وتولي يزيد الثاني",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_II",
+      "id": "um-event-062"
+    },
+    {
+      "year": 720,
+      "title": "تمرد يزيد بن المهلّب في العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قاد يزيد بن المهلّب تمردًا بعد خلافه مع السلطة، وانتهى بمقتله في معركة قرب واسط.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-yazid_muhallab",
+        "um-person-yazid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "تمرد يزيد بن المهلّب في العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_ibn_al-Muhallab",
+      "id": "um-event-063"
+    },
+    {
+      "year": 720,
+      "title": "وقعة العقر ومقتل يزيد بن المهلّب",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "هُزمت قوات يزيد بن المهلّب قرب واسط، وقُتل قائد التمرد وأفراد من أسرته.",
+      "cityIds": [
+        "um-city-wasit"
+      ],
+      "personIds": [
+        "um-person-yazid_muhallab",
+        "um-person-yazid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "وقعة العقر ومقتل يزيد بن المهلّب",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_ibn_al-Muhallab",
+      "id": "um-event-064"
+    },
+    {
+      "year": 720,
+      "title": "مقتل سعيد بن جبير",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تذكر كتب التراجم أن الحجاج قتل سعيد بن جبير في أواخر عهده، مع اختلاف التأريخ بين 714 و720م.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-said_jubayr",
+        "um-person-hajjaj"
+      ],
+      "battleId": null,
+      "sourceTitle": "مقتل سعيد بن جبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Said_ibn_Jubayr",
+      "id": "um-event-065"
+    },
+    {
+      "year": 722,
+      "title": "ولاية عمر بن هبيرة على العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تولى عمر بن هبيرة إدارة العراق في عهد يزيد الثاني، ثم تغير موقعه السياسي مع انتقال الخلافة إلى هشام.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-umar_hubayra",
+        "um-person-yazid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "ولاية عمر بن هبيرة على العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umar_ibn_Hubayra",
+      "id": "um-event-066"
+    },
+    {
+      "year": 724,
+      "title": "تولي هشام بن عبد الملك",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "خلف هشام أخاه يزيد الثاني، واستمر حكمه قرابة تسعة عشر عامًا.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-yazid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي هشام بن عبد الملك",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hisham_ibn_Abd_al-Malik",
+      "id": "um-event-067"
+    },
+    {
+      "year": 724,
+      "title": "تعيين خالد القسري على العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "ولى هشام خالدًا القسري العراق، فتولى إدارة الإقليم خلال قسم كبير من عهده.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-khalid_qasri"
+      ],
+      "battleId": null,
+      "sourceTitle": "تعيين خالد القسري على العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_al-Qasri",
+      "id": "um-event-068"
+    },
+    {
+      "year": 724,
+      "title": "نشاط ابن شهاب الزهري في تدوين الحديث",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "اتصل الزهري ببلاط هشام، وأسهمت رواياته في جمع مواد السيرة والحديث في العصر الأموي.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-zuhri",
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "نشاط ابن شهاب الزهري في تدوين الحديث",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ibn_Shihab_al-Zuhri",
+      "id": "um-event-069"
+    },
+    {
+      "year": 727,
+      "title": "حملة أسد بن عبد الله في خراسان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قاد أسد حملات على جبهة ما وراء النهر في سياق الصراع على المدن والتحالفات المحلية.",
+      "cityIds": [
+        "um-city-merv"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-asad"
+      ],
+      "battleId": null,
+      "sourceTitle": "حملة أسد بن عبد الله في خراسان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Asad_ibn_Abd_Allah_al-Qasri",
+      "id": "um-event-070"
+    },
+    {
+      "year": 728,
+      "title": "وفاة الحسن البصري في البصرة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "توفي الحسن البصري سنة 110هـ/728م تقريبًا، بعد أن صار من أبرز علماء الوعظ والفقه في البصرة.",
+      "cityIds": [
+        "um-city-basra"
+      ],
+      "personIds": [
+        "um-person-hasan_basri"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة الحسن البصري في البصرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hasan_al-Basri",
+      "id": "um-event-071"
+    },
+    {
+      "year": 730,
+      "title": "تولي أسد بن عبد الله ولاية خراسان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تولى أسد خراسان في عهد هشام، وعمل على تثبيت النفوذ الأموي ومواجهة التحديات على الحدود.",
+      "cityIds": [
+        "um-city-merv"
+      ],
+      "personIds": [
+        "um-person-asad",
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي أسد بن عبد الله ولاية خراسان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Asad_ibn_Abd_Allah_al-Qasri",
+      "id": "um-event-072"
+    },
+    {
+      "year": 730,
+      "title": "نشاط يوحنا الدمشقي في دمشق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "عاش يوحنا الدمشقي وكتب في بيئة دمشق الأموية؛ أما تفاصيل صلته بإدارة البلاط فتظل موضع نقاش بين الباحثين.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-john"
+      ],
+      "battleId": null,
+      "sourceTitle": "نشاط يوحنا الدمشقي في دمشق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/John_of_Damascus",
+      "id": "um-event-073"
+    },
+    {
+      "year": 731,
+      "title": "وقعة الممر في ما وراء النهر",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تعرض جيش أموي لهزيمة كبيرة في ممر جبلي خلال الصراع مع قوى تركية في آسيا الوسطى؛ ويختلف تحديد الموقع والتأريخ.",
+      "cityIds": [
+        "um-city-bukhara"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-asad"
+      ],
+      "battleId": "um-battle-defile",
+      "sourceTitle": "وقعة الممر في ما وراء النهر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Defile",
+      "id": "um-event-074"
+    },
+    {
+      "year": 731,
+      "title": "حملة عبد الرحمن الغافقي إلى جنوب بلاد الغال",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تحركت قوات الأندلس شمالًا عبر جبال البرانس في حملة سبقت معركة بلاط الشهداء.",
+      "cityIds": [
+        "um-city-cordoba"
+      ],
+      "personIds": [
+        "um-person-ghafiqi"
+      ],
+      "battleId": null,
+      "sourceTitle": "حملة عبد الرحمن الغافقي إلى جنوب بلاد الغال",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_invasion_of_Gaul",
+      "id": "um-event-075"
+    },
+    {
+      "year": 732,
+      "title": "معركة بلاط الشهداء",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "تقريبية",
+      "description": "انتهت الحملة الأموية شمال البرانس بهزيمة جيش عبد الرحمن الغافقي قرب تور/بواتييه، وتختلف المصادر في وصف أثرها طويل المدى.",
+      "cityIds": [
+        "um-city-cordoba"
+      ],
+      "personIds": [
+        "um-person-ghafiqi"
+      ],
+      "battleId": "um-battle-tours",
+      "sourceTitle": "معركة بلاط الشهداء",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+      "id": "um-event-076"
+    },
+    {
+      "year": 732,
+      "title": "وفاة عبد الرحمن الغافقي في بلاط الشهداء",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قُتل عبد الرحمن الغافقي خلال معركة بلاط الشهداء، وهو ما أنهى قيادته لحملة شمال البرانس.",
+      "cityIds": [
+        "um-city-cordoba"
+      ],
+      "personIds": [
+        "um-person-ghafiqi"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة عبد الرحمن الغافقي في بلاط الشهداء",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+      "id": "um-event-077"
+    },
+    {
+      "year": 737,
+      "title": "اشتداد الصراع على حدود القوقاز",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "شهدت أقاليم الجزيرة وأرمينيا حملات متبادلة بين الأمويين والبيزنطيين وحلفائهم.",
+      "cityIds": [
+        "um-city-harran"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-habib"
+      ],
+      "battleId": null,
+      "sourceTitle": "اشتداد الصراع على حدود القوقاز",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-078"
+    },
+    {
+      "year": 739,
+      "title": "بداية الثورة البربرية الكبرى",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "اندلعت ثورة في المغرب ضد الحكم الأموي والجباية، ثم امتدت إلى إفريقية والأندلس.",
+      "cityIds": [
+        "um-city-tangier"
+      ],
+      "personIds": [
+        "um-person-maysara",
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "بداية الثورة البربرية الكبرى",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Berber_Revolt",
+      "id": "um-event-079"
+    },
+    {
+      "year": 739,
+      "title": "إرسال حملة كلثوم بن عياض إلى إفريقية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "أرسل هشام جيشًا من الشام بقيادة كلثوم بن عياض لمساندة السلطة في إفريقية أمام الثورة البربرية.",
+      "cityIds": [
+        "um-city-carthage"
+      ],
+      "personIds": [
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "إرسال حملة كلثوم بن عياض إلى إفريقية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Berber_Revolt",
+      "id": "um-event-080"
+    },
+    {
+      "year": 740,
+      "title": "مقتل ميسرة وامتداد الثورة في المغرب",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "توسعت الثورة بعد سقوط قيادتها الأولى، وانقسمت المواجهات إلى جبهات مغربية وإفريقية.",
+      "cityIds": [
+        "um-city-tangier"
+      ],
+      "personIds": [
+        "um-person-maysara",
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "مقتل ميسرة وامتداد الثورة في المغرب",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Berber_Revolt",
+      "id": "um-event-081"
+    },
+    {
+      "year": 740,
+      "title": "هزيمة جيش كلثوم بن عياض في إفريقية",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "هُزم الجيش الأموي القادم من الشام قرب إفريقية في معركة بقدورة، في ضربة كبيرة للسلطة المركزية.",
+      "cityIds": [
+        "um-city-carthage"
+      ],
+      "personIds": [
+        "um-person-hisham"
+      ],
+      "battleId": null,
+      "sourceTitle": "هزيمة جيش كلثوم بن عياض في إفريقية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Berber_Revolt",
+      "id": "um-event-082"
+    },
+    {
+      "year": 743,
+      "title": "وفاة هشام وتولي الوليد الثاني",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "انتقلت الخلافة إلى الوليد بن يزيد بعد وفاة هشام، وسط تنافس داخل الأسرة الأموية.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-walid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة هشام وتولي الوليد الثاني",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Walid_II",
+      "id": "um-event-083"
+    },
+    {
+      "year": 743,
+      "title": "عزل خالد القسري عن ولاية العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "عُزل خالد القسري في أواخر ولاية هشام أو مطلع عهد الوليد الثاني بحسب اختلاف الروايات.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-walid2",
+        "um-person-khalid_qasri"
+      ],
+      "battleId": null,
+      "sourceTitle": "عزل خالد القسري عن ولاية العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_al-Qasri",
+      "id": "um-event-084"
+    },
+    {
+      "year": 743,
+      "title": "تولي يوسف بن عمر العراق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تولى يوسف بن عمر الثقفي العراق بعد عزل خالد القسري، في سياق تنافسات البلاط.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-walid2"
+      ],
+      "battleId": null,
+      "sourceTitle": "تولي يوسف بن عمر العراق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yusuf_ibn_Umar_al-Thaqafi",
+      "id": "um-event-085"
+    },
+    {
+      "year": 744,
+      "title": "خلع الوليد الثاني ومقتله",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "انتهى حكم الوليد الثاني بثورة قادها خصومه من بني أمية، وبدأت سلسلة من التغييرات السريعة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-walid2",
+        "um-person-yazid3"
+      ],
+      "battleId": null,
+      "sourceTitle": "خلع الوليد الثاني ومقتله",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Al-Walid_II",
+      "id": "um-event-086"
+    },
+    {
+      "year": 744,
+      "title": "بيعة يزيد الثالث",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "بويع يزيد بن الوليد عقب مقتل الوليد الثاني، وقدم برنامجًا لتقليل النفقات لكنه لم يحظ بإجماع.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-yazid3"
+      ],
+      "battleId": null,
+      "sourceTitle": "بيعة يزيد الثالث",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Yazid_III",
+      "id": "um-event-087"
+    },
+    {
+      "year": 744,
+      "title": "وفاة يزيد الثالث ومبايعة إبراهيم",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "خلف إبراهيم أخاه يزيد لفترة وجيزة في خضم النزاع على الخلافة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-yazid3",
+        "um-person-ibrahim"
+      ],
+      "battleId": null,
+      "sourceTitle": "وفاة يزيد الثالث ومبايعة إبراهيم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ibrahim_ibn_al-Walid",
+      "id": "um-event-088"
+    },
+    {
+      "year": 744,
+      "title": "استيلاء مروان بن محمد على دمشق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "دخل مروان دمشق بعد هزيمة خصومه، وأقرته قطاعات من الجيش خليفة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-ibrahim"
+      ],
+      "battleId": null,
+      "sourceTitle": "استيلاء مروان بن محمد على دمشق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_II",
+      "id": "um-event-089"
+    },
+    {
+      "year": 744,
+      "title": "قتل خالد القسري في الشام",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "قُتل خالد القسري بعد سجنه في اضطرابات الانتقال بين خلفاء سنة 744م.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-yazid3",
+        "um-person-khalid_qasri"
+      ],
+      "battleId": null,
+      "sourceTitle": "قتل خالد القسري في الشام",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Khalid_al-Qasri",
+      "id": "um-event-090"
+    },
+    {
+      "year": 744,
+      "title": "انشقاق مروان الثاني عن إبراهيم",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "تخلى مروان عن الاعتراف بإبراهيم، وحشد أنصاره في الجزيرة قبل تحركه إلى دمشق.",
+      "cityIds": [
+        "um-city-harran"
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-ibrahim"
+      ],
+      "battleId": null,
+      "sourceTitle": "انشقاق مروان الثاني عن إبراهيم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_II",
+      "id": "um-event-091"
+    },
+    {
+      "year": 745,
+      "title": "نقل مركز الحكم إلى حرّان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "اتخذ مروان الثاني حرّان مقرًا للحكم، بعيدًا عن دمشق التي ظلت مركزًا رمزيًا مهمًا.",
+      "cityIds": [
+        "um-city-harran"
+      ],
+      "personIds": [
+        "um-person-marwan2"
+      ],
+      "battleId": null,
+      "sourceTitle": "نقل مركز الحكم إلى حرّان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Marwan_II",
+      "id": "um-event-092"
+    },
+    {
+      "year": 747,
+      "title": "اتساع الدعوة العباسية في خراسان",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "بدأ أبو مسلم الخراساني الثورة العلنية في خراسان، مستفيدًا من الاستياء والانقسامات المحلية.",
+      "cityIds": [
+        "um-city-merv"
+      ],
+      "personIds": [
+        "um-person-nasr",
+        "um-person-abu_muslim"
+      ],
+      "battleId": null,
+      "sourceTitle": "اتساع الدعوة العباسية في خراسان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abbasid_Revolution",
+      "id": "um-event-093"
+    },
+    {
+      "year": 747,
+      "title": "تحرك نصر بن سيار لاحتواء الثورة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "حاول نصر بن سيار موازنة الصراع القبلي ومواجهة الدعوة العباسية، لكنه لم يحصل على دعم كاف من الخليفة.",
+      "cityIds": [
+        "um-city-merv"
+      ],
+      "personIds": [
+        "um-person-nasr",
+        "um-person-abu_muslim"
+      ],
+      "battleId": null,
+      "sourceTitle": "تحرك نصر بن سيار لاحتواء الثورة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Nasr_ibn_Sayyar",
+      "id": "um-event-094"
+    },
+    {
+      "year": 749,
+      "title": "دخول العباسيين الكوفة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "دخل قادة الدعوة العباسية الكوفة وأعلنوا قيام السلطة الجديدة، قبيل المواجهة الحاسمة مع مروان الثاني.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-abu_muslim",
+        "um-person-marwan2"
+      ],
+      "battleId": null,
+      "sourceTitle": "دخول العباسيين الكوفة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abbasid_Revolution",
+      "id": "um-event-095"
+    },
+    {
+      "year": 749,
+      "title": "مبايعة أبي العباس السفاح",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "بويع أبو العباس بالخلافة في الكوفة، معلنًا انتقال السلطة إلى العباسيين في المشرق.",
+      "cityIds": [
+        "um-city-kufa"
+      ],
+      "personIds": [
+        "um-person-abu_muslim"
+      ],
+      "battleId": null,
+      "sourceTitle": "مبايعة أبي العباس السفاح",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abbasid_Revolution",
+      "id": "um-event-096"
+    },
+    {
+      "year": 750,
+      "title": "معركة الزاب الكبير",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "هُزم الجيش الأموي أمام العباسيين على نهر الزاب، وكانت المعركة نقطة تحول في سقوط الخلافة الأموية بالمشرق.",
+      "cityIds": [
+        "um-city-harran"
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-abu_muslim"
+      ],
+      "battleId": "um-battle-zab",
+      "sourceTitle": "معركة الزاب الكبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Zab",
+      "id": "um-event-097"
+    },
+    {
+      "year": 750,
+      "title": "سقوط دمشق بيد العباسيين",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "دخلت القوات العباسية دمشق بعد انهيار الجبهة الأموية في العراق والجزيرة.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-abu_muslim"
+      ],
+      "battleId": null,
+      "sourceTitle": "سقوط دمشق بيد العباسيين",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abbasid_Revolution",
+      "id": "um-event-098"
+    },
+    {
+      "year": 750,
+      "title": "نهاية الخلافة الأموية في المشرق",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "أنهت الثورة العباسية حكم بني أمية في المشرق بعد قرابة تسعة عقود، مع استمرار الفرع الأموي لاحقًا في الأندلس.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-abu_muslim"
+      ],
+      "battleId": null,
+      "sourceTitle": "نهاية الخلافة الأموية في المشرق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Umayyad_Caliphate",
+      "id": "um-event-099"
+    },
+    {
+      "year": 750,
+      "title": "نجاة عبد الرحمن بن معاوية من سقوط الدولة",
+      "state": "الدولة الأموية",
+      "period": "العصر الأموي",
+      "century": 8,
+      "datePrecision": "سنة",
+      "description": "نجا عبد الرحمن بن معاوية من ملاحقة العباسيين واتجه غربًا؛ وأسس بعد سنوات إمارة أموية مستقلة في الأندلس.",
+      "cityIds": [
+        "um-city-damascus"
+      ],
+      "personIds": [
+        "um-person-marwan2"
+      ],
+      "battleId": null,
+      "sourceTitle": "نجاة عبد الرحمن بن معاوية من سقوط الدولة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Abd_al-Rahman_I",
+      "id": "um-event-100"
+    }
+  ],
+  "cities": [
+    {
+      "id": "um-city-damascus",
+      "name": "دمشق",
+      "region": "الشام",
+      "coordinates": [
+        33.5138,
+        36.2763
+      ],
+      "description": "عاصمة الخلافة الأموية ومركز البلاط والإدارة.",
+      "eventIds": [
+        "um-event-002",
+        "um-event-003",
+        "um-event-004",
+        "um-event-008",
+        "um-event-009",
+        "um-event-016",
+        "um-event-017",
+        "um-event-018",
+        "um-event-020",
+        "um-event-021",
+        "um-event-027",
+        "um-event-033",
+        "um-event-034",
+        "um-event-041",
+        "um-event-043",
+        "um-event-056",
+        "um-event-057",
+        "um-event-059",
+        "um-event-061",
+        "um-event-062",
+        "um-event-067",
+        "um-event-069",
+        "um-event-073",
+        "um-event-083",
+        "um-event-086",
+        "um-event-087",
+        "um-event-088",
+        "um-event-089",
+        "um-event-090",
+        "um-event-098",
+        "um-event-099",
+        "um-event-100"
+      ],
+      "sourceTitle": "دمشق",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Damascus"
+    },
+    {
+      "id": "um-city-medina",
+      "name": "المدينة المنورة",
+      "region": "الحجاز",
+      "coordinates": [
+        24.4672,
+        39.6111
+      ],
+      "description": "مدينة الحجاز التي شهدت أحداث الحرة ومركزًا دينيًا وسياسيًا.",
+      "eventIds": [
+        "um-event-010",
+        "um-event-013",
+        "um-event-014",
+        "um-event-031",
+        "um-event-045"
+      ],
+      "sourceTitle": "المدينة المنورة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Medina"
+    },
+    {
+      "id": "um-city-mecca",
+      "name": "مكة المكرمة",
+      "region": "الحجاز",
+      "coordinates": [
+        21.3891,
+        39.8579
+      ],
+      "description": "مركز الحجاز الذي شهد حصار ابن الزبير وانتهاء خلافته.",
+      "eventIds": [
+        "um-event-015",
+        "um-event-019",
+        "um-event-030"
+      ],
+      "sourceTitle": "مكة المكرمة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mecca"
+    },
+    {
+      "id": "um-city-jerusalem",
+      "name": "القدس",
+      "region": "فلسطين",
+      "coordinates": [
+        31.7683,
+        35.2137
+      ],
+      "description": "مدينة ذات مكانة دينية، وفيها أنشأ عبد الملك قبة الصخرة.",
+      "eventIds": [
+        "um-event-029"
+      ],
+      "sourceTitle": "القدس",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jerusalem"
+    },
+    {
+      "id": "um-city-kufa",
+      "name": "الكوفة",
+      "region": "العراق",
+      "coordinates": [
+        32.0303,
+        44.4031
+      ],
+      "description": "حاضرة عراقية شهدت صراعات الفتنة الثانية وتمرد المختار وابن الأشعث.",
+      "eventIds": [
+        "um-event-001",
+        "um-event-011",
+        "um-event-012",
+        "um-event-022",
+        "um-event-024",
+        "um-event-026",
+        "um-event-032",
+        "um-event-035",
+        "um-event-038",
+        "um-event-065",
+        "um-event-066",
+        "um-event-068",
+        "um-event-084",
+        "um-event-085",
+        "um-event-095",
+        "um-event-096"
+      ],
+      "sourceTitle": "الكوفة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kufa"
+    },
+    {
+      "id": "um-city-basra",
+      "name": "البصرة",
+      "region": "العراق",
+      "coordinates": [
+        30.5085,
+        47.7804
+      ],
+      "description": "مركز إداري وعلمي وتجاري مهم في جنوب العراق.",
+      "eventIds": [
+        "um-event-025",
+        "um-event-037",
+        "um-event-039",
+        "um-event-050",
+        "um-event-051",
+        "um-event-052",
+        "um-event-063",
+        "um-event-071"
+      ],
+      "sourceTitle": "البصرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Basra"
+    },
+    {
+      "id": "um-city-wasit",
+      "name": "واسط",
+      "region": "العراق",
+      "coordinates": [
+        32.4827,
+        45.8374
+      ],
+      "description": "مدينة أنشأها الحجاج بن يوسف لتكون مركزًا إداريًا وعسكريًا في العراق.",
+      "eventIds": [
+        "um-event-028",
+        "um-event-040",
+        "um-event-064"
+      ],
+      "sourceTitle": "واسط",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wasit"
+    },
+    {
+      "id": "um-city-harran",
+      "name": "حرّان",
+      "region": "الجزيرة",
+      "coordinates": [
+        36.8641,
+        39.032
+      ],
+      "description": "اختارها مروان الثاني مركزًا لحكمه في أواخر الدولة الأموية.",
+      "eventIds": [
+        "um-event-078",
+        "um-event-091",
+        "um-event-092",
+        "um-event-097"
+      ],
+      "sourceTitle": "حرّان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Harran"
+    },
+    {
+      "id": "um-city-aleppo",
+      "name": "حلب",
+      "region": "الشام",
+      "coordinates": [
+        36.2021,
+        37.1343
+      ],
+      "description": "حاضرة شمال الشام وملتقى طرق بين الأناضول والجزيرة.",
+      "eventIds": [
+        "um-event-004"
+      ],
+      "sourceTitle": "حلب",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Aleppo"
+    },
+    {
+      "id": "um-city-homs",
+      "name": "حمص",
+      "region": "الشام",
+      "coordinates": [
+        34.7324,
+        36.7137
+      ],
+      "description": "مدينة شامية ذات حامية وموقع محوري بين دمشق وشمال الشام.",
+      "eventIds": [
+        "um-event-004"
+      ],
+      "sourceTitle": "حمص",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Homs"
+    },
+    {
+      "id": "um-city-fustat",
+      "name": "الفسطاط",
+      "region": "مصر",
+      "coordinates": [
+        30,
+        31.23
+      ],
+      "description": "مركز الإدارة العربية في مصر منذ الفتح، واستمرت أهميتها في العصر الأموي.",
+      "eventIds": [
+        "um-event-005",
+        "um-event-023",
+        "um-event-044"
+      ],
+      "sourceTitle": "الفسطاط",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Fustat"
+    },
+    {
+      "id": "um-city-alexandria",
+      "name": "الإسكندرية",
+      "region": "مصر",
+      "coordinates": [
+        31.2001,
+        29.9187
+      ],
+      "description": "ميناء مصر الرئيس ومدينة استراتيجية على ساحل المتوسط.",
+      "eventIds": [
+        "um-event-005"
+      ],
+      "sourceTitle": "الإسكندرية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Alexandria"
+    },
+    {
+      "id": "um-city-kairouan",
+      "name": "القيروان",
+      "region": "إفريقية",
+      "coordinates": [
+        35.6781,
+        10.0963
+      ],
+      "description": "قاعدة عسكرية وإدارية أسسها عقبة بن نافع نحو 670م.",
+      "eventIds": [
+        "um-event-006"
+      ],
+      "sourceTitle": "القيروان",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kairouan"
+    },
+    {
+      "id": "um-city-carthage",
+      "name": "قرطاج",
+      "region": "إفريقية",
+      "coordinates": [
+        36.8528,
+        10.3233
+      ],
+      "description": "مدينة ساحلية استعادها الأمويون سنة 698م في صراعهم على إفريقية.",
+      "eventIds": [
+        "um-event-036",
+        "um-event-080",
+        "um-event-082"
+      ],
+      "sourceTitle": "قرطاج",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Carthage"
+    },
+    {
+      "id": "um-city-tangier",
+      "name": "طنجة",
+      "region": "المغرب الأقصى",
+      "coordinates": [
+        35.7595,
+        -5.834
+      ],
+      "description": "ميناء على مضيق جبل طارق ونقطة انطلاق لحملة الأندلس.",
+      "eventIds": [
+        "um-event-047",
+        "um-event-079",
+        "um-event-081"
+      ],
+      "sourceTitle": "طنجة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tangier"
+    },
+    {
+      "id": "um-city-cordoba",
+      "name": "قرطبة",
+      "region": "الأندلس",
+      "coordinates": [
+        37.8882,
+        -4.7794
+      ],
+      "description": "مدينة أندلسية أصبحت مركزًا للحكم الأموي في الأندلس بعد 756م.",
+      "eventIds": [
+        "um-event-049",
+        "um-event-054",
+        "um-event-075",
+        "um-event-076",
+        "um-event-077"
+      ],
+      "sourceTitle": "قرطبة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Cordoba"
+    },
+    {
+      "id": "um-city-toledo",
+      "name": "طليطلة",
+      "region": "الأندلس",
+      "coordinates": [
+        39.8628,
+        -4.0273
+      ],
+      "description": "مدينة مهمة في شبه الجزيرة الإيبيرية خلال الفتح الأموي.",
+      "eventIds": [
+        "um-event-048"
+      ],
+      "sourceTitle": "طليطلة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Toledo"
+    },
+    {
+      "id": "um-city-merv",
+      "name": "مرو",
+      "region": "خراسان",
+      "coordinates": [
+        37.661,
+        62.196
+      ],
+      "description": "قاعدة إدارية شرقية ارتبطت بحملات خراسان وبداية الثورة العباسية.",
+      "eventIds": [
+        "um-event-042",
+        "um-event-070",
+        "um-event-072",
+        "um-event-093",
+        "um-event-094"
+      ],
+      "sourceTitle": "مرو",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Merv"
+    },
+    {
+      "id": "um-city-bukhara",
+      "name": "بخارى",
+      "region": "ما وراء النهر",
+      "coordinates": [
+        39.768,
+        64.455
+      ],
+      "description": "حاضرة ما وراء النهر التي دخلت في نطاق الحملات الأموية الشرقية.",
+      "eventIds": [
+        "um-event-046",
+        "um-event-053",
+        "um-event-055",
+        "um-event-074"
+      ],
+      "sourceTitle": "بخارى",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bukhara"
+    },
+    {
+      "id": "um-city-constantinople",
+      "name": "القسطنطينية",
+      "region": "البيزنطيون",
+      "coordinates": [
+        41.0082,
+        28.9784
+      ],
+      "description": "عاصمة بيزنطة وهدف الحملات الأموية البحرية والبرية.",
+      "eventIds": [
+        "um-event-007",
+        "um-event-058",
+        "um-event-060"
+      ],
+      "sourceTitle": "القسطنطينية",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Constantinople"
+    }
+  ],
+  "battles": [
+    {
+      "id": "um-battle-karbala",
+      "name": "كربلاء",
+      "year": 680,
+      "eventId": "um-event-011",
+      "cityId": "um-city-kufa",
+      "coordinates": [
+        32.616,
+        44.024
+      ],
+      "personIds": [
+        "um-person-husayn",
+        "um-person-yazid1",
+        "um-person-ubaydullah"
+      ],
+      "description": "قُتل الحسين بن علي وأصحابه في كربلاء؛ وتعد الواقعة من أكثر أحداث العصر الأموي أثرًا في الذاكرة الإسلامية.",
+      "sourceTitle": "كربلاء",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Karbala"
+    },
+    {
+      "id": "um-battle-harra",
+      "name": "الحرة",
+      "year": 683,
+      "eventId": "um-event-014",
+      "cityId": "um-city-medina",
+      "coordinates": [
+        24.47,
+        39.61
+      ],
+      "personIds": [
+        "um-person-yazid1"
+      ],
+      "description": "واجه جيش أرسله يزيد أهل المدينة قرب الحرة؛ وتختلف المصادر في أعداد القتلى وتفاصيل الوقعة.",
+      "sourceTitle": "الحرة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_al-Harra"
+    },
+    {
+      "id": "um-battle-marj-rahit",
+      "name": "مرج راهط",
+      "year": 684,
+      "eventId": "um-event-018",
+      "cityId": "um-city-damascus",
+      "coordinates": [
+        33.7,
+        36.5
+      ],
+      "personIds": [
+        "um-person-marwan1"
+      ],
+      "description": "انتهت المواجهة قرب دمشق بانتصار أنصار مروان على خصومه، ورسخت نفوذ البيت المرواني.",
+      "sourceTitle": "مرج راهط",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Marj_Rahit_(684)"
+    },
+    {
+      "id": "um-battle-khazir",
+      "name": "الخازر",
+      "year": 686,
+      "eventId": "um-event-024",
+      "cityId": "um-city-kufa",
+      "coordinates": [
+        36.31,
+        43.53
+      ],
+      "personIds": [
+        "um-person-ubaydullah"
+      ],
+      "description": "هُزمت قوات عبيد الله بن زياد في معركة الخازر أمام جيش إبراهيم بن الأشتر الموالي للمختار.",
+      "sourceTitle": "الخازر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Khazir"
+    },
+    {
+      "id": "um-battle-maskin",
+      "name": "مسكن",
+      "year": 691,
+      "eventId": "um-event-028",
+      "cityId": "um-city-wasit",
+      "coordinates": [
+        33.8233,
+        44.24
+      ],
+      "personIds": [
+        "um-person-abdmalik",
+        "um-person-ibn_zubayr"
+      ],
+      "description": "هزم عبد الملك جيش مصعب بن الزبير عند مسكن، فاتسع الطريق لاستعادة العراق.",
+      "sourceTitle": "مسكن",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Maskin"
+    },
+    {
+      "id": "um-battle-dayr-jamajim",
+      "name": "دير الجماجم",
+      "year": 701,
+      "eventId": "um-event-038",
+      "cityId": "um-city-kufa",
+      "coordinates": [
+        32.3,
+        44.3
+      ],
+      "personIds": [
+        "um-person-hajjaj",
+        "um-person-ibn_ashath"
+      ],
+      "description": "انتهت المعركة بانتصار قوات الحجاج على جيش ابن الأشعث قرب الكوفة، مع استمرار المقاومة بعدها.",
+      "sourceTitle": "دير الجماجم",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Dayr_al-Jamajim"
+    },
+    {
+      "id": "um-battle-guadalete",
+      "name": "وادي لكة",
+      "year": 711,
+      "eventId": "um-event-048",
+      "cityId": "um-city-toledo",
+      "coordinates": [
+        36.5,
+        -5.6
+      ],
+      "personIds": [
+        "um-person-tariq",
+        "um-person-musa"
+      ],
+      "description": "هُزم جيش الملك القوطي رودريك في المعركة التي فتحت الطريق أمام التوسع الأموي في أيبيريا؛ وموقعها الدقيق موضع نقاش.",
+      "sourceTitle": "وادي لكة",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Guadalete"
+    },
+    {
+      "id": "um-battle-defile",
+      "name": "الممر في ما وراء النهر",
+      "year": 731,
+      "eventId": "um-event-074",
+      "cityId": "um-city-bukhara",
+      "coordinates": [
+        39.2939,
+        66.9097
+      ],
+      "personIds": [
+        "um-person-hisham",
+        "um-person-asad"
+      ],
+      "description": "تعرض جيش أموي لهزيمة كبيرة في ممر جبلي خلال الصراع مع قوى تركية في آسيا الوسطى؛ ويختلف تحديد الموقع والتأريخ.",
+      "sourceTitle": "الممر في ما وراء النهر",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Defile"
+    },
+    {
+      "id": "um-battle-tours",
+      "name": "بلاط الشهداء",
+      "year": 732,
+      "eventId": "um-event-076",
+      "cityId": "um-city-cordoba",
+      "coordinates": [
+        46.6,
+        0.35
+      ],
+      "personIds": [
+        "um-person-ghafiqi"
+      ],
+      "description": "انتهت الحملة الأموية شمال البرانس بهزيمة جيش عبد الرحمن الغافقي قرب تور/بواتييه، وتختلف المصادر في وصف أثرها طويل المدى.",
+      "sourceTitle": "بلاط الشهداء",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_Tours"
+    },
+    {
+      "id": "um-battle-zab",
+      "name": "الزاب الكبير",
+      "year": 750,
+      "eventId": "um-event-097",
+      "cityId": "um-city-harran",
+      "coordinates": [
+        36.5,
+        43.6
+      ],
+      "personIds": [
+        "um-person-marwan2",
+        "um-person-abu_muslim"
+      ],
+      "description": "هُزم الجيش الأموي أمام العباسيين على نهر الزاب، وكانت المعركة نقطة تحول في سقوط الخلافة الأموية بالمشرق.",
+      "sourceTitle": "الزاب الكبير",
+      "sourceName": "Wikipedia",
+      "sourceLicense": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Battle_of_the_Zab"
+    }
+  ]
+}

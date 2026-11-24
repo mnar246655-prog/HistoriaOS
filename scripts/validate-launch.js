@@ -13,11 +13,14 @@ const requiredFiles = [
     "website/events.html",
     "website/maps.html",
     "website/timeline.html",
+    "website/umayyad.html",
     "website/about.html",
     "website/pricing.html",
     "website/contact.html",
     "website/app.js",
+    "website/umayyad.js",
     "website/styles.css",
+    "umayyad/data.json",
     "books/books.json",
     "people/people.json",
     "events/events.json"
@@ -40,6 +43,15 @@ const htmlFiles = [
     path.join(root, "404.html"),
     ...listFiles(path.join(root, "website"), ".html")
 ];
+for (const htmlPath of listFiles(path.join(root, "website"), ".html")) {
+    const html = fs.readFileSync(htmlPath, "utf8");
+    const navStart = html.indexOf('<nav class="site-nav"');
+    if (navStart < 0) continue;
+    const navEnd = html.indexOf("</nav>", navStart);
+    if (!html.slice(navStart, navEnd).includes('href="umayyad.html"')) {
+        errors.push(`Missing Umayyad link in navigation: ${path.relative(root, htmlPath)}`);
+    }
+}
 const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
 if (!/<meta\s+http-equiv=["']refresh["']\s+content=["']0;\s*url=website\/index\.html["']/i.test(rootIndex)) {
     errors.push("index.html must redirect to website/index.html.");
@@ -133,6 +145,92 @@ if (events && events.some((event, index) => {
         || (index > 0 && Number(events[index - 1].year) > year);
 })) {
     errors.push("events/events.json: years, centuries, and chronological ordering must be valid.");
+}
+
+let umayyadData;
+try {
+    umayyadData = JSON.parse(fs.readFileSync(path.join(root, "umayyad/data.json"), "utf8"));
+} catch (error) {
+    errors.push(`Invalid JSON in umayyad/data.json: ${error.message}`);
+}
+
+if (umayyadData) {
+    const groups = [
+        ["people", 50],
+        ["events", 100],
+        ["cities", 20],
+        ["battles", 10]
+    ];
+    const idsByGroup = new Map();
+    for (const [group, count] of groups) {
+        const records = umayyadData[group];
+        if (!Array.isArray(records) || records.length !== count) {
+            errors.push(`umayyad/data.json: expected ${count} ${group}.`);
+            idsByGroup.set(group, new Set());
+            continue;
+        }
+        const ids = records.map(record => record.id);
+        if (ids.some(id => !id) || new Set(ids).size !== ids.length) {
+            errors.push(`umayyad/data.json: ${group} require unique IDs.`);
+        }
+        if (records.some(record => !record.name && !record.title)) {
+            errors.push(`umayyad/data.json: ${group} contain an unnamed record.`);
+        }
+        if (records.some(record => !record.sourceTitle
+            || record.sourceName !== "Wikipedia"
+            || record.sourceLicense !== "CC BY-SA 4.0"
+            || !/^https:\/\/en\.wikipedia\.org\/wiki\/[^\s]+$/.test(record.sourceUrl || ""))) {
+            errors.push(`umayyad/data.json: ${group} require attributed Wikipedia references.`);
+        }
+        idsByGroup.set(group, new Set(ids));
+    }
+
+    const peopleById = new Map(umayyadData.people.map(person => [person.id, person]));
+    const eventsById = new Map(umayyadData.events.map(event => [event.id, event]));
+    const citiesById = new Map(umayyadData.cities.map(city => [city.id, city]));
+    const battlesById = new Map(umayyadData.battles.map(battle => [battle.id, battle]));
+    if (umayyadData.events.some((event, index) => {
+        const year = Number(event.year);
+        return !Number.isInteger(year)
+            || year < 661
+            || year > 750
+            || !event.description
+            || !["سنة", "تقريبية"].includes(event.datePrecision)
+            || (index > 0 && Number(umayyadData.events[index - 1].year) > year)
+            || !event.cityIds.length
+            || event.cityIds.some(id => !citiesById.has(id))
+            || !event.personIds.length
+            || event.personIds.some(id => !peopleById.has(id))
+            || event.battleId && !battlesById.has(event.battleId);
+    })) {
+        errors.push("umayyad/data.json: events require ordered 661-750 dates and valid city, person, and battle links.");
+    }
+    if (umayyadData.people.some(person => !person.description
+        || !person.eventIds.length
+        || person.eventIds.some(id => !eventsById.has(id) || !eventsById.get(id).personIds.includes(person.id)))) {
+        errors.push("umayyad/data.json: every person must link to existing related events.");
+    }
+    if (umayyadData.cities.some(city => !Array.isArray(city.coordinates)
+        || city.coordinates.length !== 2
+        || !city.coordinates.every(Number.isFinite)
+        || Math.abs(city.coordinates[0]) > 90
+        || Math.abs(city.coordinates[1]) > 180
+        || !city.eventIds.length
+        || city.eventIds.some(id => !eventsById.has(id) || !eventsById.get(id).cityIds.includes(city.id)))) {
+        errors.push("umayyad/data.json: cities require valid coordinates and reciprocal event links.");
+    }
+    if (umayyadData.battles.some(battle => !eventsById.has(battle.eventId)
+        || !citiesById.has(battle.cityId)
+        || !battle.personIds.length
+        || battle.personIds.some(id => !peopleById.has(id))
+        || !Array.isArray(battle.coordinates)
+        || battle.coordinates.length !== 2
+        || !battle.coordinates.every(Number.isFinite)
+        || !eventsById.get(battle.eventId).cityIds.includes(battle.cityId)
+        || battle.personIds.some(id => !eventsById.get(battle.eventId).personIds.includes(id))
+        || eventsById.get(battle.eventId).battleId !== battle.id)) {
+        errors.push("umayyad/data.json: battles require valid coordinates and reciprocal event, city, and person links.");
+    }
 }
 
 const appPath = path.join(root, "website/app.js");

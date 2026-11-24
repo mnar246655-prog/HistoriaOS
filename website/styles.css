@@ -291,6 +291,31 @@ a { color: inherit; }
 .form-note, .contact-status { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
 .contact-status { color: #805d22; font-weight: 700; }
 
+.umayyad-hero { margin-bottom: 24px; padding: clamp(24px, 5vw, 48px); border-radius: 20px; color: var(--white); background: linear-gradient(125deg, #183c35, #28594c 68%, #63754d); }
+.umayyad-hero .eyebrow { margin: 0 0 10px; color: #e2c88f; font-size: 11px; font-weight: 700; }
+.umayyad-hero h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); }
+.umayyad-hero > p:not(.eyebrow) { max-width: 760px; margin: 12px 0 0; color: rgba(255,255,255,.82); font-size: 13px; line-height: 1.9; }
+.umayyad-section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.umayyad-section-nav a { padding: 8px 12px; border: 1px solid rgba(255,255,255,.28); border-radius: 20px; color: var(--white); font-size: 11px; font-weight: 700; text-decoration: none; }
+.umayyad-section-nav a:hover { background: rgba(255,255,255,.12); }
+.umayyad-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0 0 28px; }
+.umayyad-stats article { display: grid; gap: 5px; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.umayyad-stats strong { color: var(--green-dark); font-size: 25px; }
+.umayyad-stats span { color: var(--muted); font-size: 11px; }
+.umayyad-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.umayyad-page > .map-status { margin: 0 0 18px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 9px; background: var(--white); }
+.umayyad-page .content-section { padding-top: 32px; scroll-margin-top: 100px; }
+.umayyad-page .collection-heading h2 { margin: 0; font-size: 23px; }
+.umayyad-page .collection-heading .eyebrow { margin: 0 0 6px; color: #9a8050; font-size: 10px; font-weight: 700; }
+.umayyad-relations { margin-top: 9px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.umayyad-relations a, .umayyad-battle-link, .umayyad-map-events a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.umayyad-battle-link { display: inline-flex; margin-top: 8px; font-size: 10px; }
+.umayyad-map-events { display: grid; gap: 5px; margin-top: 8px; font-size: 10px; line-height: 1.6; }
+.umayyad-battle-marker .history-marker { background: #a64e3c; }
+.umayyad-editorial-note { margin-top: 34px; padding: 20px 22px; border-right: 3px solid var(--gold); border-radius: 10px; background: #f0eee5; }
+.umayyad-editorial-note h2 { margin: 0; color: var(--green-dark); font-size: 15px; }
+.umayyad-editorial-note p { margin: 8px 0 0; color: #59665f; font-size: 11px; line-height: 1.9; }
+
 .site-footer { margin-top: 52px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 10px; }
 .site-footer span { margin: 0 4px; color: var(--gold); }
 
@@ -302,6 +327,7 @@ a { color: inherit; }
     .hero-seal { flex-basis: 145px; width: 145px; height: 145px; margin-left: 5px; font-size: 58px; }
     .hero-seal::after { inset: 21px; }
     .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .umayyad-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 1100px) and (min-width: 851px) {
@@ -349,6 +375,9 @@ a { color: inherit; }
     .pricing-grid { grid-template-columns: 1fr; }
     .pricing-card ul { min-height: auto; }
     .about-panel, .contact-panel { padding: 20px; }
+    .umayyad-toolbar { align-items: stretch; }
+    .umayyad-stats article { padding: 12px; }
+    .umayyad-editorial-note { padding: 17px; }
 }
 
 @media print {

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="موسوعة الدولة الأموية: شخصيات وأحداث ومدن ومعارك موثقة بروابط المصادر وخريطة تفاعلية.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | موسوعة الدولة الأموية">
+    <meta property="og:description" content="استكشف الدولة الأموية عبر الشخصيات والأحداث والمدن والمعارك والروابط التاريخية بينها.">
+    <title>HistoriaOS | موسوعة الدولة الأموية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="umayyad.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="umayyad.html" aria-current="page">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page umayyad-page">
+        <section class="umayyad-hero">
+            <p class="eyebrow">القسم الاحترافي الأول · 661–750م</p>
+            <h1>موسوعة الدولة الأموية</h1>
+            <p>اقرأ تاريخ الدولة بوصفه شبكة من الأشخاص والأحداث والأماكن: من دمشق ومراكز المشرق إلى إفريقية والأندلس، مع تمييز الوقائع المؤرخة تقريبًا وروابط مصادر القراءة.</p>
+            <nav class="umayyad-section-nav" aria-label="أقسام الموسوعة">
+                <a href="#umayyad-people-section">الشخصيات</a>
+                <a href="#umayyad-events-section">الأحداث</a>
+                <a href="#umayyad-map-section">المدن والخريطة</a>
+                <a href="#umayyad-battles-section">المعارك</a>
+            </nav>
+        </section>
+
+        <section class="umayyad-stats" aria-label="محتويات الموسوعة">
+            <article><strong data-umayyad-count="people">—</strong><span>شخصية مرتبطة بالأحداث</span></article>
+            <article><strong data-umayyad-count="events">—</strong><span>حدث في التسلسل التاريخي</span></article>
+            <article><strong data-umayyad-count="cities">—</strong><span>مدينة على الخريطة</span></article>
+            <article><strong data-umayyad-count="battles">—</strong><span>معركة موثقة الإحداثيات</span></article>
+        </section>
+
+        <div class="collection-toolbar umayyad-toolbar">
+            <span class="result-label">ابحث في سجلات هذا القسم</span>
+            <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="umayyad-search" class="search-input" type="search" placeholder="اسم أو حدث أو مدينة" aria-label="ابحث في موسوعة الدولة الأموية"></label>
+        </div>
+        <p id="umayyad-status" class="map-status" role="status" aria-live="polite">جارٍ تحميل بيانات الموسوعة...</p>
+
+        <section id="umayyad-map-section" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">الجغرافيا السياسية</p><h2>مدن الدولة ومسارات الأحداث</h2><p>تربط كل مدينة بأحداثها، وتظهر المعارك بعلامات مستقلة في مواقعها التقريبية.</p></div></div>
+            <div class="map-explorer">
+                <aside class="map-sidebar">
+                    <div class="map-sidebar-heading"><div><h2>مدن مرتبطة بالأمويين</h2><p>اختر مدينة لعرض موضعها وأحداثها</p></div><span class="map-count">٢٠ مدينة</span></div>
+                    <div class="map-locations" id="umayyad-cities" aria-label="قائمة المدن"></div>
+                </aside>
+                <div class="map-frame"><div id="umayyad-map" class="history-map" role="application" aria-label="خريطة تفاعلية للمدن والمعارك الأموية"></div></div>
+            </div>
+            <noscript><p class="map-unavailable">تتطلب الموسوعة تفعيل JavaScript لعرض البيانات والخريطة.</p></noscript>
+        </section>
+
+        <section id="umayyad-people-section" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">الوجوه والسياقات</p><h2>الشخصيات</h2><p>ترتبط كل بطاقة بالأحداث التي تظهر فيها ضمن هذا القسم، سواء أكانت شخصية حاكمة أم إدارية أم معارضة أم ثقافية.</p></div></div>
+            <div id="umayyad-people" class="card-grid" aria-live="polite"><p class="empty-state">جارٍ تحميل الشخصيات...</p></div>
+        </section>
+
+        <section id="umayyad-events-section" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">التسلسل الزمني</p><h2>الأحداث</h2><p>تصل سجلات الأحداث بالشخصيات والمدن والمعارك ذات الصلة.</p></div></div>
+            <div id="umayyad-events" class="card-grid" aria-live="polite"><p class="empty-state">جارٍ تحميل الأحداث...</p></div>
+        </section>
+
+        <section id="umayyad-battles-section" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">المواجهات والتحولات</p><h2>معارك مختارة</h2><p>كل معركة سجل مستقل متصل بحدثه وأشخاصه وموضعه على الخريطة.</p></div></div>
+            <div id="umayyad-battles" class="card-grid" aria-live="polite"><p class="empty-state">جارٍ تحميل المعارك...</p></div>
+        </section>
+
+        <aside class="umayyad-editorial-note">
+            <h2>ملاحظة منهجية</h2>
+            <p>تختلف دقة التواريخ وأسماء المواقع في المصادر الوسيطة، لذلك تعرض السجلات السنة التقريبية عند الحاجة. الروابط الخارجية إحالات للقراءة وليست بديلًا عن مقابلة الروايات والمراجع الأكاديمية. يركز هذا القسم على الخلافة الأموية في المشرق بين 661 و750م؛ أما الإمارة الأموية اللاحقة في الأندلس فتحتاج قسمًا مستقلًا.</p>
+        </aside>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>
