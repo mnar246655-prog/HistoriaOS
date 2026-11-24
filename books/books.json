@@ -1,0 +1,1125 @@
+[
+  {
+    "title": "البداية والنهاية",
+    "author": "ابن كثير",
+    "category": "التاريخ الإسلامي",
+    "description": "مرجع تاريخي بعنوان «البداية والنهاية» للمؤلف ابن كثير.",
+    "sourceTitle": "Al-Bidaya wa l-Nihaya",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Al-Bidaya_wa_l-Nihaya"
+  },
+  {
+    "title": "تاريخ الطبري",
+    "author": "الطبري",
+    "category": "الخلافة الإسلامية",
+    "description": "مرجع تاريخي بعنوان «تاريخ الطبري» للمؤلف الطبري.",
+    "sourceTitle": "History of the Prophets and Kings",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/History_of_the_Prophets_and_Kings"
+  },
+  {
+    "title": "الكامل في التاريخ",
+    "author": "ابن الأثير",
+    "category": "التاريخ العام",
+    "description": "مرجع تاريخي بعنوان «الكامل في التاريخ» للمؤلف ابن الأثير.",
+    "sourceTitle": "The Complete History",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Complete_History"
+  },
+  {
+    "id": "verified-book-01",
+    "title": "تواريخ هيرودوت",
+    "author": "هيرودوت",
+    "category": "التاريخ القديم",
+    "description": "سرد تاريخي للعالم اليوناني والفارسي، ومن أقدم الأعمال الباقية التي تجمع الرواية والتحري.",
+    "sourceTitle": "Histories (Herodotus)",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Histories_(Herodotus)"
+  },
+  {
+    "id": "verified-book-02",
+    "title": "تاريخ الحرب البيلوبونيسية",
+    "author": "ثوقيديدس",
+    "category": "التاريخ اليوناني",
+    "description": "تحليل للحرب بين أثينا وإسبرطة، يركز على أسباب الصراع ومساراته السياسية والعسكرية.",
+    "sourceTitle": "History of the Peloponnesian War",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/History_of_the_Peloponnesian_War"
+  },
+  {
+    "id": "verified-book-03",
+    "title": "أناباسيس",
+    "author": "زينوفون",
+    "category": "التاريخ العسكري",
+    "description": "رواية زينوفون لمسيرة المرتزقة اليونانيين وعودتهم بعد حملة كورش الأصغر.",
+    "sourceTitle": "Anabasis (Xenophon)",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Anabasis_(Xenophon)"
+  },
+  {
+    "id": "verified-book-04",
+    "title": "تعليقات على حرب الغال",
+    "author": "يوليوس قيصر",
+    "category": "التاريخ الروماني",
+    "description": "مذكرات قيصر عن حملاته في بلاد الغال خلال القرن الأول قبل الميلاد.",
+    "sourceTitle": "Commentarii de Bello Gallico",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Commentarii_de_Bello_Gallico"
+  },
+  {
+    "id": "verified-book-05",
+    "title": "الحرب اليهودية",
+    "author": "يوسيفوس",
+    "category": "تاريخ روما والشرق",
+    "description": "مصدر تاريخي يروي الثورة اليهودية والحرب مع روما في القرن الأول الميلادي.",
+    "sourceTitle": "The Jewish War",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Jewish_War"
+  },
+  {
+    "id": "verified-book-06",
+    "title": "حياة القياصرة الاثني عشر",
+    "author": "سويتونيوس",
+    "category": "التاريخ الروماني",
+    "description": "سير لاثني عشر حاكمًا رومانيًا، من يوليوس قيصر إلى دوميتيان.",
+    "sourceTitle": "The Twelve Caesars",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Twelve_Caesars"
+  },
+  {
+    "id": "verified-book-07",
+    "title": "مدينة الله",
+    "author": "أوغسطينوس",
+    "category": "الفكر والتاريخ",
+    "description": "عمل فلسفي ولاهوتي يقارن بين المدينة الأرضية والمدينة الإلهية في سياق التاريخ الروماني.",
+    "sourceTitle": "The City of God",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_City_of_God"
+  },
+  {
+    "id": "verified-book-08",
+    "title": "المقدمة",
+    "author": "ابن خلدون",
+    "category": "التاريخ وعلم الاجتماع",
+    "description": "مقدمة ابن خلدون في أحوال العمران والعصبية والدولة وطرق كتابة التاريخ.",
+    "sourceTitle": "Muqaddimah",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Muqaddimah"
+  },
+  {
+    "id": "verified-book-09",
+    "title": "تواريخ بوليبيوس",
+    "author": "بوليبيوس",
+    "category": "التاريخ القديم",
+    "description": "تتبع صعود روما واتساع نفوذها في حوض المتوسط خلال القرنين الثالث والثاني قبل الميلاد.",
+    "sourceTitle": "Histories (Polybius)",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Histories_(Polybius)"
+  },
+  {
+    "id": "verified-book-10",
+    "title": "مروج الذهب",
+    "author": "المسعودي",
+    "category": "التاريخ والجغرافيا",
+    "description": "مصنف يجمع أخبار الأمم والجغرافيا والملاحظات الثقافية في العالم المعروف للمؤلف.",
+    "sourceTitle": "The Meadows of Gold",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Meadows_of_Gold"
+  },
+  {
+    "id": "verified-book-11",
+    "title": "تاريخ الفرنجة",
+    "author": "غريغوري التوري",
+    "category": "تاريخ أوروبا الوسيط",
+    "description": "مصدر لاتيني عن ممالك الفرنجة وأحداث بلاد الغال في القرنين السادس والسابع.",
+    "sourceTitle": "History of the Franks",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/History_of_the_Franks"
+  },
+  {
+    "id": "verified-book-12",
+    "title": "تاريخ البيهقي",
+    "author": "أبو الفضل البيهقي",
+    "category": "التاريخ الإسلامي",
+    "description": "تأريخ فارسي بارز يصف بلاط الدولة الغزنوية وشؤونها السياسية في القرن الحادي عشر.",
+    "sourceTitle": "Tarikh-i Bayhaqi",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Tarikh-i_Bayhaqi"
+  },
+  {
+    "id": "verified-book-13",
+    "title": "الرحلة",
+    "author": "ابن بطوطة",
+    "category": "الرحلات والجغرافيا",
+    "description": "وصف لرحلات ابن بطوطة وما شاهده من مدن ومجتمعات في أنحاء واسعة من العالم الإسلامي.",
+    "sourceTitle": "Rihla",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Rihla"
+  },
+  {
+    "id": "verified-book-14",
+    "title": "فتوح البلدان",
+    "author": "البلاذري",
+    "category": "التاريخ الإسلامي",
+    "description": "مصدر عن الفتوحات وتطور الإدارة والمدن في الأقاليم الإسلامية المبكرة.",
+    "sourceTitle": "Futuh al-Buldan",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Futuh_al-Buldan"
+  },
+  {
+    "id": "verified-book-15",
+    "title": "السيرة النبوية",
+    "author": "ابن إسحاق",
+    "category": "السيرة والتاريخ الإسلامي",
+    "description": "من أقدم المصنفات المعروفة في سيرة النبي محمد، وصلتنا روايته في صيغ لاحقة.",
+    "sourceTitle": "Al-Sirah al-Nabawiyyah (Ibn Ishaq)",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Al-Sirah_al-Nabawiyyah_(Ibn_Ishaq)"
+  },
+  {
+    "id": "verified-book-16",
+    "title": "الأليكسياد",
+    "author": "آنا كومنين",
+    "category": "تاريخ بيزنطة",
+    "description": "تاريخ حكم الإمبراطور البيزنطي ألكسيوس الأول كما كتبته ابنته آنا كومنين.",
+    "sourceTitle": "Alexiad",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Alexiad"
+  },
+  {
+    "id": "verified-book-17",
+    "title": "الشاهنامة",
+    "author": "الفردوسي",
+    "category": "التاريخ والأدب الفارسي",
+    "description": "ملحمة فارسية تسرد تاريخًا أسطوريًا وملكيًا لإيران حتى الفتح الإسلامي.",
+    "sourceTitle": "Shahnameh",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Shahnameh"
+  },
+  {
+    "id": "verified-book-18",
+    "title": "السجل الأنجلوسكسوني",
+    "author": "مؤلفون متعددون",
+    "category": "تاريخ بريطانيا",
+    "description": "مجموعة حوليات تسجل أحداث إنجلترا منذ أواخر القرن التاسع وعلى امتداد قرون.",
+    "sourceTitle": "Anglo-Saxon Chronicle",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Anglo-Saxon_Chronicle"
+  },
+  {
+    "id": "verified-book-19",
+    "title": "الأمير",
+    "author": "نيكولو مكيافيلي",
+    "category": "الفكر السياسي",
+    "description": "رسالة في الحكم والسياسة ألّفها مكيافيلي في إيطاليا خلال عصر النهضة.",
+    "sourceTitle": "The Prince",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_Prince"
+  },
+  {
+    "id": "verified-book-20",
+    "title": "تاريخ اضمحلال وسقوط الإمبراطورية الرومانية",
+    "author": "إدوارد جيبون",
+    "category": "التاريخ الروماني",
+    "description": "دراسة تاريخية واسعة تتناول تحولات الإمبراطورية الرومانية الغربية والشرقية.",
+    "sourceTitle": "The History of the Decline and Fall of the Roman Empire",
+    "sourceName": "Wikipedia",
+    "sourceLicense": "CC BY-SA 4.0",
+    "sourceUrl": "https://en.wikipedia.org/wiki/The_History_of_the_Decline_and_Fall_of_the_Roman_Empire"
+  },
+  {
+    "id": "sample-book-001",
+    "title": "عنوان كتاب تجريبي 001",
+    "author": "مؤلف افتراضي 001",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-001"
+  },
+  {
+    "id": "sample-book-002",
+    "title": "عنوان كتاب تجريبي 002",
+    "author": "مؤلف افتراضي 002",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-002"
+  },
+  {
+    "id": "sample-book-003",
+    "title": "عنوان كتاب تجريبي 003",
+    "author": "مؤلف افتراضي 003",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-003"
+  },
+  {
+    "id": "sample-book-004",
+    "title": "عنوان كتاب تجريبي 004",
+    "author": "مؤلف افتراضي 004",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-004"
+  },
+  {
+    "id": "sample-book-005",
+    "title": "عنوان كتاب تجريبي 005",
+    "author": "مؤلف افتراضي 005",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-005"
+  },
+  {
+    "id": "sample-book-006",
+    "title": "عنوان كتاب تجريبي 006",
+    "author": "مؤلف افتراضي 006",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-006"
+  },
+  {
+    "id": "sample-book-007",
+    "title": "عنوان كتاب تجريبي 007",
+    "author": "مؤلف افتراضي 007",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-007"
+  },
+  {
+    "id": "sample-book-008",
+    "title": "عنوان كتاب تجريبي 008",
+    "author": "مؤلف افتراضي 008",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-008"
+  },
+  {
+    "id": "sample-book-009",
+    "title": "عنوان كتاب تجريبي 009",
+    "author": "مؤلف افتراضي 009",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-009"
+  },
+  {
+    "id": "sample-book-010",
+    "title": "عنوان كتاب تجريبي 010",
+    "author": "مؤلف افتراضي 010",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-010"
+  },
+  {
+    "id": "sample-book-011",
+    "title": "عنوان كتاب تجريبي 011",
+    "author": "مؤلف افتراضي 011",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-011"
+  },
+  {
+    "id": "sample-book-012",
+    "title": "عنوان كتاب تجريبي 012",
+    "author": "مؤلف افتراضي 012",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-012"
+  },
+  {
+    "id": "sample-book-013",
+    "title": "عنوان كتاب تجريبي 013",
+    "author": "مؤلف افتراضي 013",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-013"
+  },
+  {
+    "id": "sample-book-014",
+    "title": "عنوان كتاب تجريبي 014",
+    "author": "مؤلف افتراضي 014",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-014"
+  },
+  {
+    "id": "sample-book-015",
+    "title": "عنوان كتاب تجريبي 015",
+    "author": "مؤلف افتراضي 015",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-015"
+  },
+  {
+    "id": "sample-book-016",
+    "title": "عنوان كتاب تجريبي 016",
+    "author": "مؤلف افتراضي 016",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-016"
+  },
+  {
+    "id": "sample-book-017",
+    "title": "عنوان كتاب تجريبي 017",
+    "author": "مؤلف افتراضي 017",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-017"
+  },
+  {
+    "id": "sample-book-018",
+    "title": "عنوان كتاب تجريبي 018",
+    "author": "مؤلف افتراضي 018",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-018"
+  },
+  {
+    "id": "sample-book-019",
+    "title": "عنوان كتاب تجريبي 019",
+    "author": "مؤلف افتراضي 019",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-019"
+  },
+  {
+    "id": "sample-book-020",
+    "title": "عنوان كتاب تجريبي 020",
+    "author": "مؤلف افتراضي 020",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-020"
+  },
+  {
+    "id": "sample-book-021",
+    "title": "عنوان كتاب تجريبي 021",
+    "author": "مؤلف افتراضي 021",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-021"
+  },
+  {
+    "id": "sample-book-022",
+    "title": "عنوان كتاب تجريبي 022",
+    "author": "مؤلف افتراضي 022",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-022"
+  },
+  {
+    "id": "sample-book-023",
+    "title": "عنوان كتاب تجريبي 023",
+    "author": "مؤلف افتراضي 023",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-023"
+  },
+  {
+    "id": "sample-book-024",
+    "title": "عنوان كتاب تجريبي 024",
+    "author": "مؤلف افتراضي 024",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-024"
+  },
+  {
+    "id": "sample-book-025",
+    "title": "عنوان كتاب تجريبي 025",
+    "author": "مؤلف افتراضي 025",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-025"
+  },
+  {
+    "id": "sample-book-026",
+    "title": "عنوان كتاب تجريبي 026",
+    "author": "مؤلف افتراضي 026",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-026"
+  },
+  {
+    "id": "sample-book-027",
+    "title": "عنوان كتاب تجريبي 027",
+    "author": "مؤلف افتراضي 027",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-027"
+  },
+  {
+    "id": "sample-book-028",
+    "title": "عنوان كتاب تجريبي 028",
+    "author": "مؤلف افتراضي 028",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-028"
+  },
+  {
+    "id": "sample-book-029",
+    "title": "عنوان كتاب تجريبي 029",
+    "author": "مؤلف افتراضي 029",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-029"
+  },
+  {
+    "id": "sample-book-030",
+    "title": "عنوان كتاب تجريبي 030",
+    "author": "مؤلف افتراضي 030",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-030"
+  },
+  {
+    "id": "sample-book-031",
+    "title": "عنوان كتاب تجريبي 031",
+    "author": "مؤلف افتراضي 031",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-031"
+  },
+  {
+    "id": "sample-book-032",
+    "title": "عنوان كتاب تجريبي 032",
+    "author": "مؤلف افتراضي 032",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-032"
+  },
+  {
+    "id": "sample-book-033",
+    "title": "عنوان كتاب تجريبي 033",
+    "author": "مؤلف افتراضي 033",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-033"
+  },
+  {
+    "id": "sample-book-034",
+    "title": "عنوان كتاب تجريبي 034",
+    "author": "مؤلف افتراضي 034",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-034"
+  },
+  {
+    "id": "sample-book-035",
+    "title": "عنوان كتاب تجريبي 035",
+    "author": "مؤلف افتراضي 035",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-035"
+  },
+  {
+    "id": "sample-book-036",
+    "title": "عنوان كتاب تجريبي 036",
+    "author": "مؤلف افتراضي 036",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-036"
+  },
+  {
+    "id": "sample-book-037",
+    "title": "عنوان كتاب تجريبي 037",
+    "author": "مؤلف افتراضي 037",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-037"
+  },
+  {
+    "id": "sample-book-038",
+    "title": "عنوان كتاب تجريبي 038",
+    "author": "مؤلف افتراضي 038",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-038"
+  },
+  {
+    "id": "sample-book-039",
+    "title": "عنوان كتاب تجريبي 039",
+    "author": "مؤلف افتراضي 039",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-039"
+  },
+  {
+    "id": "sample-book-040",
+    "title": "عنوان كتاب تجريبي 040",
+    "author": "مؤلف افتراضي 040",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-040"
+  },
+  {
+    "id": "sample-book-041",
+    "title": "عنوان كتاب تجريبي 041",
+    "author": "مؤلف افتراضي 041",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-041"
+  },
+  {
+    "id": "sample-book-042",
+    "title": "عنوان كتاب تجريبي 042",
+    "author": "مؤلف افتراضي 042",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-042"
+  },
+  {
+    "id": "sample-book-043",
+    "title": "عنوان كتاب تجريبي 043",
+    "author": "مؤلف افتراضي 043",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-043"
+  },
+  {
+    "id": "sample-book-044",
+    "title": "عنوان كتاب تجريبي 044",
+    "author": "مؤلف افتراضي 044",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-044"
+  },
+  {
+    "id": "sample-book-045",
+    "title": "عنوان كتاب تجريبي 045",
+    "author": "مؤلف افتراضي 045",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-045"
+  },
+  {
+    "id": "sample-book-046",
+    "title": "عنوان كتاب تجريبي 046",
+    "author": "مؤلف افتراضي 046",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-046"
+  },
+  {
+    "id": "sample-book-047",
+    "title": "عنوان كتاب تجريبي 047",
+    "author": "مؤلف افتراضي 047",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-047"
+  },
+  {
+    "id": "sample-book-048",
+    "title": "عنوان كتاب تجريبي 048",
+    "author": "مؤلف افتراضي 048",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-048"
+  },
+  {
+    "id": "sample-book-049",
+    "title": "عنوان كتاب تجريبي 049",
+    "author": "مؤلف افتراضي 049",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-049"
+  },
+  {
+    "id": "sample-book-050",
+    "title": "عنوان كتاب تجريبي 050",
+    "author": "مؤلف افتراضي 050",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-050"
+  },
+  {
+    "id": "sample-book-051",
+    "title": "عنوان كتاب تجريبي 051",
+    "author": "مؤلف افتراضي 051",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-051"
+  },
+  {
+    "id": "sample-book-052",
+    "title": "عنوان كتاب تجريبي 052",
+    "author": "مؤلف افتراضي 052",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-052"
+  },
+  {
+    "id": "sample-book-053",
+    "title": "عنوان كتاب تجريبي 053",
+    "author": "مؤلف افتراضي 053",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-053"
+  },
+  {
+    "id": "sample-book-054",
+    "title": "عنوان كتاب تجريبي 054",
+    "author": "مؤلف افتراضي 054",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-054"
+  },
+  {
+    "id": "sample-book-055",
+    "title": "عنوان كتاب تجريبي 055",
+    "author": "مؤلف افتراضي 055",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-055"
+  },
+  {
+    "id": "sample-book-056",
+    "title": "عنوان كتاب تجريبي 056",
+    "author": "مؤلف افتراضي 056",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-056"
+  },
+  {
+    "id": "sample-book-057",
+    "title": "عنوان كتاب تجريبي 057",
+    "author": "مؤلف افتراضي 057",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-057"
+  },
+  {
+    "id": "sample-book-058",
+    "title": "عنوان كتاب تجريبي 058",
+    "author": "مؤلف افتراضي 058",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-058"
+  },
+  {
+    "id": "sample-book-059",
+    "title": "عنوان كتاب تجريبي 059",
+    "author": "مؤلف افتراضي 059",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-059"
+  },
+  {
+    "id": "sample-book-060",
+    "title": "عنوان كتاب تجريبي 060",
+    "author": "مؤلف افتراضي 060",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-060"
+  },
+  {
+    "id": "sample-book-061",
+    "title": "عنوان كتاب تجريبي 061",
+    "author": "مؤلف افتراضي 061",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-061"
+  },
+  {
+    "id": "sample-book-062",
+    "title": "عنوان كتاب تجريبي 062",
+    "author": "مؤلف افتراضي 062",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-062"
+  },
+  {
+    "id": "sample-book-063",
+    "title": "عنوان كتاب تجريبي 063",
+    "author": "مؤلف افتراضي 063",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-063"
+  },
+  {
+    "id": "sample-book-064",
+    "title": "عنوان كتاب تجريبي 064",
+    "author": "مؤلف افتراضي 064",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-064"
+  },
+  {
+    "id": "sample-book-065",
+    "title": "عنوان كتاب تجريبي 065",
+    "author": "مؤلف افتراضي 065",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-065"
+  },
+  {
+    "id": "sample-book-066",
+    "title": "عنوان كتاب تجريبي 066",
+    "author": "مؤلف افتراضي 066",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-066"
+  },
+  {
+    "id": "sample-book-067",
+    "title": "عنوان كتاب تجريبي 067",
+    "author": "مؤلف افتراضي 067",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-067"
+  },
+  {
+    "id": "sample-book-068",
+    "title": "عنوان كتاب تجريبي 068",
+    "author": "مؤلف افتراضي 068",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-068"
+  },
+  {
+    "id": "sample-book-069",
+    "title": "عنوان كتاب تجريبي 069",
+    "author": "مؤلف افتراضي 069",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-069"
+  },
+  {
+    "id": "sample-book-070",
+    "title": "عنوان كتاب تجريبي 070",
+    "author": "مؤلف افتراضي 070",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-070"
+  },
+  {
+    "id": "sample-book-071",
+    "title": "عنوان كتاب تجريبي 071",
+    "author": "مؤلف افتراضي 071",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-071"
+  },
+  {
+    "id": "sample-book-072",
+    "title": "عنوان كتاب تجريبي 072",
+    "author": "مؤلف افتراضي 072",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-072"
+  },
+  {
+    "id": "sample-book-073",
+    "title": "عنوان كتاب تجريبي 073",
+    "author": "مؤلف افتراضي 073",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-073"
+  },
+  {
+    "id": "sample-book-074",
+    "title": "عنوان كتاب تجريبي 074",
+    "author": "مؤلف افتراضي 074",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-074"
+  },
+  {
+    "id": "sample-book-075",
+    "title": "عنوان كتاب تجريبي 075",
+    "author": "مؤلف افتراضي 075",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-075"
+  },
+  {
+    "id": "sample-book-076",
+    "title": "عنوان كتاب تجريبي 076",
+    "author": "مؤلف افتراضي 076",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-076"
+  },
+  {
+    "id": "sample-book-077",
+    "title": "عنوان كتاب تجريبي 077",
+    "author": "مؤلف افتراضي 077",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-077"
+  },
+  {
+    "id": "sample-book-078",
+    "title": "عنوان كتاب تجريبي 078",
+    "author": "مؤلف افتراضي 078",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-078"
+  },
+  {
+    "id": "sample-book-079",
+    "title": "عنوان كتاب تجريبي 079",
+    "author": "مؤلف افتراضي 079",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-079"
+  },
+  {
+    "id": "sample-book-080",
+    "title": "عنوان كتاب تجريبي 080",
+    "author": "مؤلف افتراضي 080",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-080"
+  },
+  {
+    "id": "sample-book-081",
+    "title": "عنوان كتاب تجريبي 081",
+    "author": "مؤلف افتراضي 081",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-081"
+  },
+  {
+    "id": "sample-book-082",
+    "title": "عنوان كتاب تجريبي 082",
+    "author": "مؤلف افتراضي 082",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-082"
+  },
+  {
+    "id": "sample-book-083",
+    "title": "عنوان كتاب تجريبي 083",
+    "author": "مؤلف افتراضي 083",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-083"
+  },
+  {
+    "id": "sample-book-084",
+    "title": "عنوان كتاب تجريبي 084",
+    "author": "مؤلف افتراضي 084",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-084"
+  },
+  {
+    "id": "sample-book-085",
+    "title": "عنوان كتاب تجريبي 085",
+    "author": "مؤلف افتراضي 085",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-085"
+  },
+  {
+    "id": "sample-book-086",
+    "title": "عنوان كتاب تجريبي 086",
+    "author": "مؤلف افتراضي 086",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-086"
+  },
+  {
+    "id": "sample-book-087",
+    "title": "عنوان كتاب تجريبي 087",
+    "author": "مؤلف افتراضي 087",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-087"
+  },
+  {
+    "id": "sample-book-088",
+    "title": "عنوان كتاب تجريبي 088",
+    "author": "مؤلف افتراضي 088",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-088"
+  },
+  {
+    "id": "sample-book-089",
+    "title": "عنوان كتاب تجريبي 089",
+    "author": "مؤلف افتراضي 089",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-089"
+  },
+  {
+    "id": "sample-book-090",
+    "title": "عنوان كتاب تجريبي 090",
+    "author": "مؤلف افتراضي 090",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-090"
+  },
+  {
+    "id": "sample-book-091",
+    "title": "عنوان كتاب تجريبي 091",
+    "author": "مؤلف افتراضي 091",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-091"
+  },
+  {
+    "id": "sample-book-092",
+    "title": "عنوان كتاب تجريبي 092",
+    "author": "مؤلف افتراضي 092",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-092"
+  },
+  {
+    "id": "sample-book-093",
+    "title": "عنوان كتاب تجريبي 093",
+    "author": "مؤلف افتراضي 093",
+    "category": "تاريخ الحضارات",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-093"
+  },
+  {
+    "id": "sample-book-094",
+    "title": "عنوان كتاب تجريبي 094",
+    "author": "مؤلف افتراضي 094",
+    "category": "التاريخ السياسي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-094"
+  },
+  {
+    "id": "sample-book-095",
+    "title": "عنوان كتاب تجريبي 095",
+    "author": "مؤلف افتراضي 095",
+    "category": "التاريخ الثقافي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-095"
+  },
+  {
+    "id": "sample-book-096",
+    "title": "عنوان كتاب تجريبي 096",
+    "author": "مؤلف افتراضي 096",
+    "category": "التاريخ الإسلامي",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-096"
+  },
+  {
+    "id": "sample-book-097",
+    "title": "عنوان كتاب تجريبي 097",
+    "author": "مؤلف افتراضي 097",
+    "category": "تاريخ العالم",
+    "description": "سجل تجريبي مولّد لاختبار الواجهة والبحث؛ لا يمثل معلومة تاريخية موثقة.",
+    "isSample": true,
+    "sampleId": "book-097"
+  }
+]

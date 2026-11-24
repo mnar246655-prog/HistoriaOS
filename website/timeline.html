@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="استكشف الأحداث التاريخية في خط زمني تفاعلي مع فلاتر للسنة والقرن والدولة والفترة الزمنية.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | الخط الزمني">
+    <meta property="og:description" content="خط زمني تفاعلي للأحداث التاريخية العربية والعالمية.">
+    <title>HistoriaOS | الخط الزمني</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="timeline">
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html" aria-current="page">الخط الزمني</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page">
+        <section class="page-intro"><p class="eyebrow eyebrow-dark">من الماضي إلى الحاضر</p><h1>الخط الزمني</h1><p>ترتيب زمني للأحداث المسجلة في قاعدة بيانات الموسوعة.</p></section>
+        <div class="collection-toolbar"><span class="result-label">الأحداث مرتبة من الأقدم إلى الأحدث</span><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث عن حدث أو سنة" aria-label="ابحث في الخط الزمني"></label></div>
+        <p class="sample-disclosure">الأحداث الموسومة «تجريبي» بيانات مولّدة لا تمثل وقائع تاريخية موثقة.</p>
+        <section class="timeline-controls" aria-label="التحكم في عرض الخط الزمني">
+            <div class="timeline-controls-heading">
+                <div><span class="timeline-control-label">عرض الأحداث حتى عام</span><strong id="timeline-current-year">جارٍ تحميل الأحداث...</strong></div>
+                <span class="timeline-result-count" id="timeline-result-count" aria-live="polite">جارٍ تحميل الأحداث...</span>
+            </div>
+            <label class="visually-hidden" for="timeline-range">اختر سنة لعرض الأحداث حتى ذلك التاريخ</label>
+            <input id="timeline-range" type="range" min="0" max="0" value="0" disabled>
+            <div class="timeline-range-labels"><span id="timeline-start-year">—</span><span id="timeline-end-year">—</span></div>
+            <div class="timeline-actions">
+                <button class="timeline-control-button" id="timeline-prev" type="button" disabled><span aria-hidden="true">→</span> الحدث الأقدم</button>
+                <button class="timeline-control-button timeline-show-all" id="timeline-show-all" type="button" disabled>عرض كل الأحداث</button>
+                <button class="timeline-control-button" id="timeline-next" type="button" disabled>الحدث الأحدث <span aria-hidden="true">←</span></button>
+            </div>
+            <div class="timeline-filters" aria-label="فلاتر الأحداث">
+                <label>القرن<select id="timeline-century"><option value="">جارٍ تحميل القرون...</option></select></label>
+                <label>الدولة أو الكيان<select id="timeline-state"><option value="">جارٍ تحميل الدول...</option></select></label>
+                <label>الفترة التاريخية<select id="timeline-period"><option value="">جارٍ تحميل الفترات...</option></select></label>
+                <label>من سنة<input id="timeline-from-year" type="number" inputmode="numeric" placeholder="من"></label>
+                <label>إلى سنة<input id="timeline-to-year" type="number" inputmode="numeric" placeholder="إلى"></label>
+            </div>
+        </section>
+        <section class="timeline-list" data-collection="events" data-display="timeline" aria-label="الخط الزمني للأحداث" aria-live="polite"><div class="empty-state">جارٍ تحميل الخط الزمني...</div></section>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>

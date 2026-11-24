@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="استكشف مدنًا تاريخية عربية على خريطة تفاعلية مدعومة ببيانات OpenStreetMap.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | الخرائط التاريخية">
+    <meta property="og:description" content="مكة والمدينة والقدس ودمشق وبغداد وقرطبة والقاهرة وإسطنبول على خريطة تفاعلية.">
+    <title>HistoriaOS | الخرائط</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body data-page="maps">
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html" aria-current="page">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page">
+        <section class="page-intro"><p class="eyebrow eyebrow-dark">الجغرافيا عبر العصور</p><h1>المدن التاريخية</h1><p>استكشف مواقع بارزة على خريطة العالم، واضغط على العلامات لقراءة نبذة تاريخية عن كل مدينة.</p></section>
+        <section class="map-explorer" aria-label="خريطة المدن التاريخية">
+            <aside class="map-sidebar">
+                <div class="map-sidebar-heading">
+                    <div><h2>محطات تاريخية</h2><p>اختر مدينة للانتقال إليها</p></div>
+                    <span class="map-count">٨ مواقع</span>
+                </div>
+                <div class="map-locations" id="map-locations" aria-label="المدن على الخريطة"></div>
+                <p class="map-status" id="map-status" role="status" aria-live="polite">الخريطة تفاعلية؛ اختر علامة أو مدينة لعرض المعلومات.</p>
+            </aside>
+            <div class="map-frame">
+                <div id="history-map" class="history-map" role="application" aria-label="خريطة تفاعلية للمدن التاريخية الثماني"></div>
+                <noscript><p class="map-unavailable">تتطلب الخريطة تفعيل JavaScript.</p></noscript>
+            </div>
+        </section>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>

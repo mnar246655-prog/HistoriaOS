@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="اكتشف شخصيات تاريخية من عصور متعددة وابحث في موسوعة HistoriaOS العربية.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | الشخصيات التاريخية">
+    <meta property="og:description" content="شخصيات تاريخية وعصورها وسير موجزة في موسوعة عربية.">
+    <title>HistoriaOS | الشخصيات</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="people">
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html" aria-current="page">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page">
+        <section class="page-intro"><p class="eyebrow eyebrow-dark">وجوه من الماضي</p><h1>الشخصيات التاريخية</h1><p>اكتشف الشخصيات وعصورها كما وردت في قاعدة بيانات الموسوعة.</p></section>
+        <div class="collection-toolbar"><span class="result-label">شخصيات صنعت التاريخ</span><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث عن شخصية أو عصر" aria-label="ابحث عن شخصية أو عصر"></label></div>
+        <p class="sample-disclosure">السجلات الموسومة «تجريبي» مخصّصة لاختبار الواجهة وليست سيرًا تاريخية موثقة.</p>
+        <section class="card-grid" data-collection="people" aria-label="قائمة الشخصيات" aria-live="polite"><div class="empty-state">جارٍ تحميل الشخصيات...</div></section>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>

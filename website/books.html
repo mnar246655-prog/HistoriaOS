@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="تصفح كتب التاريخ ومؤلفيها وتصنيفاتها، وابحث في مكتبة HistoriaOS العربية.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | المكتبة التاريخية">
+    <meta property="og:description" content="مصادر وكتب تاريخية مع المؤلف والتصنيف والوصف.">
+    <title>HistoriaOS | الكتب</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body data-page="books">
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html" aria-current="page">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page">
+        <section class="page-intro"><p class="eyebrow eyebrow-dark">مصادر التاريخ</p><h1>المكتبة التاريخية</h1><p>تصفّح كتب التاريخ ومؤلفيها وتصنيفاتها.</p></section>
+        <div class="collection-toolbar"><span class="result-label">الكتب المتاحة في الموسوعة</span><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث عن كتاب أو مؤلف" aria-label="ابحث عن كتاب أو مؤلف"></label><button class="export-button" type="button" data-export-pdf>طباعة / حفظ PDF</button></div>
+        <p class="sample-disclosure">السجلات الموسومة «تجريبي» بيانات مولّدة لا تمثل كتبًا تاريخية موثقة.</p>
+        <section class="card-grid" data-collection="books" aria-label="قائمة الكتب" aria-live="polite"><div class="empty-state">جارٍ تحميل الكتب...</div></section>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>
