@@ -3,12 +3,45 @@ const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
 const outputDirectory = path.join(root, "umayyad");
+const encyclopedia = require("../umayyad/encyclopedia-content");
 const source = (slug, title) => ({
     sourceTitle: title,
     sourceName: "Wikipedia",
     sourceLicense: "CC BY-SA 4.0",
     sourceUrl: `https://en.wikipedia.org/wiki/${slug}`
 });
+
+function eventReferenceIds(year, title, description) {
+    const ids = ["hawting", "kennedy", "tabari"];
+    if (year >= 724) ids.push("blankinship");
+    if (year >= 685 && year <= 715 && /عبد الملك|النقد|الديوان|قبة الصخرة|دمشق/.test(`${title} ${description}`)) {
+        ids.push("robinson");
+    }
+    if (/فتح|حملة|عبور|سند|خراسان|ما وراء النهر|إفريقية|قرطاج/.test(`${title} ${description}`)) {
+        ids.push("donner", "hoyland");
+    }
+    if (/الأندلس|قرطبة|طليطلة|بلاط الشهداء|الغافقي/.test(`${title} ${description}`)) ids.push("andalus");
+    if (/مصر|الفسطاط|قرة|الديوان|الخراج/.test(`${title} ${description}`)) ids.push("sijpesteijn");
+    if (/بيزنط|القسطنطينية|الأناضول|الروم/.test(`${title} ${description}`)) ids.push("theophanes");
+    if (/العراق|الكوفة|البصرة|واسط|الأزارقة|المختار|الخوارج|ابن الأشعث/.test(`${title} ${description}`)) ids.push("morony");
+    if (/الشعر|شاعر|مدح|نقائض/.test(`${title} ${description}`)) ids.push("stetkevych");
+    if (/يوحنا الدمشقي/.test(`${title} ${description}`)) ids.push("sahas");
+    return [...new Set(ids)];
+}
+
+function eventContext(title) {
+    const context = encyclopedia.eventContexts[title];
+    if (!context) throw new Error(`Missing historical context for event: ${title}.`);
+    return context;
+}
+
+function eventAnalysis(title) {
+    const analysis = encyclopedia.eventAnalyses[title];
+    if (!analysis?.causes || !analysis?.outcomes) {
+        throw new Error(`Missing causes or outcomes for event: ${title}.`);
+    }
+    return analysis;
+}
 
 const peopleRows = [
     ["muawiya", "معاوية بن أبي سفيان", "خليفة ومؤسس الدولة الأموية", "تولى الخلافة سنة 661م بعد تنازل الحسن بن علي، واتخذ دمشق مركزًا للحكم.", "Muawiyah_I"],
@@ -57,7 +90,7 @@ const peopleRows = [
     ["salih", "صالح بن عبد الرحمن", "كاتب ومحاسب", "كاتب إداري ارتبط اسمه بتعريب الدواوين في العراق في عهد الحجاج.", "Salih_ibn_Abd_al-Rahman"],
     ["qurra", "قرة بن شريك العبسي", "والٍ على مصر", "تولى مصر في عهد الوليد بن عبد الملك، وتوثق البرديات جانبًا من مراسلات إدارته.", "Umayyad_Caliphate"],
     ["asad", "أسد بن عبد الله القسري", "والٍ وقائد في خراسان", "تولى خراسان في عهد هشام، وقاد حملات على حدود ما وراء النهر.", "Asad_ibn_Abd_Allah_al-Qasri"],
-    ["hisham_ismail", "هشام بن إسماعيل المخزومي", "والٍ على المدينة", "والٍ أموي على المدينة في عهد عبد الملك، وارتبطت ولايته بإدارة الحجاز.", "Umayyad_Caliphate"],
+    ["muawiya2", "معاوية بن يزيد", "الخليفة الأموي الثالث", "تولى الخلافة بعد وفاة أبيه سنة 683م، ولم يدم حكمه إلا أشهرًا في سياق أزمة انتقال السلطة.", "Muawiyah_II"],
     ["said_jubayr", "سعيد بن جبير", "عالم ومفسر", "تابعي ومفسر من الكوفة، عاصر الحكم الأموي وقُتل في عهد الحجاج بحسب الروايات.", "Said_ibn_Jubayr"],
     ["maysara", "ميسرة المطغري", "قائد ثورة بربرية", "تذكر مصادر العصور الوسطى قيادته لبداية الثورة البربرية الكبرى في المغرب سنة 740م.", "Maysara_al-Matghari"],
     ["abu_muslim", "أبو مسلم الخراساني", "قائد الثورة العباسية", "قاد الدعوة العباسية في خراسان، وأسهمت حركته في إسقاط الحكم الأموي في المشرق.", "Abu_Muslim_al-Khurasani"]
@@ -102,7 +135,7 @@ const eventRows = [
     [683, "انتفاضة المدينة على يزيد", "medina", ["yazid1", "ibn_zubayr"], "أعلن أهل المدينة خلع يزيد، في تطور من أحداث الفتنة الثانية.", "Battle_of_al-Harra"],
     [683, "وقعة الحرة", "medina", ["yazid1", "ibn_zubayr"], "واجه جيش أرسله يزيد أهل المدينة قرب الحرة؛ وتختلف المصادر في أعداد القتلى وتفاصيل الوقعة.", "Battle_of_al-Harra"],
     [683, "بدء حصار مكة", "mecca", ["yazid1", "ibn_zubayr"], "حاصرت قوات أموية مكة حيث أقام عبد الله بن الزبير مركزًا لمعارضة يزيد.", "Siege_of_Mecca_(683)"],
-    [683, "وفاة يزيد وتولي معاوية الثاني", "damascus", ["yazid1"], "توفي يزيد سنة 683م، وتولى ابنه معاوية الثاني لفترة قصيرة خلال أزمة خلافة حادة.", "Muawiyah_II"],
+    [683, "وفاة يزيد وتولي معاوية الثاني", "damascus", ["yazid1", "muawiya2"], "توفي يزيد سنة 683م، وتولى ابنه معاوية الثاني لفترة قصيرة خلال أزمة خلافة حادة.", "Muawiyah_II"],
     [684, "مبايعة مروان بن الحكم في الجابية", "damascus", ["marwan1", "ibn_zubayr"], "عُقد اجتماع الجابية الذي أفضى إلى مبايعة مروان، مع اختلاف الروايات حول ترتيب ولاية العهد.", "Marwan_I"],
     [684, "وقعة مرج راهط", "damascus", ["marwan1", "ibn_zubayr"], "انتهت المواجهة قرب دمشق بانتصار أنصار مروان على خصومه، ورسخت نفوذ البيت المرواني.", "Battle_of_Marj_Rahit_(684)"],
     [684, "ترسيخ سلطة ابن الزبير في الحجاز", "mecca", ["ibn_zubayr", "marwan1"], "استمرت مكة والمدينة خارج السيطرة الأموية المباشرة، فيما اتسع الاعتراف بابن الزبير في أقاليم أخرى.", "Second_Fitna"],
@@ -158,7 +191,7 @@ const eventRows = [
     [737, "اشتداد الصراع على حدود القوقاز", "harran", ["hisham", "habib"], "شهدت أقاليم الجزيرة وأرمينيا حملات متبادلة بين الأمويين والبيزنطيين وحلفائهم.", "Umayyad_Caliphate"],
     [739, "بداية الثورة البربرية الكبرى", "tangier", ["maysara", "hisham"], "اندلعت ثورة في المغرب ضد الحكم الأموي والجباية، ثم امتدت إلى إفريقية والأندلس.", "Berber_Revolt"],
     [740, "مقتل ميسرة وامتداد الثورة في المغرب", "tangier", ["maysara", "hisham"], "توسعت الثورة بعد سقوط قيادتها الأولى، وانقسمت المواجهات إلى جبهات مغربية وإفريقية.", "Berber_Revolt"],
-    [740, "هزيمة جيش كلثوم بن عياض في إفريقية", "carthage", ["hisham"], "هُزم الجيش الأموي القادم من الشام قرب إفريقية في معركة بقدورة، في ضربة كبيرة للسلطة المركزية.", "Berber_Revolt"],
+    [741, "هزيمة جيش كلثوم بن عياض في إفريقية", "carthage", ["hisham"], "هُزم الجيش الأموي القادم من الشام قرب إفريقية في معركة بقدورة؛ وتؤرخها دراسات حديثة عادةً بسنة 741م، مع اختلاف في ضبط التسلسل.", "Berber_Revolt"],
     [741, "اتساع اضطراب الأندلس بعد الثورة", "cordoba", ["hisham"], "امتد أثر الثورة البربرية إلى الأندلس، وظهرت انقسامات بين الجند والولاة.", "Berber_Revolt"],
     [742, "استعادة إفريقية بعد معارك القيروان", "kairouan", ["hisham"], "تمكنت قوات الشام من استعادة السيطرة على القيروان بعد جولات من القتال، مع بقاء الاضطراب في المغرب.", "Berber_Revolt"],
     [743, "وفاة هشام وتولي الوليد الثاني", "damascus", ["hisham", "walid2"], "انتقلت الخلافة إلى الوليد بن يزيد بعد وفاة هشام، وسط تنافس داخل الأسرة الأموية.", "Al-Walid_II"],
@@ -187,7 +220,7 @@ const eventRows = [
     [684, "مقتل عمرو بن سعيد الأشدق", "damascus", ["marwan1"], "قضى مروان على تمرد عمرو بن سعيد الأشدق في دمشق بعد صراع على الخلافة.", "Marwan_I"],
     [685, "تولي عبد العزيز بن مروان مصر", "fustat", ["abdaziz", "abdmalik"], "ولى عبد الملك أخاه عبد العزيز مصر، فاستمر في إدارتها حتى وفاته سنة 705م.", "Abd_al-Aziz_ibn_Marwan"],
     [686, "تولي المهلّب قيادة قتال الأزارقة", "basra", ["muhallab", "abdmalik"], "كلف عبد الملك المهلّب بمواجهة الأزارقة في العراق وفارس، واستمرت حملاته سنوات.", "Al-Muhallab_ibn_Abi_Sufra"],
-    [692, "تعيين هشام بن إسماعيل على المدينة", "medina", ["hisham_ismail", "abdmalik"], "تولى هشام بن إسماعيل إدارة المدينة في عهد عبد الملك ضمن إعادة تنظيم ولاية الحجاز.", "Umayyad_Caliphate"],
+    [692, "تعيين هشام بن إسماعيل على المدينة", "medina", ["abdmalik"], "تولى هشام بن إسماعيل إدارة المدينة في عهد عبد الملك ضمن إعادة تنظيم ولاية الحجاز.", "Umayyad_Caliphate"],
     [695, "نشاط خالد بن يزيد في مجال العلوم", "damascus", ["khalid_yazid"], "تربط كتب التراث خالد بن يزيد باهتمام مبكر بالكيمياء والترجمة؛ وتحتاج تفاصيل هذه الروايات إلى قراءة نقدية.", "Khalid_ibn_Yazid"],
     [697, "بدء تعريب دواوين العراق", "kufa", ["hajjaj", "salih"], "تُنسب إلى الحجاج وصالح بن عبد الرحمن خطوة تعريب الدواوين في العراق، مع اختلاف المصادر في تاريخ بدء العملية.", "Salih_ibn_Abd_al-Rahman"],
     [698, "توسيع جامع عمرو بن العاص في الفسطاط", "fustat", ["abdaziz"], "شهدت المساجد الكبرى في مصر توسعات وإصلاحات في العصر الأموي، وتختلف روايات التأريخ والتفاصيل المعمارية.", "Mosque_of_Amr_ibn_al-As"],
@@ -200,7 +233,7 @@ const eventRows = [
     [713, "دخول إشبيلية ضمن السيطرة الإسلامية", "cordoba", ["musa", "tariq"], "توسعت السيطرة في مدن الأندلس خلال الحملات المشتركة لقادة إفريقية، مع اختلاف التواريخ التفصيلية.", "Umayyad_conquest_of_Hispania"],
     [715, "وفاة موسى بن نصير", "damascus", ["musa", "sulayman"], "توفي موسى بن نصير بعد استدعائه إلى المشرق في أواخر عهد الوليد أو بداية عهد سليمان بحسب الروايات.", "Musa_ibn_Nusayr"],
     [717, "إعفاء بعض الولاة في إصلاحات عمر", "damascus", ["umar2", "raja"], "تذكر المصادر أن عمر راجع تعيينات الولاة وأعاد بعض الحقوق؛ ولا تتفق الروايات على قائمة موحدة للإجراءات.", "Umar_II"],
-    [720, "مقتل سعيد بن جبير", "kufa", ["said_jubayr", "hajjaj"], "تذكر كتب التراجم أن الحجاج قتل سعيد بن جبير في أواخر عهده، مع اختلاف التأريخ بين 714 و720م.", "Said_ibn_Jubayr"],
+    [714, "مقتل سعيد بن جبير", "kufa", ["said_jubayr", "hajjaj"], "تذكر كتب التراجم أن الحجاج قتل سعيد بن جبير في أواخر ولايته؛ ويشيع تأريخ الحادثة بسنة 95هـ/714م، مع ورود روايات أخرى قريبة.", "Said_ibn_Jubayr"],
     [724, "نشاط ابن شهاب الزهري في تدوين الحديث", "damascus", ["zuhri", "hisham"], "اتصل الزهري ببلاط هشام، وأسهمت رواياته في جمع مواد السيرة والحديث في العصر الأموي.", "Ibn_Shihab_al-Zuhri"],
     [728, "وفاة رجاء بن حيوة", "damascus", ["raja", "umar2"], "توفي رجاء بن حيوة بعد أن شغل موقعًا بارزًا في الفقه والاستشارة السياسية في الشام.", "Raja_ibn_Haywa"],
     [730, "تولي أسد بن عبد الله ولاية خراسان", "merv", ["asad", "hisham"], "تولى أسد خراسان في عهد هشام، وعمل على تثبيت النفوذ الأموي ومواجهة التحديات على الحدود.", "Asad_ibn_Abd_Allah_al-Qasri"],
@@ -265,6 +298,15 @@ const omittedEventTitles = new Set([
     "اتخاذ قرطبة عاصمة للإمارة الأموية بالأندلس"
 ]);
 const curatedEventRows = eventRows.filter(row => !omittedEventTitles.has(row[1]));
+const curatedEventTitles = new Set(curatedEventRows.map(row => row[1]));
+const contextTitles = Object.keys(encyclopedia.eventContexts);
+const analysisTitles = Object.keys(encyclopedia.eventAnalyses);
+if (curatedEventTitles.size !== contextTitles.length
+    || contextTitles.some(title => !curatedEventTitles.has(title))
+    || curatedEventTitles.size !== analysisTitles.length
+    || analysisTitles.some(title => !curatedEventTitles.has(title))) {
+    throw new Error("Event contexts and analyses must correspond one-to-one with curated events.");
+}
 if (peopleRows.length !== 50 || curatedEventRows.length !== 100 || cityRows.length !== 20 || battleRows.length !== 10) {
     throw new Error(`Unexpected Umayyad data counts: ${peopleRows.length} people, ${curatedEventRows.length} events, ${cityRows.length} cities, ${battleRows.length} battles.`);
 }
@@ -278,17 +320,22 @@ const events = curatedEventRows.map(row => {
     }
     if (personIds.some(id => !peopleIds.has(id))) throw new Error(`Unknown person in event ${title}.`);
     const battle = battleRows.find(item => item[2] === title);
+    const analysis = eventAnalysis(title);
     return {
         year,
         title,
         state: "الدولة الأموية",
-        period: "العصر الأموي",
+        period: year < 684 ? "الفرع السفياني والفتنة الثانية" : year < 750 ? "الفرع المرواني" : "امتداد أندلسي لاحق",
         century: Math.ceil(year / 100),
-        datePrecision: ["تختلف", "تقريب", "تقريبًا", "تقريباً", "نحو", "موضع نقاش"].some(marker => description.includes(marker)) ? "تقريبية" : "سنة",
+        datePrecision: ["تختلف", "تقريب", "نحو", "موضع نقاش", "بحسب الروايات", "تتباين", "يختلف"].some(marker => description.includes(marker)) ? "تقريبية" : "سنة",
         description,
+        background: eventContext(title),
+        causes: analysis.causes,
+        outcomes: analysis.outcomes,
         cityIds: [cityId, ...relatedCityIds].map(id => `um-city-${id}`),
         personIds: personIds.map(personId => `um-person-${personId}`),
         battleId: battle ? `um-battle-${battle[0]}` : null,
+        referenceIds: eventReferenceIds(year, title, description),
         ...source(sourceSlug, title)
     };
 }).sort((first, second) => first.year - second.year)
@@ -297,16 +344,33 @@ const events = curatedEventRows.map(row => {
 const people = peopleRows.map(([id, name, role, description, sourceSlug]) => {
     const eventIds = events.filter(event => event.personIds.includes(`um-person-${id}`)).map(event => event.id);
     if (!eventIds.length) throw new Error(`Person ${id} is not linked to any event.`);
+    const profile = encyclopedia.profiles[id];
+    if (!profile) throw new Error(`Missing encyclopedia profile for ${id}.`);
+    const details = encyclopedia.profileDetails[id];
+    if (!details?.origin || !details?.achievements) throw new Error(`Missing origin or achievements for ${id}.`);
     return {
         id: `um-person-${id}`,
         name,
         role,
         period: "العصر الأموي",
         description,
+        biography: profile.biography,
+        origin: details.origin,
+        achievements: details.achievements,
+        historicalImpact: profile.historicalImportance,
+        relations: (encyclopedia.relations[id] || []).map(([relatedId, label]) => {
+            if (!peopleIds.has(relatedId)) throw new Error(`Unknown related person ${relatedId} for ${id}.`);
+            return { personId: `um-person-${relatedId}`, label };
+        }),
+        referenceIds: profile.referenceIds,
         eventIds,
         ...source(sourceSlug, name)
     };
 });
+if (Object.keys(encyclopedia.profiles).length !== peopleRows.length
+    || Object.keys(encyclopedia.profileDetails).length !== peopleRows.length) {
+    throw new Error("Encyclopedia profiles and editorial details must correspond one-to-one with the people records.");
+}
 
 const cities = cityRows.map(([id, name, region, latitude, longitude, description, sourceSlug]) => ({
     id: `um-city-${id}`,
@@ -315,8 +379,26 @@ const cities = cityRows.map(([id, name, region, latitude, longitude, description
     coordinates: [latitude, longitude],
     description,
     eventIds: events.filter(event => event.cityIds.includes(`um-city-${id}`)).map(event => event.id),
+    referenceIds: region === "الأندلس"
+        ? ["andalus", "kennedy", "hoyland"]
+        : region === "مصر"
+            ? ["sijpesteijn", "kennedy"]
+            : ["hawting", "kennedy", "donner"],
     ...source(sourceSlug, name)
 }));
+
+const battleLocationDescriptions = {
+    karbala: "مدينة كربلاء في جنوبي العراق؛ الإحداثية تمثل موضع المدينة الحديث، لا نقطة أثرية مؤكدة.",
+    harra: "منطقة الحَرّة شرقي المدينة المنورة؛ يختلف وصف حدود الموضع في الروايات.",
+    "marj-rahit": "مرج راهط قرب دمشق؛ الإحداثية تقريبية.",
+    khazir: "منطقة نهر الخازر قرب الموصل في شمال العراق؛ تعيين موضع القتال الدقيق تقريبي.",
+    maskin: "منطقة مسكن/دير الجاثليق في العراق الأوسط؛ تختلف الدراسات في تحديد ساحة القتال.",
+    "dayr-jamajim": "قرب الكوفة في العراق؛ موضع دير الجماجم القديم غير محدد على نحو قطعي.",
+    guadalete: "جنوب شبه الجزيرة الإيبيرية؛ تعيين وادي لكة وموقع المعركة الدقيق موضع نقاش.",
+    defile: "ممر جبلي في ما وراء النهر؛ لا يتفق الباحثون على تعيين الموقع الحديث.",
+    tours: "قرب بواتييه في بلاد الفرنجة؛ الإحداثية تقريبية، كما يختلف وصف أثر المعركة في الروايات اللاحقة.",
+    zab: "منطقة نهر الزاب الكبير شمال العراق؛ الإحداثية تشير إلى نطاق تقريبي لا نقطة محسومة."
+};
 
 const battles = battleRows.map(([id, name, eventTitle, cityId, personIds, sourceSlug, coordinates]) => {
     const event = events.find(item => item.title === eventTitle);
@@ -330,13 +412,199 @@ const battles = battleRows.map(([id, name, eventTitle, cityId, personIds, source
         eventId: event.id,
         cityId: `um-city-${cityId}`,
         coordinates,
+        locationDescription: battleLocationDescriptions[id],
         personIds: personIds.map(personId => `um-person-${personId}`),
         description: event.description,
+        background: event.background,
+        causes: event.causes,
+        outcomes: event.outcomes,
+        referenceIds: event.referenceIds,
         ...source(sourceSlug, name)
     };
 });
 
-const data = { people, events, cities, battles };
+const caliphs = encyclopedia.caliphs.map(entry => {
+    const person = people.find(record => record.id === `um-person-${entry.personId}`);
+    if (!person) throw new Error(`Unknown caliph profile: ${entry.personId}.`);
+    return {
+        personId: person.id,
+        reign: entry.reign,
+        note: entry.note || ""
+    };
+});
+
+const data = {
+    scope: "تغطي الخلافة الأموية في المشرق بين 661 و750م؛ وتستبعد الإمارة الأموية في الأندلس بوصفها مرحلة سياسية مستقلة.",
+    references: encyclopedia.references,
+    caliphs,
+    people,
+    events,
+    cities,
+    battles
+};
+
+function buildEncyclopediaMarkdown() {
+    const referenceNumbers = new Map(encyclopedia.references.map((reference, index) => [reference.id, index + 1]));
+    const citations = ids => ids.map(id => `[${referenceNumbers.get(id)}]`).join("، ");
+    const personNames = new Map(people.map(person => [person.id, person.name]));
+    const cityNames = new Map(cities.map(city => [city.id, city.name]));
+    const eventTitles = new Map(events.map(event => [event.id, event.title]));
+    const caliphRows = caliphs.map((caliph, index) => {
+        const person = people.find(record => record.id === caliph.personId);
+        const note = caliph.note ? ` — ${caliph.note}` : "";
+        return `| ${index + 1} | ${person.name} | ${caliph.reign}${note} |`;
+    });
+    const lines = [
+        "# موسوعة الدولة الأموية",
+        "",
+        "## صفحة العنوان",
+        "",
+        "**HistoriaOS — موسوعة تاريخية عربية**",
+        "",
+        "تغطي هذه النسخة الخلافة الأموية في المشرق من قيامها سنة 661م إلى سقوطها سنة 750م. وهي مرجع تحريري قابل للتحويل إلى كتاب، لا تدّعي حسم المسائل التي تختلف فيها المصادر.",
+        "",
+        "## المحتويات",
+        "",
+        "1. [مدخل عام](#مدخل-عام)",
+        "2. [الخلفاء](#الخلفاء)",
+        "3. [التوسع الجغرافي](#التوسع-الجغرافي)",
+        "4. [الإنجازات الحضارية](#الإنجازات-الحضارية)",
+        "5. [الشخصيات](#الشخصيات)",
+        "6. [الخط الزمني](#الخط-الزمني)",
+        "7. [الأحداث والسياقات](#الأحداث-والسياقات)",
+        "8. [المدن والجغرافيا](#المدن-والجغرافيا)",
+        "9. [المعارك](#المعارك)",
+        "10. [المراجع والمنهج](#المراجع-والمنهج)",
+        "",
+        "## مدخل عام",
+        "",
+        "نشأت الخلافة الأموية عقب تسوية سياسية أعقبت الفتنة الأولى، واتخذت دمشق مركزًا للحكم. واستندت إلى ولاة وأجناد وشبكات قبلية وإدارية متفاوتة بين الأقاليم. شهدت الدولة في عهد عبد الملك إعادة توحيد المجال السياسي، وتطورًا في أدوات الحكم، ثم اتساعًا عسكريًا في عهد الوليد. ولم يكن التوسع خطًا متصلًا؛ فقد تداخلت الحملات مع تفاوض محلي وأزمات حدودية واحتجاجات داخلية.",
+        "",
+        "امتدت الفتنة الثانية من أواخر عهد معاوية ويزيد إلى إعادة التوحيد على يد عبد الملك. وفي القرن الثامن واجهت الخلافة ضغوطًا متزامنة على الجبهات البيزنطية والشرقية والمغاربية، واضطرابًا في انتقال السلطة، ثم الثورة العباسية. انتهت خلافة دمشق سنة 750م، فيما قام لاحقًا فرع أموي مستقل في الأندلس لا يدخل ضمن التسلسل السياسي لهذه الموسوعة.",
+        "",
+        "## الخلفاء",
+        "",
+        "| الترتيب | الخليفة | مدة الحكم / ملاحظة |",
+        "|---:|---|---|",
+        ...caliphRows,
+        "",
+        "يعرض الجدول الترتيب السياسي الشائع؛ وقد كانت بيعة إبراهيم بن الوليد قصيرة ومتنازعًا عليها، كما تختلف الأخبار في تفاصيل عهد معاوية بن يزيد.",
+        "",
+        "## التوسع الجغرافي",
+        "",
+        "امتد النفوذ الأموي عبر أقاليم ذات أوضاع مختلفة، ولم يكن التوسع احتلالًا ثابتًا أو متساويًا في جميع المواضع. في الشرق اتخذت خراسان قاعدة للحملات إلى ما وراء النهر، ووصلت حملة محمد بن القاسم إلى السند عبر العراق. وفي الغرب أسهمت القيروان في ترسيخ الوجود بإفريقية، ثم عبرت القوات إلى الأندلس. أما الجبهة البيزنطية فشهدت حملات متكررة لم تُفض إلى السيطرة على القسطنطينية.",
+        "",
+        "تُظهر هذه الجبهات اعتماد الخلافة على الولاة والقادة والتحالفات المحلية، وعلى طرق التموين والجباية. كما توضح الثورات في المغرب وخراسان أن اتساع المجال الجغرافي صاحبه تفاوت في القدرة على إدماج السكان والأقاليم.",
+        "",
+        "## الإنجازات الحضارية",
+        "",
+        "- **النقد والسيادة:** شهد عهد عبد الملك إصلاحًا نقديًا أنتج نقودًا إسلامية ذات كتابات عربية وتعبيرات دينية وسياسية، عبر مراحل إقليمية متفاوتة.",
+        "- **الإدارة واللغة:** توسعت العربية في الدواوين تدريجيًا، إلى جانب استمرار لغات وتقاليد إدارية موروثة؛ وتوفر البرديات المصرية شواهد على الممارسة اليومية.",
+        "- **العمارة:** ارتبط العصر بقبة الصخرة والجامع الأموي بدمشق وتوسعة المسجد النبوي، كما ظهرت مراكز إدارية جديدة مثل واسط والقيروان.",
+        "- **الثقافة والمعرفة:** نشط الشعر والفقه والحديث والجدل الديني في مراكز متعددة؛ وتُقرأ أخبار الرعاية البلاطية وتدوين الروايات نقديًا.",
+        "",
+        "### منهج القراءة",
+        "",
+        "تُعرض السنوات الميلادية مع التنبيه إلى التقريب عند اختلاف الأخبار. وتُعامل أخبار الحوليات بوصفها روايات تاريخية تحتاج إلى المقارنة، لا تسجيلًا محايدًا للوقائع. الإحالات الأكاديمية أدناه مراجع موضوعية لكل سجل؛ لم تُضف أرقام صفحات غير متحقق منها، إذ تختلف صفحات الطبعات والترجمات.",
+        "",
+        "## الشخصيات",
+        ""
+    ];
+
+    people.forEach((person, index) => {
+        lines.push(
+            `### ${index + 1}. ${person.name}`,
+            "",
+            `**الصفة:** ${person.role}.`,
+            "",
+            `**النشأة:** ${person.origin}`,
+            "",
+            `**التعريف الموسوعي:** ${person.biography}`,
+            "",
+            `**الإنجازات:** ${person.achievements}`,
+            "",
+            `**التأثير التاريخي:** ${person.historicalImpact}`,
+            ""
+        );
+        lines.push(
+            `**الأحداث المرتبطة:** ${person.eventIds.map(id => eventTitles.get(id)).join("؛ ")}.`,
+            ""
+        );
+        if (person.relations.length) {
+            lines.push(`**الروابط السياسية:** ${person.relations.map(relation => `${personNames.get(relation.personId)} (${relation.label})`).join("؛ ")}.`, "");
+        }
+        lines.push(`**مراجع:** ${citations(person.referenceIds)}.`, "");
+    });
+
+    lines.push("## الخط الزمني", "");
+    lines.push("يرتب القسم التالي الوقائع بحسب السنة الميلادية؛ وتُشار السنة التقريبية حين تختلف الروايات. لا تعني المجاورة الزمنية بالضرورة وجود علاقة سببية مباشرة.", "");
+    lines.push("## الأحداث والسياقات", "");
+    events.forEach(event => {
+        const date = event.datePrecision === "تقريبية" ? `${event.year}م تقريبًا` : `${event.year}م`;
+        lines.push(
+            `### ${date} — ${event.title}`,
+            "",
+            `**الحدث:** ${event.description}`,
+            "",
+            `**الخلفية:** ${event.background}`,
+            "",
+            `**الأسباب:** ${event.causes}`,
+            "",
+            `**النتائج:** ${event.outcomes}`,
+            "",
+            `**الشخصيات:** ${event.personIds.map(id => personNames.get(id)).join("، ")}. **المدن والأقاليم المرتبطة:** ${event.cityIds.map(id => cityNames.get(id)).join("، ")}.`,
+            "",
+            `**مراجع:** ${citations(event.referenceIds)}.`,
+            ""
+        );
+    });
+
+    lines.push("## المدن والجغرافيا", "");
+    lines.push("الإحداثيات أدناه تمثل مراكز المدن الحديثة لأغراض العرض التقريبي، ولا تحدد حدود المدينة التاريخية أو موقعًا أثريًا بعينه.", "");
+    cities.forEach(city => {
+        lines.push(
+            `### ${city.name}`,
+            "",
+            `**الإقليم:** ${city.region}. **الإحداثيات التقريبية:** ${city.coordinates[0]}, ${city.coordinates[1]}.`,
+            "",
+            `${city.description} ترتبط في قاعدة البيانات بالأحداث: ${city.eventIds.map(id => eventTitles.get(id)).join("؛ ")}.`,
+            "",
+            `**مراجع:** ${citations(city.referenceIds)}.`,
+            ""
+        );
+    });
+
+    lines.push("## المعارك", "");
+    battles.forEach(battle => {
+        lines.push(
+            `### ${battle.year}م — ${battle.name}`,
+            "",
+            `**الحدث المرتبط:** ${eventTitles.get(battle.eventId)}. **الموضع:** ${battle.locationDescription} **الإحداثيات التقريبية:** ${battle.coordinates[0]}, ${battle.coordinates[1]}.`,
+            "",
+            `**الملخص:** ${battle.description}`,
+            "",
+            `**الخلفية:** ${battle.background}`,
+            "",
+            `**مراجع:** ${citations(battle.referenceIds)}.`,
+            ""
+        );
+    });
+
+    lines.push("## المراجع والمنهج", "");
+    encyclopedia.references.forEach((reference, index) => {
+        lines.push(`${index + 1}. ${reference.citation} ${reference.scope}`);
+    });
+    lines.push(
+        "",
+        "### تنبيه ببليوغرافي",
+        "",
+        "الإحالات المرقمة تقود إلى كتب ودراسات أكاديمية أو مصادر أولية محققة ذات صلة بالفترة أو الموضوع، لكنها لا تعوّض مراجعة الموضع المحدد في الطبعة المعتمدة. تُنقل الأخبار عن الطبري والبلاذري بصفتها روايات، وتُقارن بالدراسات الحديثة وبالشواهد البيزنطية والوثائق عند توفرها. الروابط الموسوعية العامة الظاهرة في واجهة الموقع للقراءة التمهيدية فقط.",
+        ""
+    );
+    return `${lines.join("\n")}\n`;
+}
+
 fs.mkdirSync(outputDirectory, { recursive: true });
 fs.writeFileSync(path.join(outputDirectory, "data.json"), `${JSON.stringify(data, null, 2)}\n`, "utf8");
+fs.writeFileSync(path.join(root, "UMAYYAD_ENCYCLOPEDIA.md"), buildEncyclopediaMarkdown(), "utf8");
 console.log(`Generated ${people.length} people, ${events.length} events, ${cities.length} cities, and ${battles.length} battles.`);

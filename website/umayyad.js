@@ -6,6 +6,9 @@ const eventsGrid = document.querySelector("#umayyad-events");
 const battlesGrid = document.querySelector("#umayyad-battles");
 const citiesList = document.querySelector("#umayyad-cities");
 const mapElement = document.querySelector("#umayyad-map");
+const caliphsGrid = document.querySelector("#umayyad-caliphs");
+const featuredPeopleGrid = document.querySelector("#umayyad-featured-people");
+const referencesGrid = document.querySelector("#umayyad-references");
 const cityMarkers = new Map();
 let umayyadData;
 
@@ -35,8 +38,23 @@ function addSourceLink(container, item) {
     link.href = item.sourceUrl;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = `المصدر: ${item.sourceName} · ${item.sourceTitle} (${item.sourceLicense})`;
+    link.textContent = `قراءة تمهيدية: ${item.sourceName} · ${item.sourceTitle} (${item.sourceLicense})`;
     container.append(link);
+}
+
+function addReferenceLinks(container, item) {
+    if (!item.referenceIds?.length) return;
+    const row = textElement("div", "encyclopedia-citations", "مراجع أكاديمية: ");
+    item.referenceIds.forEach((id, index) => {
+        const reference = umayyadData.references.find(entry => entry.id === id);
+        if (!reference) {
+            console.error("Unknown bibliography reference in Umayyad record:", item.id, id);
+            return;
+        }
+        if (index) row.append(document.createTextNode(" · "));
+        addLink(row, reference.shortTitle || reference.id, `#reference-${id}`);
+    });
+    container.append(row);
 }
 
 function addRelations(container, label, records, ids, prefix, className) {
@@ -51,10 +69,77 @@ function addRelations(container, label, records, ids, prefix, className) {
     container.append(relation);
 }
 
+function renderCaliphs() {
+    const peopleById = new Map(umayyadData.people.map(person => [person.id, person]));
+    caliphsGrid.replaceChildren();
+    umayyadData.caliphs.forEach((entry, index) => {
+        const person = peopleById.get(entry.personId);
+        if (!person) {
+            console.error("Missing Umayyad caliph profile:", entry.personId);
+            return;
+        }
+        const card = document.createElement("article");
+        card.className = "data-card caliph-card";
+        card.append(textElement("p", "card-kicker", `الخليفة ${index + 1} · ${entry.reign}`));
+        const title = textElement("h3", "card-title", person.name);
+        card.append(title);
+        card.append(textElement("p", "card-description", person.historicalImpact));
+        if (entry.note) card.append(textElement("p", "encyclopedia-reference-scope", entry.note));
+        addLink(card, "فتح الترجمة الموسوعية", `#person-${person.id}`, "umayyad-battle-link");
+        caliphsGrid.append(card);
+    });
+}
+
+function renderFeaturedPeople() {
+    const featuredIds = [
+        "muawiya", "abdmalik", "umar2", "hajjaj", "maslama",
+        "qutayba", "musa", "ibn_zubayr", "husayn", "abu_muslim"
+    ];
+    const peopleById = new Map(umayyadData.people.map(person => [person.id.replace("um-person-", ""), person]));
+    featuredPeopleGrid.replaceChildren();
+    featuredIds.forEach(id => {
+        const person = peopleById.get(id);
+        if (!person) return;
+        const card = document.createElement("article");
+        card.className = "data-card";
+        card.append(textElement("p", "card-kicker", person.role));
+        card.append(textElement("h3", "card-title", person.name));
+        card.append(textElement("p", "card-description", person.historicalImpact));
+        addLink(card, "فتح الترجمة الموسوعية", `#person-${person.id}`, "umayyad-battle-link");
+        featuredPeopleGrid.append(card);
+    });
+}
+
+function renderReferences() {
+    referencesGrid.replaceChildren();
+    umayyadData.references.forEach((reference, index) => {
+        const card = document.createElement("article");
+        card.className = "encyclopedia-reference";
+        card.id = `reference-${reference.id}`;
+        card.append(textElement("p", "card-kicker", `مرجع ${index + 1}`));
+        card.append(textElement("h3", "card-title", reference.shortTitle || reference.id));
+        card.append(textElement("p", "card-description", reference.citation));
+        card.append(textElement("p", "encyclopedia-reference-scope", reference.scope));
+        if (reference.url) {
+            const link = document.createElement("a");
+            link.href = reference.url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.className = "source-link";
+            link.textContent = "صفحة الناشر";
+            card.append(link);
+        }
+        referencesGrid.append(card);
+    });
+}
+
 function renderPeople(query) {
     const eventById = new Map(umayyadData.events.map(event => [event.id, event]));
     const people = umayyadData.people.filter(person => {
-        const haystack = `${person.name} ${person.role} ${person.description}`.toLocaleLowerCase("ar");
+        const relationNames = person.relations.map(relation =>
+            umayyadData.people.find(item => item.id === relation.personId)?.name || ""
+        ).join(" ");
+        const haystack = `${person.name} ${person.role} ${person.origin} ${person.biography} ${person.achievements} ${person.historicalImpact} ${relationNames}`.toLocaleLowerCase("ar");
         return haystack.includes(query);
     });
     peopleGrid.replaceChildren();
@@ -64,17 +149,37 @@ function renderPeople(query) {
         card.id = `person-${person.id}`;
         card.append(textElement("p", "card-kicker", person.role));
         card.append(textElement("h3", "card-title", person.name));
-        card.append(textElement("p", "card-description", person.description));
-        const relatedEvents = document.createElement("div");
+        card.append(textElement("p", "encyclopedia-label", "النشأة"));
+        card.append(textElement("p", "card-description", person.origin));
+        card.append(textElement("p", "encyclopedia-label", "التعريف الموسوعي"));
+        card.append(textElement("p", "card-description", person.biography));
+        card.append(textElement("p", "encyclopedia-label", "الإنجازات"));
+        card.append(textElement("p", "card-description", person.achievements));
+        card.append(textElement("p", "encyclopedia-label", "التأثير التاريخي"));
+        card.append(textElement("p", "card-description", person.historicalImpact));
+        if (person.relations.length) {
+            const relations = textElement("div", "umayyad-relations", "الروابط السياسية: ");
+            person.relations.forEach((relation, index) => {
+                const related = umayyadData.people.find(item => item.id === relation.personId);
+                if (!related) return;
+                if (index) relations.append(document.createTextNode(" · "));
+                addLink(relations, `${related.name} (${relation.label})`, `#person-${related.id}`);
+            });
+            card.append(relations);
+        }
+        const relatedEvents = document.createElement("details");
         relatedEvents.className = "umayyad-relations";
-        relatedEvents.append(document.createTextNode("الأحداث المرتبطة: "));
-        person.eventIds.slice(0, 5).forEach((eventId, index) => {
+        relatedEvents.append(textElement("summary", "", `الأحداث المرتبطة (${person.eventIds.length})`));
+        const relatedEventLinks = document.createElement("div");
+        person.eventIds.forEach((eventId, index) => {
             const event = eventById.get(eventId);
             if (!event) return;
-            if (index) relatedEvents.append(document.createTextNode(" · "));
-            addLink(relatedEvents, event.title, `#event-${event.id}`);
+            if (index) relatedEventLinks.append(document.createTextNode(" · "));
+            addLink(relatedEventLinks, event.title, `#event-${event.id}`);
         });
+        relatedEvents.append(relatedEventLinks);
         card.append(relatedEvents);
+        addReferenceLinks(card, person);
         addSourceLink(card, person);
         peopleGrid.append(card);
     });
@@ -88,7 +193,7 @@ function renderEvents(query) {
     const events = umayyadData.events.filter(event => {
         const names = event.personIds.map(id => peopleById.get(id)?.name || "").join(" ");
         const cityNames = event.cityIds.map(id => citiesById.get(id)?.name || "").join(" ");
-        return `${event.title} ${event.year} ${event.description} ${names} ${cityNames}`.toLocaleLowerCase("ar").includes(query);
+        return `${event.title} ${event.year} ${event.description} ${event.background} ${event.causes} ${event.outcomes} ${names} ${cityNames}`.toLocaleLowerCase("ar").includes(query);
     });
     eventsGrid.replaceChildren();
     events.forEach(event => {
@@ -99,12 +204,23 @@ function renderEvents(query) {
         card.append(textElement("p", "card-kicker", `${dateLabel} · ${event.state}`));
         card.append(textElement("h3", "card-title", event.title));
         card.append(textElement("p", "card-description", event.description));
-        addRelations(card, "المكان", citiesById, event.cityIds, "city-", "umayyad-relations");
+        card.append(textElement("p", "encyclopedia-label", "الخلفية"));
+        card.append(textElement("p", "card-description event-context", event.background));
+        card.append(textElement("p", "encyclopedia-label", "الأسباب"));
+        card.append(textElement("p", "card-description event-context", event.causes));
+        card.append(textElement("p", "encyclopedia-label", "النتائج"));
+        card.append(textElement("p", "card-description event-context", event.outcomes));
+        addRelations(card, "المدن والأقاليم المرتبطة", citiesById, event.cityIds, "city-", "umayyad-relations");
         addRelations(card, "الشخصيات", peopleById, event.personIds, "person-", "umayyad-relations");
         if (event.battleId) {
             const battle = battlesById.get(event.battleId);
-            if (battle) addLink(card, `تفاصيل المعركة: ${battle.name}`, `#battle-${battle.id}`, "umayyad-battle-link");
+            if (battle) {
+                card.append(textElement("p", "encyclopedia-label", "موضع المعركة"));
+                card.append(textElement("p", "card-description event-context", battle.locationDescription));
+                addLink(card, `تفاصيل المعركة: ${battle.name}`, `#battle-${battle.id}`, "umayyad-battle-link");
+            }
         }
+        addReferenceLinks(card, event);
         addSourceLink(card, event);
         eventsGrid.append(card);
     });
@@ -130,8 +246,10 @@ function createBattlePopup(battle) {
     const popup = textElement("div", "map-popup", "");
     popup.dir = "rtl";
     popup.append(textElement("h2", "map-popup-title", battle.name));
-    popup.append(textElement("p", "map-popup-region", `${battle.year}م · موقع تقريبي`));
+    popup.append(textElement("p", "map-popup-region", `${battle.year}م · موضع تقريبي`));
+    popup.append(textElement("p", "map-popup-history", battle.locationDescription));
     popup.append(textElement("p", "map-popup-history", battle.description));
+    popup.append(textElement("p", "map-popup-history", battle.background));
     addLink(popup, "فتح سجل الحدث", `#event-${battle.eventId}`);
     return popup;
 }
@@ -175,9 +293,14 @@ function renderBattles(query) {
         card.append(textElement("p", "card-kicker", `${battle.year}م · معركة`));
         card.append(textElement("h3", "card-title", battle.name));
         card.append(textElement("p", "card-description", battle.description));
-        addRelations(card, "المدينة المرتبطة", citiesById, [battle.cityId], "city-", "umayyad-relations");
+        card.append(textElement("p", "encyclopedia-label", "الخلفية"));
+        card.append(textElement("p", "card-description event-context", battle.background));
+        card.append(textElement("p", "encyclopedia-label", "الموضع التقريبي"));
+        card.append(textElement("p", "card-description event-context", battle.locationDescription));
+        addRelations(card, "المدينة أو الإقليم المرجعي", citiesById, [battle.cityId], "city-", "umayyad-relations");
         addRelations(card, "الشخصيات", peopleById, battle.personIds, "person-", "umayyad-relations");
         addLink(card, "عرض الحدث في التسلسل", `#event-${battle.eventId}`, "umayyad-battle-link");
+        addReferenceLinks(card, battle);
         addSourceLink(card, battle);
         battlesGrid.append(card);
     });
@@ -249,10 +372,17 @@ async function loadUmayyadData() {
         if (umayyadData.people.length !== 50
             || umayyadData.events.length !== 100
             || umayyadData.cities.length !== 20
-            || umayyadData.battles.length !== 10) {
+            || umayyadData.battles.length !== 10
+            || !Array.isArray(umayyadData.caliphs)
+            || umayyadData.caliphs.length !== 14
+            || !Array.isArray(umayyadData.references)
+            || !umayyadData.references.length) {
             throw new Error("بيانات الموسوعة الأموية لا تطابق الأعداد المطلوبة.");
         }
         window.umayyadMap = initializeMap();
+        renderCaliphs();
+        renderFeaturedPeople();
+        renderReferences();
         document.querySelectorAll("[data-umayyad-count]").forEach(element => {
             element.textContent = String(umayyadData[element.dataset.umayyadCount].length);
         });

@@ -308,6 +308,8 @@ a { color: inherit; }
 .umayyad-page .collection-heading h2 { margin: 0; font-size: 23px; }
 .umayyad-page .collection-heading .eyebrow { margin: 0 0 6px; color: #9a8050; font-size: 10px; font-weight: 700; }
 .umayyad-relations { margin-top: 9px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.umayyad-relations summary { color: var(--green); cursor: pointer; font-weight: 700; }
+.umayyad-relations[open] > div { margin-top: 5px; }
 .umayyad-relations a, .umayyad-battle-link, .umayyad-map-events a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .umayyad-battle-link { display: inline-flex; margin-top: 8px; font-size: 10px; }
 .umayyad-map-events { display: grid; gap: 5px; margin-top: 8px; font-size: 10px; line-height: 1.6; }
@@ -315,7 +317,26 @@ a { color: inherit; }
 .umayyad-editorial-note { margin-top: 34px; padding: 20px 22px; border-right: 3px solid var(--gold); border-radius: 10px; background: #f0eee5; }
 .umayyad-editorial-note h2 { margin: 0; color: var(--green-dark); font-size: 15px; }
 .umayyad-editorial-note p { margin: 8px 0 0; color: #59665f; font-size: 11px; line-height: 1.9; }
-
+.encyclopedia-intro { padding: 22px 24px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.encyclopedia-intro p { margin: 0 0 14px; color: #3e4c45; font-size: 13px; line-height: 2; }
+.encyclopedia-intro p:last-child { margin-bottom: 0; }
+.encyclopedia-intro .editorial-caveat { padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.encyclopedia-feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.encyclopedia-feature { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+.encyclopedia-feature h3 { margin: 0; color: var(--green-dark); font-size: 14px; }
+.encyclopedia-feature p { margin: 8px 0 0; color: #4a5750; font-size: 11px; line-height: 1.9; }
+.encyclopedia-label { margin: 12px 0 2px; color: #8a7044; font-size: 10px; font-weight: 800; }
+.encyclopedia-citations { margin-top: 9px; color: var(--muted); font-size: 10px; line-height: 1.8; }
+.encyclopedia-citations a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.encyclopedia-reference-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.encyclopedia-reference { padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); scroll-margin-top: 100px; }
+.encyclopedia-reference .card-title { font-size: 14px; line-height: 1.7; }
+.encyclopedia-reference-scope { margin: 8px 0 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.umayyad-timeline { display: grid; gap: 11px; margin-right: 8px; padding-right: 20px; border-right: 2px solid #d7cba9; }
+.umayyad-timeline .data-card { position: relative; }
+.umayyad-timeline .data-card::before { position: absolute; top: 21px; right: -27px; width: 10px; height: 10px; border: 2px solid var(--white); border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 1px #b9a36f; content: ""; }
+.umayyad-timeline .event-context { color: #4f5c55; }
+.caliph-card { border-top: 3px solid var(--gold); }
 .site-footer { margin-top: 52px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 10px; }
 .site-footer span { margin: 0 4px; color: var(--gold); }
 
@@ -328,6 +349,7 @@ a { color: inherit; }
     .hero-seal::after { inset: 21px; }
     .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .umayyad-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .encyclopedia-reference-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1100px) and (min-width: 851px) {
@@ -376,17 +398,22 @@ a { color: inherit; }
     .pricing-card ul { min-height: auto; }
     .about-panel, .contact-panel { padding: 20px; }
     .umayyad-toolbar { align-items: stretch; }
+    .encyclopedia-feature-grid { grid-template-columns: 1fr; }
+    .encyclopedia-intro { padding: 17px; }
     .umayyad-stats article { padding: 12px; }
     .umayyad-editorial-note { padding: 17px; }
 }
 
 @media print {
     body { background: #fff; }
-    .site-header, .site-footer, .collection-toolbar, .export-button, .timeline-controls, .sample-disclosure { display: none !important; }
+    .site-header, .site-footer, .collection-toolbar, .export-button, .timeline-controls, .sample-disclosure, .umayyad-section-nav, .umayyad-toolbar, #umayyad-status, #umayyad-map, .map-frame { display: none !important; }
     .page-shell { max-width: none; padding: 0; }
     .page-intro { margin: 0 0 18px; }
     .card-grid { display: block; }
     .data-card { break-inside: avoid; margin: 0 0 10px; box-shadow: none; }
     .data-card:hover { transform: none; }
     .card-description { color: #222; }
+    .umayyad-page .content-section { break-before: page; }
+    .encyclopedia-feature, .encyclopedia-intro, .encyclopedia-reference { break-inside: avoid; box-shadow: none; }
+    .umayyad-timeline .data-card::before { display: none; }
 }

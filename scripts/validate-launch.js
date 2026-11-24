@@ -21,6 +21,8 @@ const requiredFiles = [
     "website/umayyad.js",
     "website/styles.css",
     "umayyad/data.json",
+    "umayyad/encyclopedia-content.js",
+    "UMAYYAD_ENCYCLOPEDIA.md",
     "books/books.json",
     "people/people.json",
     "events/events.json"
@@ -189,12 +191,31 @@ if (umayyadData) {
     const eventsById = new Map(umayyadData.events.map(event => [event.id, event]));
     const citiesById = new Map(umayyadData.cities.map(city => [city.id, city]));
     const battlesById = new Map(umayyadData.battles.map(battle => [battle.id, battle]));
+    const references = Array.isArray(umayyadData.references) ? umayyadData.references : [];
+    const referenceIds = new Set(references.map(reference => reference.id));
+    if (!references.length || references.some(reference => !reference.id || !reference.citation || !reference.scope)
+        || referenceIds.size !== references.length) {
+        errors.push("umayyad/data.json: bibliography entries require unique IDs, citations, and scope notes.");
+    }
+    const hasValidReferences = record => Array.isArray(record.referenceIds)
+        && record.referenceIds.length > 0
+        && record.referenceIds.every(id => referenceIds.has(id));
+    if (!Array.isArray(umayyadData.caliphs)
+        || umayyadData.caliphs.length !== 14
+        || new Set(umayyadData.caliphs.map(caliph => caliph.personId)).size !== umayyadData.caliphs.length
+        || umayyadData.caliphs.some(caliph => !peopleById.has(caliph.personId) || !caliph.reign)) {
+        errors.push("umayyad/data.json: the 14-caliph chronology must link to unique profiles and reign periods.");
+    }
     if (umayyadData.events.some((event, index) => {
         const year = Number(event.year);
         return !Number.isInteger(year)
             || year < 661
             || year > 750
             || !event.description
+            || !event.background
+            || !event.causes
+            || !event.outcomes
+            || !hasValidReferences(event)
             || !["سنة", "تقريبية"].includes(event.datePrecision)
             || (index > 0 && Number(umayyadData.events[index - 1].year) > year)
             || !event.cityIds.length
@@ -206,15 +227,24 @@ if (umayyadData) {
         errors.push("umayyad/data.json: events require ordered 661-750 dates and valid city, person, and battle links.");
     }
     if (umayyadData.people.some(person => !person.description
+        || !person.origin
+        || !person.biography
+        || !person.achievements
+        || !person.historicalImpact
+        || !Array.isArray(person.relations)
+        || !person.relations.length
+        || person.relations.some(relation => !peopleById.has(relation.personId) || !relation.label)
+        || !hasValidReferences(person)
         || !person.eventIds.length
         || person.eventIds.some(id => !eventsById.has(id) || !eventsById.get(id).personIds.includes(person.id)))) {
-        errors.push("umayyad/data.json: every person must link to existing related events.");
+        errors.push("umayyad/data.json: every person requires an encyclopedia profile, valid relations, sources, and related events.");
     }
     if (umayyadData.cities.some(city => !Array.isArray(city.coordinates)
         || city.coordinates.length !== 2
         || !city.coordinates.every(Number.isFinite)
         || Math.abs(city.coordinates[0]) > 90
         || Math.abs(city.coordinates[1]) > 180
+        || !hasValidReferences(city)
         || !city.eventIds.length
         || city.eventIds.some(id => !eventsById.has(id) || !eventsById.get(id).cityIds.includes(city.id)))) {
         errors.push("umayyad/data.json: cities require valid coordinates and reciprocal event links.");
@@ -226,10 +256,58 @@ if (umayyadData) {
         || !Array.isArray(battle.coordinates)
         || battle.coordinates.length !== 2
         || !battle.coordinates.every(Number.isFinite)
+        || !battle.locationDescription
+        || !battle.background
+        || !hasValidReferences(battle)
         || !eventsById.get(battle.eventId).cityIds.includes(battle.cityId)
         || battle.personIds.some(id => !eventsById.get(battle.eventId).personIds.includes(id))
         || eventsById.get(battle.eventId).battleId !== battle.id)) {
         errors.push("umayyad/data.json: battles require valid coordinates and reciprocal event, city, and person links.");
+    }
+}
+
+const encyclopediaPath = path.join(root, "UMAYYAD_ENCYCLOPEDIA.md");
+if (fs.existsSync(encyclopediaPath)) {
+    const encyclopedia = fs.readFileSync(encyclopediaPath, "utf8");
+    const profileHeadings = encyclopedia.match(/^### \d+\. /gm) || [];
+    const biographies = encyclopedia.match(/\*\*التعريف الموسوعي:\*\*/g) || [];
+    const origins = encyclopedia.match(/\*\*النشأة:\*\*/g) || [];
+    const achievements = encyclopedia.match(/\*\*الإنجازات:\*\*/g) || [];
+    const historicalImpacts = encyclopedia.match(/\*\*التأثير التاريخي:\*\*/g) || [];
+    const relatedEventLists = encyclopedia.match(/\*\*الأحداث المرتبطة:\*\*/g) || [];
+    const backgrounds = encyclopedia.match(/\*\*الخلفية:\*\*/g) || [];
+    const causes = encyclopedia.match(/\*\*الأسباب:\*\*/g) || [];
+    const outcomes = encyclopedia.match(/\*\*النتائج:\*\*/g) || [];
+    if (profileHeadings.length !== 50
+        || biographies.length !== 50
+        || origins.length !== 50
+        || achievements.length !== 50
+        || historicalImpacts.length !== 50
+        || relatedEventLists.length !== 50
+        || backgrounds.length !== 110
+        || causes.length !== 100
+        || outcomes.length !== 100
+        || !encyclopedia.includes("## الخلفاء")
+        || !encyclopedia.includes("## التوسع الجغرافي")
+        || !encyclopedia.includes("## الإنجازات الحضارية")
+        || !encyclopedia.includes("## الخط الزمني")
+        || !encyclopedia.includes("## الأحداث والسياقات")
+        || !encyclopedia.includes("## المراجع والمنهج")) {
+        errors.push("UMAYYAD_ENCYCLOPEDIA.md: expected complete sections for 50 biographies and 100 events.");
+    }
+
+    const umayyadPagePath = path.join(root, "website/umayyad.html");
+    if (fs.existsSync(umayyadPagePath)) {
+        const umayyadPage = fs.readFileSync(umayyadPagePath, "utf8");
+        const ids = [...umayyadPage.matchAll(/\bid=["']([^"']+)["']/g)].map(([, id]) => id);
+        const idSet = new Set(ids);
+        if (ids.length !== idSet.size) errors.push("website/umayyad.html: duplicate element IDs.");
+        const missingFragments = [...umayyadPage.matchAll(/\bhref=["']#([^"']+)["']/g)]
+            .map(([, id]) => id)
+            .filter(id => !idSet.has(id));
+        if (missingFragments.length) {
+            errors.push(`website/umayyad.html: missing section anchors: ${[...new Set(missingFragments)].join(", ")}.`);
+        }
     }
 }
 
