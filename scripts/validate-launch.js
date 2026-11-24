@@ -40,6 +40,10 @@ const htmlFiles = [
     path.join(root, "404.html"),
     ...listFiles(path.join(root, "website"), ".html")
 ];
+const rootIndex = fs.readFileSync(path.join(root, "index.html"), "utf8");
+if (!/<meta\s+http-equiv=["']refresh["']\s+content=["']0;\s*url=website\/index\.html["']/i.test(rootIndex)) {
+    errors.push("index.html must redirect to website/index.html.");
+}
 let checkedLinks = 0;
 for (const htmlPath of htmlFiles) {
     const html = fs.readFileSync(htmlPath, "utf8");
