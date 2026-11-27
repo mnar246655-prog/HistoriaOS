@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img">
+  <title>رسم زمني لحدث تاريخي</title>
+  <desc>لوحة تجريدية لتمثيل حدث في سياقه الزمني من دون ادعاء تصوير الواقعة.</desc>
+  <defs>
+    <linearGradient id="event" x2="1">
+      <stop stop-color="#173b34"/>
+      <stop offset="1" stop-color="#526f5b"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#event)" d="M0 0h720v420H0z"/>
+  <path d="M96 208h528" stroke="#f0d7a4" stroke-opacity=".72" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#d3a95f" stroke="#f7edda" stroke-width="5">
+    <circle cx="143" cy="208" r="18"/>
+    <circle cx="298" cy="208" r="25"/>
+    <circle cx="472" cy="208" r="18"/>
+    <circle cx="588" cy="208" r="14"/>
+  </g>
+  <g stroke="#f0d7a4" stroke-opacity=".7" stroke-width="3">
+    <path d="M143 178v-51m0 111v48M298 168V88m0 145v75M472 178v-51m0 111v48M588 184v-53m0 77v53"/>
+  </g>
+  <path d="M90 72h540M90 348h540" stroke="#f0d7a4" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M105 72v20m510-20v20M105 328v20m510-20v20" stroke="#f0d7a4" stroke-opacity=".6" stroke-width="3"/>
+</svg>

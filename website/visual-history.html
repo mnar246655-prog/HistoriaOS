@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="المتحف البصري في HistoriaOS: صور توضيحية أصلية، خرائط، خطوط زمنية وبطاقات معلومات للشخصيات والمدن والمعارك والدول.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | المتحف البصري">
+    <meta property="og:description" content="اكتشف السجلات التاريخية بصريًا عبر الفن التوضيحي والخرائط والخطوط الزمنية.">
+    <title>HistoriaOS | المتحف البصري</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="visual-system.js" defer></script>
+    <script src="visual-history.js" defer></script>
+</head>
+<body class="visual-history-page">
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الأطلس التفاعلي</a><a href="visual-history.html" aria-current="page">المتحف البصري</a><a href="timeline.html">الخط الزمني</a><a href="rashidun.html">الخلفاء الراشدون</a><a href="umayyad.html">الدولة الأموية</a><a href="references.html">المراجع</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page visual-history-shell">
+        <section class="visual-museum-hero">
+            <div class="visual-museum-copy">
+                <p class="eyebrow">HistoriaOS · متحف رقمي</p>
+                <h1>التاريخ يُرى ويُستكشف</h1>
+                <p>انتقل بين الشخصيات والمدن والمعارك والدول عبر رسوم توضيحية أصلية، وخرائط مرتبطة بالسجلات، وخطوط زمنية وبطاقات معلومات قابلة للاستكشاف.</p>
+                <p class="visual-rights-note">الرسوم هنا تصورية وليست صورًا أرشيفية أو إعادة بناء أثرية. تظهر مواضع الخريطة بحسب دقة الإحالة، ولا تُختلق صورة شخصية أو حدود تاريخية.</p>
+            </div>
+            <div class="visual-museum-seal" aria-hidden="true"><span>هـ</span><i></i></div>
+        </section>
+
+        <section class="visual-stats" aria-label="محتويات المعرض البصري">
+            <article><span>الشخصيات</span><strong id="visual-count-people">—</strong></article>
+            <article><span>المدن والمواضع</span><strong id="visual-count-cities">—</strong></article>
+            <article><span>المعارك</span><strong id="visual-count-battles">—</strong></article>
+            <article><span>الدول والحقب</span><strong id="visual-count-states">—</strong></article>
+        </section>
+
+        <section class="visual-explorer" aria-label="استكشاف السجلات التاريخية بصريًا">
+            <div class="visual-gallery-column">
+                <div class="visual-toolbar">
+                    <div class="visual-type-filters" role="group" aria-label="تصفية حسب نوع السجل">
+                        <button type="button" class="visual-filter is-active" data-visual-type="all" aria-pressed="true">الكل</button>
+                        <button type="button" class="visual-filter" data-visual-type="person" aria-pressed="false">الشخصيات</button>
+                        <button type="button" class="visual-filter" data-visual-type="city" aria-pressed="false">المدن</button>
+                        <button type="button" class="visual-filter" data-visual-type="battle" aria-pressed="false">المعارك</button>
+                        <button type="button" class="visual-filter" data-visual-type="state" aria-pressed="false">الدول</button>
+                    </div>
+                    <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="visual-search" class="search-input" type="search" placeholder="ابحث في المعرض" aria-label="ابحث في المعرض البصري"></label>
+                </div>
+                <div class="visual-results-heading">
+                    <p class="eyebrow eyebrow-dark">قاعة العرض</p>
+                    <h2>سجلات مختارة</h2>
+                    <span id="visual-result-count" class="result-label" aria-live="polite">جارٍ تحميل السجلات...</span>
+                </div>
+                <div id="visual-gallery" class="visual-gallery" aria-live="polite"><p class="empty-state">جارٍ إعداد المعرض...</p></div>
+            </div>
+
+            <aside class="visual-inspector" aria-labelledby="visual-inspector-title">
+                <div class="visual-inspector-heading"><p class="eyebrow eyebrow-dark">بطاقة موسوعية</p><h2 id="visual-inspector-title">اختر سجلًا من المعرض</h2></div>
+                <div id="visual-record-art" class="visual-record-art"><p class="empty-state">ستظهر هنا الصورة التوضيحية والبيانات المرتبطة.</p></div>
+                <div id="visual-record-info" class="visual-record-info"></div>
+                <a id="visual-record-link" class="text-link" href="people.html">افتح السجل الموسوعي ←</a>
+                <div class="visual-detail-block">
+                    <div class="visual-detail-heading"><h3>المكان</h3><span id="visual-map-precision" class="visual-precision-label">—</span></div>
+                    <div id="visual-map" class="visual-map-canvas" role="application" aria-label="خريطة موضع السجل المختار"></div>
+                    <p id="visual-map-note" class="visual-rights-note" role="status">اختر سجلًا لعرض موضعه أو درجة توفر إحداثياته.</p>
+                    <a id="visual-atlas-link" class="text-link" href="maps.html">افتح الأطلس التفاعلي ←</a>
+                </div>
+                <div class="visual-detail-block">
+                    <div class="visual-detail-heading"><h3>الخط الزمني</h3><span id="visual-timeline-period" class="visual-precision-label">—</span></div>
+                    <div id="visual-detail-timeline"></div>
+                </div>
+                <div id="visual-related-events" class="visual-detail-block"></div>
+            </aside>
+        </section>
+
+        <aside class="umayyad-editorial-note visual-editorial-note">
+            <h2>الصورة التاريخية بين الشاهد والتصور</h2>
+            <p>لا تتوفر صور فوتوغرافية معاصرة لمعظم شخصيات العصور الوسطى، كما أن الأعمال الفنية اللاحقة لا تُعدّ سجلًا بصريًا مباشرًا. لذلك يستخدم النظام رسومًا تجريدية أصلية، ويميّزها عن الصور الأثرية والخرائط الجغرافية. يمكن لاحقًا إضافة مواد مرخصة فقط مع تسجيل صاحب العمل والترخيص والمصدر.</p>
+        </aside>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>

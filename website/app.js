@@ -3,9 +3,10 @@ const collections = {
         file: "../books/books.json",
         title: "title",
         description: "description",
-        searchFields: ["title", "author", "category", "description"],
+        searchFields: ["title", "author", "category", "description", "historicalPeriod", "personNames", "eventNames", "cityNames"],
         fields: [
             { key: "author", label: "المؤلف" },
+            { key: "compositionDate", label: "تاريخ التأليف" },
             { key: "category", label: "التصنيف" }
         ],
         kicker: "كتاب تاريخي"
@@ -30,57 +31,6 @@ const collections = {
         kicker: "حدث تاريخي"
     }
 };
-
-const historicalPlaces = [
-    {
-        name: "مكة",
-        region: "الحجاز · المملكة العربية السعودية",
-        coordinates: [21.4225, 39.8262],
-        history: "تضم المسجد الحرام والكعبة، وكانت مقصدًا للحج ومركزًا دينيًا وتجاريًا بارزًا في غرب الجزيرة العربية."
-    },
-    {
-        name: "المدينة",
-        region: "الحجاز · المملكة العربية السعودية",
-        coordinates: [24.4672, 39.6111],
-        history: "هاجر إليها النبي محمد ﷺ سنة 622م، ومنها قامت أول جماعة إسلامية، وتضم المسجد النبوي."
-    },
-    {
-        name: "القدس",
-        region: "بلاد الشام",
-        coordinates: [31.7683, 35.2137],
-        history: "مدينة ذات مكانة دينية وتاريخية كبرى، وفيها المسجد الأقصى وقبة الصخرة، وارتبطت بمحطات بارزة في تاريخ المنطقة."
-    },
-    {
-        name: "دمشق",
-        region: "بلاد الشام · سوريا",
-        coordinates: [33.5138, 36.2765],
-        history: "من أقدم المدن المأهولة، وكانت عاصمة الدولة الأموية بين عامي 661 و750م."
-    },
-    {
-        name: "بغداد",
-        region: "العراق",
-        coordinates: [33.3152, 44.3661],
-        history: "أسسها الخليفة العباسي أبو جعفر المنصور سنة 762م، وغدت مركزًا سياسيًا وعلميًا بارزًا في العصر العباسي."
-    },
-    {
-        name: "قرطبة",
-        region: "الأندلس · إسبانيا",
-        coordinates: [37.8882, -4.7794],
-        history: "ازدهرت في الأندلس، وصارت عاصمة الخلافة الأموية في الأندلس في القرن العاشر ومركزًا للعلم والعمران."
-    },
-    {
-        name: "القاهرة",
-        region: "مصر",
-        coordinates: [30.0444, 31.2357],
-        history: "تأسست القاهرة الفاطمية سنة 969م، وغدت مركزًا سياسيًا وثقافيًا بارزًا في مصر."
-    },
-    {
-        name: "إسطنبول",
-        region: "تركيا",
-        coordinates: [41.0082, 28.9784],
-        history: "كانت القسطنطينية عاصمة للإمبراطورية البيزنطية، وفتحها العثمانيون سنة 1453م."
-    }
-];
 
 const loadedCollections = new Map();
 const searchInput = document.querySelector("#search");
@@ -122,25 +72,101 @@ function createTextElement(tagName, className, text) {
 
 function createSourceLink(item) {
     if (!item.sourceUrl) return null;
-    if (typeof item.sourceUrl !== "string"
-        || !/^https:\/\/en\.wikipedia\.org\/wiki\/[^\s]+$/.test(item.sourceUrl)) {
+    let url;
+    try {
+        url = new URL(item.sourceUrl);
+    } catch {
+        console.error("Invalid source URL in historical record:", item.title || item.name || item.id);
+        return null;
+    }
+    const allowedHosts = new Set([
+        "en.wikipedia.org",
+        "ar.wikipedia.org",
+        "en.wikisource.org",
+        "ar.wikisource.org",
+        "zh.wikisource.org"
+    ]);
+    if (url.protocol !== "https:"
+        || url.username
+        || url.password
+        || url.port
+        || !allowedHosts.has(url.hostname)
+        || !url.pathname.startsWith("/wiki/")) {
         console.error("Invalid source URL in historical record:", item.title || item.name || item.id);
         return null;
     }
 
     const link = document.createElement("a");
     link.className = "source-link";
-    link.href = item.sourceUrl;
+    link.href = url.href;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = `المصدر: ${item.sourceName === "Wikipedia" ? "ويكيبيديا" : item.sourceName || "مصدر مفتوح"}`
+    const sourceName = item.sourceName === "Wikipedia" ? "ويكيبيديا"
+        : item.sourceName === "Wikisource" ? "ويكي مصدر"
+            : item.sourceName === "Chinese Wikisource" ? "ويكي مصدر (الصينية)"
+                : item.sourceName || "مصدر مفتوح";
+    link.textContent = `المصدر: ${sourceName}`
         + (item.sourceLicense ? ` (${item.sourceLicense})` : "");
     return link;
 }
 
+function createBookCard(item, collection) {
+    const card = document.createElement("article");
+    card.className = "data-card book-card";
+    const heading = document.createElement("div");
+    heading.className = "card-heading";
+    heading.append(createTextElement("span", "card-kicker", collection.kicker));
+    card.append(heading);
+
+    const detailHref = `book.html?id=${encodeURIComponent(item.id)}`;
+    const coverLink = document.createElement("a");
+    coverLink.className = "book-cover-link";
+    coverLink.href = detailHref;
+    coverLink.setAttribute("aria-label", `عرض تفاصيل كتاب ${item.title}`);
+    coverLink.append(window.HistoriaBookCovers.create(item, "card"));
+    card.append(coverLink);
+
+    const content = document.createElement("div");
+    content.className = "book-card-content";
+    const title = document.createElement("h3");
+    title.className = "card-title";
+    const titleLink = document.createElement("a");
+    titleLink.className = "book-title-link";
+    titleLink.href = detailHref;
+    titleLink.textContent = item[collection.title] ?? "بدون عنوان";
+    title.append(titleLink);
+    content.append(title);
+    collection.fields.forEach(field => {
+        const value = item[field.key];
+        if (value !== undefined && value !== null && value !== "") {
+            content.append(createTextElement("p", "card-detail", `${field.label}: ${value}`));
+        }
+    });
+    if (item.summary || item[collection.description]) {
+        content.append(createTextElement("p", "card-description", item.summary || item[collection.description]));
+    }
+    const detailLink = document.createElement("a");
+    detailLink.className = "book-detail-link";
+    detailLink.href = detailHref;
+    detailLink.textContent = "عرض الملف التفصيلي";
+    content.append(detailLink);
+    const sourceLink = createSourceLink(item);
+    if (sourceLink) content.append(sourceLink);
+    card.append(content);
+    return card;
+}
+
 function createCard(item, collection) {
+    if (collection.kicker === "كتاب تاريخي" && item.cover && window.HistoriaBookCovers) {
+        return createBookCard(item, collection);
+    }
     const card = document.createElement("article");
     card.className = "data-card";
+    if (window.HistoriaVisualSystem
+        && (collection.kicker === "شخصية تاريخية" || collection.kicker === "حدث تاريخي")) {
+        const type = collection.kicker === "شخصية تاريخية" ? "person" : "event";
+        window.HistoriaVisualSystem.addArtwork(card, type, item[collection.title] || "سجل تاريخي");
+    }
     const heading = document.createElement("div");
     heading.className = "card-heading";
     heading.append(createTextElement("span", "card-kicker", collection.kicker));
@@ -468,37 +494,105 @@ function refreshVisibleCollections() {
 }
 
 async function loadHomepageStats() {
-    const statElements = Array.from(document.querySelectorAll("[data-umayyad-stat]"));
+    const statElements = Array.from(document.querySelectorAll("[data-home-stat]"));
     if (!statElements.length) return;
 
     const status = document.getElementById("home-stats-status");
     try {
-        const response = await fetch("../umayyad/data.json");
-        if (!response.ok) throw new Error(`تعذّر تحميل بيانات الإحصاءات (HTTP ${response.status})`);
-        const data = await response.json();
-        const expectedGroups = ["people", "events", "cities", "battles"];
-        if (expectedGroups.some(group => !Array.isArray(data[group]))) {
-            throw new Error("ملف الموسوعة الأموية لا يحتوي مجموعات إحصائية صالحة.");
-        }
-
+        const paths = [
+            "../people/people.json",
+            "../events/events.json",
+            "../umayyad/data.json",
+            "../rashidun/data.json"
+        ];
+        const responses = await Promise.all(paths.map(path => fetch(path)));
+        const failedResponse = responses.find(response => !response.ok);
+        if (failedResponse) throw new Error(`تعذّر تحميل بيانات الإحصاءات (HTTP ${failedResponse.status})`);
+        const [people, events, umayyad, rashidun] = await Promise.all(responses.map(response => response.json()));
+        const isSourced = record => !record.isSample
+            && (record.sourceUrl || (Array.isArray(record.referenceIds) && record.referenceIds.length));
+        const uniqueCount = (records, keyFor) => new Set(records.map(keyFor).filter(Boolean)).size;
+        const normalize = value => normalizeSearchText(value).replace(/[^\p{L}\p{N}]+/gu, "");
+        const documentedPeople = [
+            ...people.filter(isSourced),
+            ...umayyad.people.filter(isSourced),
+            ...rashidun.caliphs.filter(isSourced)
+        ];
+        const documentedEvents = [
+            ...events.filter(isSourced),
+            ...umayyad.events.filter(isSourced),
+            ...rashidun.events.filter(isSourced)
+        ];
+        const documentedCities = [...umayyad.cities, ...rashidun.places];
+        const documentedBattles = [
+            ...umayyad.battles.filter(isSourced),
+            ...rashidun.events.filter(event => isSourced(event) && /معركة|وقعة/.test(event.title)),
+            ...events.filter(event => isSourced(event) && /معركة|وقعة|battle|siege/i.test(`${event.title} ${event.sourceTitle || ""}`))
+        ];
+        const counts = {
+            people: uniqueCount(documentedPeople, person => normalize(person.name)),
+            events: uniqueCount(documentedEvents, event => `${Number(event.year)}:${normalize(event.title)}`),
+            cities: uniqueCount(documentedCities, city => normalize(city.name)),
+            battles: uniqueCount(documentedBattles, battle => {
+                const year = Number(battle.year);
+                const title = normalize(battle.name || battle.title);
+                return Number.isFinite(year) && title ? `${year}:${title}` : "";
+            })
+        };
         statElements.forEach(element => {
-            const records = data[element.dataset.umayyadStat];
-            if (!Array.isArray(records)) {
-                throw new Error(`مجموعة إحصائية غير معروفة: ${element.dataset.umayyadStat}`);
+            const count = counts[element.dataset.homeStat];
+            if (!Number.isFinite(count)) {
+                throw new Error(`مجموعة إحصائية غير معروفة: ${element.dataset.homeStat}`);
             }
-            element.textContent = records.length.toLocaleString("ar");
+            element.textContent = count.toLocaleString("ar");
         });
-        if (status) status.textContent = "الأعداد محدثة من ملف بيانات الموسوعة الأموية.";
+        if (status) status.textContent = "إحصاءات السجلات ذات الإحالات؛ السجلات التجريبية مستبعدة.";
     } catch (error) {
         console.error("تعذّر تحميل إحصاءات الصفحة الرئيسية:", error);
         statElements.forEach(element => {
             element.textContent = "—";
         });
         if (status) {
-            status.textContent = "تعذّر تحميل الإحصاءات. أعد المحاولة بعد التحقق من اتصال الموقع بملف البيانات.";
+            status.textContent = "تعذّر تحميل الإحصاءات الحية؛ تحقق من اتصال ملفات البيانات.";
             status.classList.add("load-error");
         }
     }
+}
+
+function initializeHomeEraCounter() {
+    const range = document.getElementById("home-era-range");
+    const yearOutput = document.getElementById("home-era-year");
+    const mapLabel = document.getElementById("home-era-map-label");
+    const eraLink = document.getElementById("home-era-link");
+    const map = document.querySelector(".home-hero-map-window");
+    const buttons = Array.from(document.querySelectorAll("[data-home-era]"));
+    if (!range || !yearOutput || !eraLink || !buttons.length) return;
+
+    const eras = [
+        { year: "٦٣٢م", title: "الخلافة الراشدة", href: "rashidun.html" },
+        { year: "٦٦١م", title: "الدولة الأموية", href: "umayyad.html" },
+        { year: "٧١١م", title: "الأندلس", href: "events.html?q=الأندلس" },
+        { year: "١٢٩٩م", title: "الدولة العثمانية", href: "events.html?q=الدولة%20العثمانية" }
+    ];
+    const updateEra = value => {
+        const index = Math.max(0, Math.min(eras.length - 1, Number(value)));
+        const era = eras[index];
+        range.value = String(index);
+        range.setAttribute("aria-valuetext", `${era.title}، ${era.year}`);
+        yearOutput.value = era.year;
+        yearOutput.textContent = era.year;
+        eraLink.href = era.href;
+        eraLink.firstChild.textContent = `استكشف ${era.title} `;
+        if (mapLabel) mapLabel.textContent = `${era.title} · ${era.year}`;
+        if (map) map.dataset.activeEra = String(index);
+        buttons.forEach(button => {
+            button.setAttribute("aria-pressed", String(Number(button.dataset.homeEra) === index));
+        });
+    };
+
+    range.addEventListener("input", () => updateEra(range.value));
+    buttons.forEach(button => button.addEventListener("click", () => updateEra(button.dataset.homeEra)));
+    updateEra(range.value);
 }
 
 document.querySelectorAll("[data-collection]").forEach(container => {
@@ -516,89 +610,11 @@ if (searchInput) searchInput.addEventListener("input", () => {
 });
 
 loadHomepageStats();
+initializeHomeEraCounter();
 
 document.querySelectorAll("[data-current-year]").forEach(element => {
     element.textContent = String(new Date().getFullYear());
 });
-
-function createMapPopup(place) {
-    const popup = document.createElement("div");
-    popup.className = "map-popup";
-    popup.dir = "rtl";
-    popup.append(createTextElement("h2", "map-popup-title", place.name));
-    popup.append(createTextElement("p", "map-popup-region", place.region));
-    popup.append(createTextElement("p", "map-popup-history", place.history));
-    return popup;
-}
-
-function initializeHistoricalMap() {
-    const mapElement = document.getElementById("history-map");
-    if (!mapElement) return;
-
-    const placesList = document.getElementById("map-locations");
-    const status = document.getElementById("map-status");
-    if (typeof L === "undefined") {
-        status.textContent = "تعذّر تحميل مكتبة الخريطة. تحقق من اتصال الإنترنت ثم أعد تحميل الصفحة.";
-        status.classList.add("map-status-error");
-        return;
-    }
-
-    const map = L.map(mapElement, { scrollWheelZoom: false });
-    const bounds = [];
-    const placeButtons = [];
-
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
-    }).addTo(map);
-
-    historicalPlaces.forEach(place => {
-        const button = document.createElement("button");
-        button.className = "map-place-button";
-        button.type = "button";
-        button.setAttribute("aria-label", `اعرض ${place.name} على الخريطة`);
-        button.append(createTextElement("span", "map-place-name", place.name));
-        button.append(createTextElement("span", "map-place-region", place.region));
-        placesList.append(button);
-
-        const marker = L.marker(place.coordinates, {
-            title: place.name,
-            alt: place.name,
-            icon: L.divIcon({
-                className: "history-marker-shell",
-                html: '<span class="history-marker"></span>',
-                iconSize: [24, 24],
-                iconAnchor: [12, 12]
-            })
-        }).addTo(map);
-        marker.bindPopup(createMapPopup(place), { minWidth: 210, maxWidth: 270 });
-        marker.on("click", () => {
-            placeButtons.forEach(item => item.classList.remove("is-active"));
-            button.classList.add("is-active");
-        });
-        button.addEventListener("click", () => {
-            map.flyTo(place.coordinates, 7, { duration: 0.7 });
-            marker.openPopup();
-            placeButtons.forEach(item => item.classList.remove("is-active"));
-            button.classList.add("is-active");
-        });
-
-        placeButtons.push(button);
-        bounds.push(place.coordinates);
-    });
-
-    map.fitBounds(bounds, { padding: [32, 32], maxZoom: 5 });
-    map.on("tileerror", () => {
-        status.textContent = "تعذّر تحميل بعض بلاطات الخريطة. تحقق من اتصال الإنترنت.";
-        status.classList.add("map-status-error");
-    });
-    map.on("tileload", () => {
-        status.textContent = "اضغط على علامة أو اختر مدينة لعرض معلوماتها التاريخية.";
-        status.classList.remove("map-status-error");
-    });
-}
-
-initializeHistoricalMap();
 
 document.querySelectorAll("[data-export-pdf]").forEach(button => {
     button.addEventListener("click", () => window.print());

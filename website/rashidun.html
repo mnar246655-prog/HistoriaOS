@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183c35">
+    <meta name="description" content="موسوعة الخلفاء الراشدين: أبو بكر وعمر وعثمان وعلي، مع خط زمني تفاعلي وخرائط ومراجع.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:title" content="HistoriaOS | موسوعة الخلفاء الراشدين">
+    <meta property="og:description" content="مدخل تاريخي موثق إلى خلافة أبي بكر وعمر وعثمان وعلي بين 632 و661م.">
+    <title>HistoriaOS | موسوعة الخلفاء الراشدين</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="visual-system.js" defer></script>
+    <script src="rashidun.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
+        <nav class="site-nav" aria-label="التنقل الرئيسي">
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الأطلس التفاعلي</a><a href="visual-history.html">المتحف البصري</a><a href="timeline.html">الخط الزمني</a><a href="rashidun.html" aria-current="page">الخلفاء الراشدون</a><a href="umayyad.html">الدولة الأموية</a><a href="references.html">المراجع</a><a href="about.html">عن المنصة</a>
+        </nav>
+    </header>
+    <main class="page-shell inner-page rashidun-page">
+        <section class="umayyad-hero">
+            <p class="eyebrow">موسوعة تاريخية عربية · 632–661م</p>
+            <h1>موسوعة الخلفاء الراشدين</h1>
+            <p>قراءة سياقية لخلافة أبي بكر وعمر وعثمان وعلي، وما شهدته من بناء للسلطة واتساع للأقاليم ونزاعات سياسية. تعرض الصفحة الروايات والخلافات بقدر ما تسمح به الإحالات، ولا تحوّل الأخبار المتأخرة إلى وقائع يقينية.</p>
+            <nav class="umayyad-section-nav" aria-label="أقسام الموسوعة">
+                <a href="#rashidun-overview">المدخل</a>
+                <a href="#rashidun-caliphs">الخلفاء</a>
+                <a href="#rashidun-timeline">الخط الزمني</a>
+                <a href="#rashidun-map">الجغرافيا والفتوحات</a>
+                <a href="#rashidun-references">المراجع</a>
+                <a href="maps.html?period=rashidun">عش الحدث على الأطلس</a>
+            </nav>
+        </section>
+
+        <section class="umayyad-stats" aria-label="محتويات الموسوعة">
+            <article><strong data-rashidun-count="caliphs">—</strong><span>خلفاء</span></article>
+            <article><strong data-rashidun-count="events">—</strong><span>حدثًا تاريخيًا</span></article>
+            <article><strong data-rashidun-count="places">—</strong><span>موضعًا جغرافيًا</span></article>
+            <article><strong data-rashidun-count="battles">—</strong><span>معركة أو حملة</span></article>
+        </section>
+
+        <p id="rashidun-status" class="map-status" role="status" aria-live="polite">جارٍ تحميل بيانات الموسوعة...</p>
+
+        <section id="rashidun-overview" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">مدخل ومنهج</p><h2>الخلافة في سياق التحول السياسي</h2></div></div>
+            <div class="encyclopedia-intro">
+                <p>يتناول القسم المدة الممتدة من وفاة النبي سنة 632م إلى مقتل علي سنة 661م، وهي مرحلة تغيرت فيها آليات اختيار القيادة، واتسع نطاق الدولة، وظهرت مراكز إدارية وعسكرية جديدة. ولا يفترض هذا التقسيم أن لفظ «الراشدين» كان وصفًا سياسيًا محايدًا في كل المصادر؛ بل يميز بين الوقائع والروايات التي تشكلت حولها.</p>
+                <p>كانت الفتوحات عمليات متعددة المراحل شملت تفاوضًا وحروبًا وتسويات محلية، ولم يكن دخول مدينة مرادفًا لسيطرة فورية على إقليم كامل. كما تختلف الأخبار في تأريخ المعارك وأعداد القوات وتفاصيلها؛ لذلك لا تعرض هذه الصفحة تقديرات عددية غير محررة أو مسارات دقيقة لا يسندها مصدر.</p>
+                <p class="editorial-caveat">تُذكر الإحداثيات بوصفها نقاطًا حديثة تقريبية، لا تحديدًا أثريًا قاطعًا. المصادر الوسيطة متأخرة عن كثير من الوقائع، وتُقرأ بوصفها روايات تحتاج إلى المقارنة.</p>
+            </div>
+        </section>
+
+        <section id="rashidun-caliphs" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">السير والسياقات</p><h2>الخلفاء</h2><p>النشأة، الإسلام، الحكم، الإصلاحات، الفتوحات، التحديات والأثر التاريخي.</p></div></div>
+            <div id="rashidun-caliph-cards" class="card-grid" aria-live="polite"><p class="empty-state">جارٍ تحميل السير...</p></div>
+        </section>
+
+        <section id="rashidun-timeline" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">تاريخ متحرك</p><h2>الخط الزمني التفاعلي</h2><p>حرّك المؤشر لاستعراض الأحداث حتى السنة المختارة، ثم افتح سجل الحدث أو موضعه على الخريطة.</p></div></div>
+            <div class="timeline-controls">
+                <div class="timeline-controls-heading">
+                    <div><span class="timeline-control-label">السنة المعروضة حتى</span><strong id="rashidun-current-year">—</strong></div>
+                    <span id="rashidun-event-count" class="timeline-result-count" aria-live="polite">—</span>
+                </div>
+                <input id="rashidun-year" type="range" min="632" max="661" value="661" aria-label="اختر سنة لعرض أحداث الخلافة الراشدة">
+                <div class="timeline-range-labels"><span>٦٣٢م</span><span>٦٦١م</span></div>
+            </div>
+            <div id="rashidun-events" class="umayyad-timeline" aria-live="polite"><p class="empty-state">جارٍ تحميل الأحداث...</p></div>
+        </section>
+
+        <section id="rashidun-map" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">الجغرافيا التاريخية</p><h2>مواضع الأحداث والفتوحات</h2><p>علامات مرتبطة بسجلات الحدث؛ لا تمثل حدودًا سياسية أو طرق سير مؤكدة.</p></div><a class="text-link" href="maps.html?period=rashidun">افتح الأطلس التفاعلي الكامل ←</a></div>
+            <div class="map-explorer">
+                <aside class="map-sidebar">
+                    <div class="map-sidebar-heading"><div><h2>مواضع مرتبطة</h2><p>اختر موضعًا للانتقال إليه</p></div><span id="rashidun-place-count" class="map-count">— موضع</span></div>
+                    <div id="rashidun-places" class="map-locations" aria-label="مواضع الأحداث على الخريطة"></div>
+                    <p class="map-status">المواضع والإحداثيات تقريبية، وتختلف درجة تعيينها من سجل إلى آخر.</p>
+                </aside>
+                <div class="map-frame"><div id="rashidun-map-canvas" class="history-map" role="application" aria-label="خريطة تفاعلية لمواضع أحداث الخلافة الراشدة"></div></div>
+            </div>
+            <noscript><p class="map-unavailable">تتطلب الموسوعة تفعيل JavaScript لعرض البيانات والخريطة.</p></noscript>
+        </section>
+
+        <section id="rashidun-references" class="content-section">
+            <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">القراءة والتحقق</p><h2>المصادر والمراجع</h2><p>إحالات عامة للقراءة والمقارنة؛ يجب تثبيت الطبعة والجزء والصفحة قبل الاستشهاد البحثي.</p></div></div>
+            <p><a class="source-link" href="../RASHIDUN_ENCYCLOPEDIA.md" download>تنزيل النسخة الموسوعية بصيغة Markdown</a></p>
+            <div id="rashidun-reference-cards" class="encyclopedia-reference-list"></div>
+        </section>
+
+        <aside class="umayyad-editorial-note">
+            <h2>حدود المعرفة التاريخية</h2>
+            <p>تتباين روايات الفتوح والفتنة الأولى في أسماء المشاركين والتواريخ وأعداد الجيوش. لا تعرض الموسوعة رقمًا بوصفه ثابتًا ما لم يُربط بمصدر معين وتوضّح درجة موثوقيته؛ كما أن المسارات المرسومة في الأطلس تعليمية وتقريبية وليست إعادة بناء يقينية.</p>
+        </aside>
+        <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
+    </main>
+</body>
+</html>

@@ -4,40 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#183c35">
-    <meta name="description" content="استكشف مدنًا تاريخية عربية على خريطة تفاعلية مدعومة ببيانات OpenStreetMap.">
+    <meta name="description" content="أطلس تاريخي تفاعلي يعرض المدن والمعارك والفتوحات على خريطة Leaflet، مع وضع عش الحدث للمعارك.">
+    <meta name="historical-ai-endpoint" content="">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_AR">
-    <meta property="og:title" content="HistoriaOS | الخرائط التاريخية">
-    <meta property="og:description" content="مكة والمدينة والقدس ودمشق وبغداد وقرطبة والقاهرة وإسطنبول على خريطة تفاعلية.">
-    <title>HistoriaOS | الخرائط</title>
+    <meta property="og:title" content="HistoriaOS | الأطلس التاريخي التفاعلي">
+    <meta property="og:description" content="استكشف طبقات المدن والمعارك والدول والفتوحات والطرق التجارية وتحركات الجيوش في السياق الزمني.">
+    <title>HistoriaOS | الأطلس التاريخي التفاعلي</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-    <script src="app.js" defer></script>
+    <script src="atlas.js" defer></script>
 </head>
-<body data-page="maps">
+<body class="atlas-page">
     <header class="site-header">
         <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
         <nav class="site-nav" aria-label="التنقل الرئيسي">
-            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html" aria-current="page">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="umayyad.html">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html" aria-current="page">الأطلس التفاعلي</a><a href="visual-history.html">المتحف البصري</a><a href="timeline.html">الخط الزمني</a><a href="rashidun.html">الخلفاء الراشدون</a><a href="umayyad.html">الدولة الأموية</a><a href="references.html">المراجع</a><a href="about.html">عن المنصة</a>
         </nav>
     </header>
-    <main class="page-shell inner-page">
-        <section class="page-intro"><p class="eyebrow eyebrow-dark">الجغرافيا عبر العصور</p><h1>المدن التاريخية</h1><p>استكشف مواقع بارزة على خريطة العالم، واضغط على العلامات لقراءة نبذة تاريخية عن كل مدينة.</p></section>
-        <section class="map-explorer" aria-label="خريطة المدن التاريخية">
-            <aside class="map-sidebar">
-                <div class="map-sidebar-heading">
-                    <div><h2>محطات تاريخية</h2><p>اختر مدينة للانتقال إليها</p></div>
-                    <span class="map-count">٨ مواقع</span>
-                </div>
-                <div class="map-locations" id="map-locations" aria-label="المدن على الخريطة"></div>
-                <p class="map-status" id="map-status" role="status" aria-live="polite">الخريطة تفاعلية؛ اختر علامة أو مدينة لعرض المعلومات.</p>
+    <main class="page-shell inner-page atlas-shell">
+        <section class="atlas-hero">
+            <p class="eyebrow">جغرافيا التاريخ · 632–750م</p>
+            <h1>الأطلس التاريخي التفاعلي</h1>
+            <p>اربط الحدث بمكانه وزمنه، وبدّل الطبقات الجغرافية لاستكشاف سجلات الخلافة الراشدة والدولة الأموية. الإحداثيات والمسارات التعليمية تقريبية، ويُعرض نقص الدليل بدل ملئه بتفاصيل غير موثقة.</p>
+            <a class="button button-light" href="#atlas-workspace">ابدأ الاستكشاف <span aria-hidden="true">←</span></a>
+        </section>
+
+        <p id="atlas-status" class="map-status" role="status" aria-live="polite">جارٍ تحميل السجلات التاريخية...</p>
+
+        <section id="atlas-workspace" class="atlas-workspace" aria-label="الأطلس التاريخي التفاعلي">
+            <aside class="atlas-sidebar">
+                <section class="atlas-panel" aria-labelledby="atlas-layers-title">
+                    <div class="atlas-panel-heading"><div><p class="eyebrow eyebrow-dark">طبقات الخريطة</p><h2 id="atlas-layers-title">ماذا تريد أن تستكشف؟</h2></div></div>
+                    <fieldset id="atlas-layers" class="atlas-layer-list">
+                        <legend class="visually-hidden">اختر طبقات الخريطة</legend>
+                        <label><input type="checkbox" value="cities" checked> <span class="atlas-layer-dot layer-city"></span> المدن والمواضع</label>
+                        <label><input type="checkbox" value="battles" checked> <span class="atlas-layer-dot layer-battle"></span> المعارك</label>
+                        <label><input type="checkbox" value="states"> <span class="atlas-layer-dot layer-state"></span> مراكز الدول</label>
+                        <label><input type="checkbox" value="conquests"> <span class="atlas-layer-dot layer-conquest"></span> الفتوحات والحملات</label>
+                        <label><input type="checkbox" value="tradeRoutes"> <span class="atlas-layer-line layer-trade"></span> الطرق التجارية التخطيطية</label>
+                        <label><input type="checkbox" value="armyMovements"> <span class="atlas-layer-line layer-army"></span> تحركات الجيوش الموثقة</label>
+                    </fieldset>
+                    <p class="atlas-caveat">تُظهر طبقة الدول مراكز الحكم لا حدودًا سياسية. لا تُرسم حركة جيش ما لم تتوفر بيانات مسار مرتبطة بمصدر.</p>
+                </section>
+
+                <section class="atlas-panel atlas-time-panel" aria-labelledby="atlas-time-title">
+                    <p class="eyebrow eyebrow-dark">استكشف عبر الزمن</p>
+                    <div class="atlas-panel-heading"><h2 id="atlas-time-title">الخط الزمني</h2><strong id="atlas-year-label">—</strong></div>
+                    <input id="atlas-year" type="range" min="632" max="750" value="750" aria-label="اختر السنة التاريخية">
+                    <div class="timeline-range-labels"><span>٦٣٢م</span><span>٧٥٠م</span></div>
+                    <p id="atlas-time-count" class="atlas-caveat" aria-live="polite">—</p>
+                </section>
+
+                <section class="atlas-panel" aria-labelledby="atlas-battle-title">
+                    <p class="eyebrow eyebrow-dark">قراءة المعركة</p>
+                    <h2 id="atlas-battle-title">سجل المعركة المختارة</h2>
+                    <div id="atlas-battle-detail"><p class="empty-state">اختر علامة معركة من الخريطة.</p></div>
+                </section>
+
+                <section class="atlas-panel" aria-labelledby="atlas-experience-title">
+                    <p class="eyebrow eyebrow-dark">خط زمني · خريطة · سرد</p>
+                    <h2 id="atlas-experience-title">عش الحدث</h2>
+                    <p class="atlas-caveat">مشاهد سردية تفاعلية تُظهر السياق والموقع المرجعي وتسلسل المعرفة المتاحة. لا تُعرض مواقع جيوش أو أعداد أو قرارات تكتيكية إلا إذا أُسندت بمصدر.</p>
+                    <label class="atlas-field-label" for="atlas-experience-select">اختر معركة</label>
+                    <select id="atlas-experience-select"><option value="">جارٍ تحميل المعارك...</option></select>
+                    <div class="atlas-button-row">
+                        <button id="atlas-experience-start" class="timeline-control-button" type="button" disabled>ابدأ سرد الحدث</button>
+                        <button id="atlas-experience-toggle" class="timeline-control-button" type="button" disabled>تشغيل تلقائي</button>
+                    </div>
+                    <div class="atlas-button-row">
+                        <button id="atlas-experience-previous" class="timeline-control-button" type="button" disabled>السابق</button>
+                        <button id="atlas-experience-next" class="timeline-control-button" type="button" disabled>التالي</button>
+                    </div>
+                    <button id="atlas-motion-demo" class="timeline-control-button atlas-motion-demo" type="button" disabled>جرّب حركة توضيحية</button>
+                    <ol id="atlas-experience-timeline" class="atlas-experience-timeline" aria-label="مراحل السرد التاريخي"></ol>
+                    <div id="atlas-experience-output" class="atlas-experience-output" aria-live="polite"><p class="atlas-caveat">يعرض الوضع مراحل سردية مستندة إلى ملخصات الموسوعة، لا توقيتًا لحظيًا أو إعادة تمثيل حرفية.</p></div>
+                </section>
+
+                <section class="atlas-panel" aria-labelledby="atlas-guide-title">
+                    <p class="eyebrow eyebrow-dark">مرشد تاريخي</p>
+                    <h2 id="atlas-guide-title">اسأل عن سجل</h2>
+                    <p class="atlas-caveat">يبحث المرشد محليًا في البيانات ويربط النتائج بمراجعها. لا يوجد نموذج توليدي متصل بعد؛ يتطلب تفعيله خدمة خلفية آمنة.</p>
+                    <form id="atlas-guide-form">
+                        <label class="atlas-field-label" for="atlas-guide-question">سؤالك</label>
+                        <textarea id="atlas-guide-question" rows="3" maxlength="300" required placeholder="مثال: ما سياق معركة اليرموك؟"></textarea>
+                        <button class="timeline-control-button atlas-guide-submit" type="submit">ابحث في الموسوعة</button>
+                    </form>
+                    <div id="atlas-guide-answer" class="atlas-guide-answer" aria-live="polite"></div>
+                </section>
             </aside>
-            <div class="map-frame">
-                <div id="history-map" class="history-map" role="application" aria-label="خريطة تفاعلية للمدن التاريخية الثماني"></div>
-                <noscript><p class="map-unavailable">تتطلب الخريطة تفعيل JavaScript.</p></noscript>
+
+            <div class="atlas-map-column">
+                <div id="historical-atlas-map" class="history-map atlas-map" role="application" aria-label="خريطة تفاعلية بطبقات تاريخية متعددة"></div>
+                <div class="atlas-map-legend" aria-label="مفتاح علامات الخريطة">
+                    <span><i class="legend-dot layer-city"></i> موضع</span>
+                    <span><i class="legend-dot layer-battle"></i> معركة</span>
+                    <span><i class="legend-dot layer-conquest"></i> حملة أو فتح</span>
+                    <span><i class="legend-line layer-trade"></i> مسار تخطيطي</span>
+                </div>
+                <div class="atlas-catalog">
+                    <div class="collection-heading"><div><p class="eyebrow eyebrow-dark">السجلات المتاحة</p><h2>الأحداث المرتبطة بالخريطة</h2></div><span id="atlas-result-count" class="result-label">—</span></div>
+                    <div id="atlas-event-list" class="atlas-event-list" aria-live="polite"><p class="empty-state">جارٍ تحميل الأحداث...</p></div>
+                </div>
             </div>
         </section>
+        <noscript><p class="map-unavailable">تتطلب الخريطة التفاعلية تفعيل JavaScript.</p></noscript>
+        <aside class="umayyad-editorial-note atlas-editorial-note">
+            <h2>منهج تمثيل المكان والحركة</h2>
+            <p>البلاطات من OpenStreetMap مرجع جغرافي حديث، لا خريطة تاريخية. تُعرض نقاط المواقع بحسب دقة الإحالة المتاحة. الأعداد العسكرية المختلف فيها لا تُختزل إلى رقم واحد، ولا تُستنتج مسارات الحملات من المسافة بين المدن. الطرق التخطيطية طبقة تعليمية وليست دليلًا على مسار تاريخي بعينه.</p>
+        </aside>
         <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
     </main>
 </body>

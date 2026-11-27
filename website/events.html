@@ -11,19 +11,20 @@
     <meta property="og:description" content="أحداث تاريخية مرتبة زمنيًا مع البحث والتصدير إلى PDF.">
     <title>HistoriaOS | الأحداث</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="visual-system.js" defer></script>
     <script src="app.js" defer></script>
 </head>
 <body data-page="events">
     <header class="site-header">
         <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
         <nav class="site-nav" aria-label="التنقل الرئيسي">
-            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html" aria-current="page">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html">الخط الزمني</a><a href="umayyad.html">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html" aria-current="page">الأحداث</a><a href="maps.html">الأطلس التفاعلي</a><a href="visual-history.html">المتحف البصري</a><a href="timeline.html">الخط الزمني</a><a href="rashidun.html">الخلفاء الراشدون</a><a href="umayyad.html">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
         </nav>
     </header>
     <main class="page-shell inner-page">
         <section class="page-intro"><p class="eyebrow eyebrow-dark">محطات صنعت التحوّل</p><h1>الأحداث التاريخية</h1><p>استعرض الأحداث وسنواتها وابحث في سجل الموسوعة.</p></section>
         <div class="collection-toolbar"><span class="result-label">أحداث عبر الزمن</span><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث عن حدث أو سنة" aria-label="ابحث عن حدث أو سنة"></label><button class="export-button" type="button" data-export-pdf>طباعة / حفظ PDF</button></div>
-        <p class="sample-disclosure">الأحداث الموسومة «تجريبي» بيانات مولّدة لا تمثل وقائع تاريخية موثقة.</p>
+        <p class="sample-disclosure">تعرض القائمة الأحداث ذات الإحالات المتاحة، مرتبة بحسب السنة؛ راجع المصدر قبل الاستشهاد.</p>
         <section class="card-grid" data-collection="events" aria-label="قائمة الأحداث" aria-live="polite"><div class="empty-state">جارٍ تحميل الأحداث...</div></section>
         <footer class="site-footer">HistoriaOS <span>·</span> نافذتك إلى التاريخ</footer>
     </main>

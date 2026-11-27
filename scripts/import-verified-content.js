@@ -5,6 +5,31 @@ const root = path.resolve(__dirname, "..");
 const sourceFile = path.join(__dirname, "verified-content.json");
 const data = JSON.parse(fs.readFileSync(sourceFile, "utf8"));
 const sourceLicense = "CC BY-SA 4.0";
+const bookCenturies = {
+    "Al-Bidaya wa l-Nihaya": "القرن الرابع عشر الميلادي",
+    "History of the Prophets and Kings": "القرن العاشر الميلادي",
+    "The Complete History": "القرن الثالث عشر الميلادي",
+    "Histories (Herodotus)": "القرن الخامس قبل الميلاد",
+    "History of the Peloponnesian War": "القرن الخامس قبل الميلاد",
+    "Anabasis (Xenophon)": "القرن الرابع قبل الميلاد",
+    "Commentarii de Bello Gallico": "القرن الأول قبل الميلاد",
+    "The Jewish War": "القرن الأول الميلادي",
+    "The Twelve Caesars": "القرن الثاني الميلادي",
+    "The City of God": "القرن الخامس الميلادي",
+    "Muqaddimah": "القرن الرابع عشر الميلادي",
+    "Histories (Polybius)": "القرن الثاني قبل الميلاد",
+    "The Meadows of Gold": "القرن العاشر الميلادي",
+    "History of the Franks": "القرن السادس الميلادي",
+    "Tarikh-i Bayhaqi": "القرن الحادي عشر الميلادي",
+    "Rihla": "القرن الرابع عشر الميلادي",
+    "Futuh al-Buldan": "القرن التاسع الميلادي",
+    "Al-Sirah al-Nabawiyyah (Ibn Ishaq)": "القرن الثامن الميلادي",
+    "Alexiad": "القرن الثاني عشر الميلادي",
+    "Shahnameh": "القرن الحادي عشر الميلادي",
+    "Anglo-Saxon Chronicle": "من القرن التاسع إلى الثاني عشر الميلادي",
+    "The Prince": "القرن السادس عشر الميلادي",
+    "The History of the Decline and Fall of the Roman Empire": "القرن الثامن عشر الميلادي"
+};
 
 function sourceUrl(sourceTitle) {
     return `https://en.wikipedia.org/wiki/${encodeURIComponent(sourceTitle.replace(/ /g, "_"))}`;
@@ -47,6 +72,11 @@ function mergeVerifiedRecords(relativePath, rows, expectedCount, createRecord, k
         if (!url.startsWith("https://en.wikipedia.org/wiki/")) {
             throw new Error(`${relativePath}: invalid source URL for ${record[keyField]}`);
         }
+        const existing = records.find(item => item[keyField] === record[keyField]);
+        if (existing) {
+            Object.assign(existing, record);
+            return;
+        }
         if (sourceUrls.has(url) || keys.has(record[keyField])) return;
         records.push(record);
         sourceUrls.add(url);
@@ -67,7 +97,8 @@ mergeVerifiedRecords("books/books.json", data.books, 20, (row, index) => {
         title,
         author,
         category,
-        description
+        description,
+        century: bookCenturies[sourceTitle]
     }, sourceTitle);
 }, "title", "verified-book-");
 
@@ -122,6 +153,13 @@ for (const [relativePath, sources] of Object.entries(sourcePages)) {
     writeJson(relativePath, records);
 }
 
+const books = readJson("books/books.json");
+books.forEach(book => {
+    const century = bookCenturies[book.sourceTitle];
+    if (century) book.century = century;
+});
+writeJson("books/books.json", books);
+
 const events = readJson("events/events.json").sort((first, second) => Number(first.year) - Number(second.year));
 writeJson("events/events.json", events);
-console.log("Verified 20 sourced books, 50 sourced people, and 100 sourced events.");
+console.log("Verified 20 sourced books, 50 sourced people, and 100 sourced events; added composition-century metadata.");

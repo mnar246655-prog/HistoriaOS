@@ -80,6 +80,7 @@ function renderCaliphs() {
         }
         const card = document.createElement("article");
         card.className = "data-card caliph-card";
+        if (window.HistoriaVisualSystem) window.HistoriaVisualSystem.addArtwork(card, "person", person.name);
         card.append(textElement("p", "card-kicker", `الخليفة ${index + 1} · ${entry.reign}`));
         const title = textElement("h3", "card-title", person.name);
         card.append(title);
@@ -102,6 +103,7 @@ function renderFeaturedPeople() {
         if (!person) return;
         const card = document.createElement("article");
         card.className = "data-card";
+        if (window.HistoriaVisualSystem) window.HistoriaVisualSystem.addArtwork(card, "person", person.name);
         card.append(textElement("p", "card-kicker", person.role));
         card.append(textElement("h3", "card-title", person.name));
         card.append(textElement("p", "card-description", person.historicalImpact));
@@ -147,6 +149,7 @@ function renderPeople(query) {
         const card = document.createElement("article");
         card.className = "data-card";
         card.id = `person-${person.id}`;
+        if (window.HistoriaVisualSystem) window.HistoriaVisualSystem.addArtwork(card, "person", person.name);
         card.append(textElement("p", "card-kicker", person.role));
         card.append(textElement("h3", "card-title", person.name));
         card.append(textElement("p", "encyclopedia-label", "النشأة"));
@@ -265,6 +268,9 @@ function renderCities(query, map) {
         button.id = `city-${city.id}`;
         button.type = "button";
         button.setAttribute("aria-label", `اعرض ${city.name} على الخريطة`);
+        if (window.HistoriaVisualSystem) {
+            button.append(window.HistoriaVisualSystem.createArtwork("city", city.name));
+        }
         button.append(textElement("span", "map-place-name", city.name));
         button.append(textElement("span", "map-place-region", `${city.region} · ${city.eventIds.length} حدث`));
         button.addEventListener("click", () => {
@@ -290,6 +296,7 @@ function renderBattles(query) {
         const card = document.createElement("article");
         card.className = "data-card";
         card.id = `battle-${battle.id}`;
+        if (window.HistoriaVisualSystem) window.HistoriaVisualSystem.addArtwork(card, "battle", battle.name);
         card.append(textElement("p", "card-kicker", `${battle.year}م · معركة`));
         card.append(textElement("h3", "card-title", battle.name));
         card.append(textElement("p", "card-description", battle.description));

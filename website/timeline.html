@@ -11,19 +11,20 @@
     <meta property="og:description" content="خط زمني تفاعلي للأحداث التاريخية العربية والعالمية.">
     <title>HistoriaOS | الخط الزمني</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="visual-system.js" defer></script>
     <script src="app.js" defer></script>
 </head>
 <body data-page="timeline">
     <header class="site-header">
         <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">هـ</span><span>HistoriaOS</span></a>
         <nav class="site-nav" aria-label="التنقل الرئيسي">
-            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الخرائط</a><a href="timeline.html" aria-current="page">الخط الزمني</a><a href="umayyad.html">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
+            <a href="index.html">الرئيسية</a><a href="books.html">الكتب</a><a href="people.html">الشخصيات</a><a href="events.html">الأحداث</a><a href="maps.html">الأطلس التفاعلي</a><a href="visual-history.html">المتحف البصري</a><a href="timeline.html" aria-current="page">الخط الزمني</a><a href="rashidun.html">الخلفاء الراشدون</a><a href="umayyad.html">الدولة الأموية</a><a href="about.html">عن المنصة</a><a href="pricing.html">الخطط</a><a href="contact.html">تواصل</a>
         </nav>
     </header>
     <main class="page-shell inner-page">
         <section class="page-intro"><p class="eyebrow eyebrow-dark">من الماضي إلى الحاضر</p><h1>الخط الزمني</h1><p>ترتيب زمني للأحداث المسجلة في قاعدة بيانات الموسوعة.</p></section>
         <div class="collection-toolbar"><span class="result-label">الأحداث مرتبة من الأقدم إلى الأحدث</span><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" class="search-input" type="search" placeholder="ابحث عن حدث أو سنة" aria-label="ابحث في الخط الزمني"></label></div>
-        <p class="sample-disclosure">الأحداث الموسومة «تجريبي» بيانات مولّدة لا تمثل وقائع تاريخية موثقة.</p>
+        <p class="sample-disclosure">يعرض الخط الزمني الأحداث ذات الإحالات المتاحة، ولا يمثل تسلسلًا شاملًا لجميع العصور.</p>
         <section class="timeline-controls" aria-label="التحكم في عرض الخط الزمني">
             <div class="timeline-controls-heading">
                 <div><span class="timeline-control-label">عرض الأحداث حتى عام</span><strong id="timeline-current-year">جارٍ تحميل الأحداث...</strong></div>

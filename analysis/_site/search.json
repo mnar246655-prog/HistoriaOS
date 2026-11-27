@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "إحصاءات الموسوعة",
+    "section": "",
+    "text": "عدد السجلات: 135\n['name', 'period', 'description', 'sourceTitle', 'sourceName', 'sourceLicense', 'sourceUrl', 'id', 'eventIds', 'bookIds', 'relatedPersonIds', 'stateNames', 'sourceReferences', 'cityIds', 'sourceMetadata.title', 'sourceMetadata.name', 'sourceMetadata.url', 'sourceMetadata.license', 'biography', 'historicalImportance', 'cityNames', 'achievements']\n\n\n\n\n\n\n\n\n\nname\nperiod\ndescription\nsourceTitle\nsourceName\nsourceLicense\nsourceUrl\nid\neventIds\nbookIds\n...\nsourceReferences\ncityIds\nsourceMetadata.title\nsourceMetadata.name\nsourceMetadata.url\nsourceMetadata.license\nbiography\nhistoricalImportance\ncityNames\nachievements\n\n\n\n\n0\nصلاح الدين الأيوبي\nالدولة الأيوبية\nقائد مسلم ومؤسس الدولة الأيوبية، استعاد القدس ...\nSaladin\nWikipedia\nCC BY-SA 4.0\nhttps://en.wikipedia.org/wiki/Saladin\nperson-salah-al-din\n[]\n[]\n...\n[]\n[]\nSaladin\nWikipedia\nhttps://en.wikipedia.org/wiki/Saladin\nCC BY-SA 4.0\nNaN\nNaN\nNaN\nNaN\n\n\n1\nعمر بن الخطاب\nالخلفاء الراشدون\nثاني الخلفاء الراشدين، تولى الخلافة بعد أبي بك...\nUmar\nWikipedia\nCC BY-SA 4.0\nhttps://en.wikipedia.org/wiki/Umar\nperson-umar-ibn-al-khattab\n[rash-event-saqifa-pledge, rash-event-umar-suc...\n[]\n...\n[]\n[]\nUmar\nWikipedia\nhttps://en.wikipedia.org/wiki/Umar\nCC BY-SA 4.0\nNaN\nNaN\nNaN\nNaN\n\n\n2\nأرسطو\nاليونان القديمة\nفيلسوف يوناني كتب في المنطق والطبيعة والأخلاق ...\nAristotle\nWikipedia\nCC BY-SA 4.0\nhttps://en.wikipedia.org/wiki/Aristotle\nverified-person-01\n[]\n[]\n...\n[]\n[]\nAristotle\nWikipedia\nhttps://en.wikipedia.org/wiki/Aristotle\nCC BY-SA 4.0\nNaN\nNaN\nNaN\nNaN\n\n\n3\nأفلاطون\nاليونان القديمة\nفيلسوف أثيني أسس الأكاديمية ودوّن حوارات أثرت ...\nPlato\nWikipedia\nCC BY-SA 4.0\nhttps://en.wikipedia.org/wiki/Plato\nverified-person-02\n[]\n[]\n...\n[]\n[]\nPlato\nWikipedia\nhttps://en.wikipedia.org/wiki/Plato\nCC BY-SA 4.0\nNaN\nNaN\nNaN\nNaN\n\n\n4\nسقراط\nاليونان القديمة\nفيلسوف أثيني عُرف بأسلوب الحوار والاستجواب، ون...\nSocrates\nWikipedia\nCC BY-SA 4.0\nhttps://en.wikipedia.org/wiki/Socrates\nverified-person-03\n[]\n[]\n...\n[]\n[]\nSocrates\nWikipedia\nhttps://en.wikipedia.org/wiki/Socrates\nCC BY-SA 4.0\nNaN\nNaN\nNaN\nNaN\n\n\n\n\n5 rows × 22 columns"
+  },
+  {
+    "objectID": "index.html#الشخصيات-حسب-العصر",
+    "href": "index.html#الشخصيات-حسب-العصر",
+    "title": "إحصاءات الموسوعة",
+    "section": "الشخصيات حسب العصر",
+    "text": "الشخصيات حسب العصر"
+  }
+]

@@ -1,0 +1,9 @@
+﻿project:
+  type: website
+  output-dir: _site
+lang: ar
+format:
+  html:
+    theme: cosmo
+    toc: true
+    rtl: true

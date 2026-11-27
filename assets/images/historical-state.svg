@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img">
+  <title>رسم رمزي لدولة تاريخية</title>
+  <desc>شعار هندسي تجريدي لا يمثل حدودًا سياسية أو راية تاريخية بعينها.</desc>
+  <defs>
+    <linearGradient id="field" x2="1" y2="1">
+      <stop stop-color="#6b5336"/>
+      <stop offset="1" stop-color="#9a8050"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#field)" d="M0 0h720v420H0z"/>
+  <circle cx="360" cy="206" r="151" fill="none" stroke="#f0d7a4" stroke-width="2" stroke-opacity=".78"/>
+  <circle cx="360" cy="206" r="124" fill="none" stroke="#f0d7a4" stroke-width="2" stroke-dasharray="5 9" stroke-opacity=".6"/>
+  <path d="M360 91 466 152v108l-106 62-106-62V152z" fill="#183c35" stroke="#f0d7a4" stroke-width="4"/>
+  <path d="m360 136 62 36v68l-62 36-62-36v-68z" fill="none" stroke="#d3a95f" stroke-width="4"/>
+  <path d="M360 158v97m-42-73 84 49m0-49-84 49" stroke="#f1dfb1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="360" cy="207" r="15" fill="#d3a95f"/>
+  <path d="M40 40h90m-90 0v58m640-58h-90m90 0v58M40 380h90m-90 0v-58m640 58h-90m90 0v-58" fill="none" stroke="#f0d7a4" stroke-opacity=".55" stroke-width="3"/>
+</svg>

@@ -1,0 +1,32 @@
+﻿---
+title: "إحصاءات الموسوعة"
+jupyter: historiaos
+---
+
+```{python}
+#| echo: false
+import pandas as pd
+import json
+
+with open("../people/people.json", encoding="utf-8") as f:
+    data = json.load(f)
+
+people = pd.json_normalize(data)
+print(f"عدد السجلات: {len(people)}")
+print(list(people.columns))
+people.head()
+```
+
+## الشخصيات حسب العصر
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+counts = people["period"].value_counts().head(10)
+counts.plot(kind="barh")
+plt.xlabel("عدد الشخصيات")
+plt.gca().invert_yaxis()
+plt.tight_layout()
+plt.show()
+```

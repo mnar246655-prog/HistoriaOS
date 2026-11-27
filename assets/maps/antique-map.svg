@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img">
+  <title>خريطة أطلس توضيحية قديمة الطابع</title>
+  <desc>رسم خرائطي أصلي تجريدي للعرض البصري، لا يمثل حدودًا أو طرقًا تاريخية دقيقة.</desc>
+  <defs>
+    <linearGradient id="parchment" x2="1" y2="1">
+      <stop stop-color="#eadbb8"/>
+      <stop offset=".52" stop-color="#d9c79e"/>
+      <stop offset="1" stop-color="#c5ae7f"/>
+    </linearGradient>
+    <radialGradient id="stain">
+      <stop stop-color="#ad8c58" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#ad8c58" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="fiber" width="17" height="17" patternUnits="userSpaceOnUse">
+      <path d="M1 4 7 3m4 10 5-2M3 16l2-1" stroke="#715b39" stroke-opacity=".14" stroke-width="1"/>
+      <circle cx="13" cy="5" r=".8" fill="#715b39" fill-opacity=".2"/>
+    </pattern>
+    <pattern id="grid" width="92" height="92" patternUnits="userSpaceOnUse">
+      <path d="M92 0H0V92" fill="none" stroke="#765f3e" stroke-opacity=".2" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path fill="url(#parchment)" d="M0 0h1200v760H0z"/>
+  <path fill="url(#fiber)" d="M0 0h1200v760H0z"/>
+  <path fill="url(#grid)" d="M0 0h1200v760H0z"/>
+  <ellipse cx="225" cy="142" rx="270" ry="180" fill="url(#stain)"/>
+  <ellipse cx="930" cy="610" rx="390" ry="230" fill="url(#stain)"/>
+  <g fill="#a9976d" fill-opacity=".64" stroke="#705a3b" stroke-width="4" stroke-linejoin="round">
+    <path d="M76 217 118 159l83-18 54 28 29 54-22 42-49 14-22 53-57 15-24 47-61-4-31-54 16-52-30-32 19-40-18-41Z"/>
+    <path d="m335 116 49-41 66 8 19 42-28 33-14 57-42 17-28-39-45-20Z"/>
+    <path d="m428 219 68-56 106-12 72 29 50-7 58 34-12 48-54 24-29 54-62 6-46 54-71-21-26-52-47-15-13-42Z"/>
+    <path d="m539 382 82-33 86 13 54 41 15 79-46 54-80-18-40-49-58-7-40-43Z"/>
+    <path d="m755 197 79-33 98 15 45 38 84-2 64 36-25 45-74 7-44 37-77-5-51 26-61-35-56-6-38-48Z"/>
+    <path d="m873 416 59-33 80 7 51 44-16 60-55 18-56-24-48 12-36-38Z"/>
+    <path d="m213 421 63-24 47 30 18 73-43 50-63-14-31-48Z"/>
+  </g>
+  <g fill="none" stroke="#705a3b" stroke-opacity=".52" stroke-width="2">
+    <path d="M70 312c83-49 159-48 231 3m-207 42c68-35 142-38 204-9m94-81c99-61 193-61 284-8m-281 58c102-39 202-32 296 15m55-122c84-34 180-34 284 2m-274 57c94-31 185-23 268 27"/>
+    <path d="M135 107c67 102 73 207 21 314m128-397c-33 106-31 220 9 336m160-263c-18 126 7 254 74 377m181-446c-48 132-42 270 18 414m152-424c-26 135 3 253 87 354"/>
+  </g>
+  <g fill="none" stroke="#874e32" stroke-width="5" stroke-linecap="round" stroke-dasharray="11 16" opacity=".8">
+    <path d="M163 374c118-89 208-105 306-62s151 61 235 12 157-56 258-8"/>
+    <path d="M397 306c-8 84 32 156 112 211s132 83 180 131"/>
+  </g>
+  <g fill="#8a4930" stroke="#f0e2c5" stroke-width="7">
+    <circle cx="163" cy="374" r="13"/>
+    <circle cx="469" cy="312" r="13"/>
+    <circle cx="704" cy="324" r="13"/>
+    <circle cx="962" cy="316" r="13"/>
+    <circle cx="689" cy="648" r="13"/>
+  </g>
+  <g transform="translate(1036 590)" fill="none" stroke="#71583a" stroke-width="4">
+    <circle r="74"/>
+    <circle r="56" stroke-dasharray="4 10"/>
+    <path d="M0-65 13-9 0 65-13-9ZM-65 0-9-13 65 0 9 13Z" fill="#8a7047" fill-opacity=".18"/>
+    <circle r="8" fill="#71583a"/>
+  </g>
+  <path d="M22 22h1156v716H22z" fill="none" stroke="#705a3b" stroke-opacity=".54" stroke-width="3"/>
+  <path d="M35 35h1130v690H35z" fill="none" stroke="#705a3b" stroke-opacity=".3" stroke-width="1"/>
+</svg>

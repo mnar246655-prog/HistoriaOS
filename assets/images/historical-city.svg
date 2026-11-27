@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img">
+  <title>رسم توضيحي لمدينة تاريخية</title>
+  <desc>مشهد معماري رمزي لا يمثل إعادة بناء أثرية لمدينة بعينها.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#1b4339"/>
+      <stop offset="1" stop-color="#63816a"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h720v420H0z"/>
+  <circle cx="540" cy="104" r="45" fill="#e1c47f" fill-opacity=".85"/>
+  <path d="M0 306 105 270l70 25 93-57 96 48 94-70 92 50 86-42 84 39v157H0z" fill="#214b3f"/>
+  <path d="M0 344h720v76H0z" fill="#17392f"/>
+  <g fill="#d9bd7a" stroke="#f1dfb1" stroke-width="3">
+    <path d="M94 344V230h83v114zm18-114v-54h46v54zm-7 54h16v23h-16zm45 0h16v23h-16z"/>
+    <path d="M218 344V270l57-44 57 44v74zm48-74v-83h18v83zm-24 34h17v24h-17zm47 0h17v24h-17z"/>
+    <path d="M375 344V204h101v140zm30-140v-42h41v42zm-12 55h20v25h-20zm45 0h20v25h-20z"/>
+    <path d="M515 344V258h86v86zm25-86v-67h36v67zm-8 31h17v22h-17zm38 0h17v22h-17z"/>
+  </g>
+  <path d="M40 378h640" stroke="#e8d49f" stroke-opacity=".35" stroke-width="2"/>
+</svg>

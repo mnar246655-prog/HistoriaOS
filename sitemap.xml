@@ -23,7 +23,12 @@
   <url>
     <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/maps.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/visual-history.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/timeline.html</loc>
@@ -31,9 +36,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/rashidun.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/umayyad.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/references.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://YOUR_GITHUB_USERNAME.github.io/HistoriaOS/website/about.html</loc>

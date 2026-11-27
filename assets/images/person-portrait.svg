@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img">
+  <title>رسم تجريدي لشخصية تاريخية</title>
+  <desc>هيئة رمزية غير مخصصة لشخص بعينه ولا تمثل ملامح تاريخية موثقة.</desc>
+  <defs>
+    <linearGradient id="paper" x2="1" y2="1">
+      <stop stop-color="#173b34"/>
+      <stop offset="1" stop-color="#315c4d"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#f0d7a4" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h720v420H0z"/>
+  <path fill="url(#grid)" d="M0 0h720v420H0z"/>
+  <circle cx="360" cy="176" r="118" fill="none" stroke="#dfc181" stroke-opacity=".7" stroke-width="2"/>
+  <circle cx="360" cy="176" r="98" fill="none" stroke="#dfc181" stroke-opacity=".28" stroke-width="2" stroke-dasharray="4 9"/>
+  <path d="M360 104c-38 0-66 30-66 68 0 23 10 39 25 52l-61 48v77h204v-77l-61-48c15-13 25-29 25-52 0-38-28-68-66-68Z" fill="#d3a95f"/>
+  <path d="M253 348c10-40 45-62 107-62s97 22 107 62" fill="none" stroke="#f7e9c9" stroke-opacity=".7" stroke-width="4"/>
+  <path d="M360 56v23m0 194v25m-142-122h24m236 0h24" stroke="#dfc181" stroke-width="3" stroke-linecap="round"/>
+</svg>

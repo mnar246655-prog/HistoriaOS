@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img">
+  <title>إطار خريطة تاريخية</title>
+  <desc>خريطة رمزية بإحداثيات تقريبية، وليست خريطة حدود تاريخية.</desc>
+  <defs>
+    <linearGradient id="map" x2="1" y2="1">
+      <stop stop-color="#dfe7d9"/>
+      <stop offset="1" stop-color="#cad8c8"/>
+    </linearGradient>
+    <pattern id="coords" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#577763" stroke-opacity=".24"/>
+    </pattern>
+  </defs>
+  <path fill="url(#map)" d="M0 0h720v420H0z"/>
+  <path fill="url(#coords)" d="M0 0h720v420H0z"/>
+  <path d="M79 94c56-39 121-19 157 6 37 26 63 17 95 5 54-20 76 9 95 35 25 34 68 28 99 53 28 23 25 53 3 78-22 26-28 55-59 70-43 21-62-17-92-31-30-14-63-4-93-20-26-14-43-42-76-43-44-2-75 24-112 9-45-18-60-66-36-103 6-10 12-36 19-59Z" fill="#9eb69a" stroke="#56755d" stroke-width="4"/>
+  <path d="M184 252c75-79 154-59 216-17s95 31 148-24" fill="none" stroke="#a64e3c" stroke-width="5" stroke-dasharray="9 10"/>
+  <path d="M523 194c12-24 34-28 47-14 18 20 9 45-23 74-31-30-41-48-24-60Z" fill="#a64e3c"/>
+  <circle cx="547" cy="205" r="8" fill="#fff"/>
+  <path d="M34 34h80m-80 0v55m572-55h80m-80 0v55M34 386h80m-80 0v-55m572 55h80m-80 0v-55" fill="none" stroke="#56755d" stroke-opacity=".7" stroke-width="3"/>
+</svg>

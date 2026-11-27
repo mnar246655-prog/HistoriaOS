@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img">
+  <title>رموز تخطيطية لتمثيل الجيوش</title>
+  <desc>رموز تعليمية عامة لا تمثل رايات أو أزياء أو تشكيلات تاريخية بعينها.</desc>
+  <defs>
+    <linearGradient id="field" x2="1" y2="1">
+      <stop stop-color="#213e36"/>
+      <stop offset="1" stop-color="#3b5d4c"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#e8d4a9" stroke-opacity=".1"/>
+    </pattern>
+  </defs>
+  <path fill="url(#field)" d="M0 0h960v420H0z"/>
+  <path fill="url(#grid)" d="M0 0h960v420H0z"/>
+  <path d="M58 210h844" stroke="#e8d4a9" stroke-opacity=".28" stroke-width="2" stroke-dasharray="4 12"/>
+  <g transform="translate(255 210)">
+    <circle r="104" fill="#d0a85e" fill-opacity=".12" stroke="#e3c88e" stroke-width="3"/>
+    <circle r="78" fill="none" stroke="#e3c88e" stroke-opacity=".7" stroke-width="2" stroke-dasharray="5 9"/>
+    <path d="M0-61 52-31v62L0 61l-52-30v-62z" fill="#d0a85e" stroke="#f4e3bd" stroke-width="4"/>
+    <path d="M-21-19h42M-21 0h42M-21 19h42" stroke="#244438" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#e9ddc4">
+      <circle cx="-108" cy="-112" r="7"/><circle cx="-78" cy="-142" r="7"/><circle cx="-42" cy="-157" r="7"/>
+      <circle cx="0" cy="-163" r="7"/><circle cx="44" cy="-157" r="7"/><circle cx="82" cy="-139" r="7"/>
+      <circle cx="113" cy="-108" r="7"/>
+    </g>
+  </g>
+  <g transform="translate(705 210)">
+    <circle r="104" fill="#b35944" fill-opacity=".12" stroke="#efc7b5" stroke-width="3"/>
+    <circle r="78" fill="none" stroke="#efc7b5" stroke-opacity=".7" stroke-width="2" stroke-dasharray="5 9"/>
+    <path d="M0-61 52-31v62L0 61l-52-30v-62z" fill="#b35944" stroke="#f6d8cc" stroke-width="4"/>
+    <path d="M-21-19h42M-21 0h42M-21 19h42" stroke="#4d342d" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#f3e5d7">
+      <circle cx="-108" cy="-112" r="7"/><circle cx="-78" cy="-142" r="7"/><circle cx="-42" cy="-157" r="7"/>
+      <circle cx="0" cy="-163" r="7"/><circle cx="44" cy="-157" r="7"/><circle cx="82" cy="-139" r="7"/>
+      <circle cx="113" cy="-108" r="7"/>
+    </g>
+  </g>
+  <path d="m385 195 58 15-58 15m132-30-58 15 58 15" fill="none" stroke="#f0d7a4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 32h880v356H40z" fill="none" stroke="#e8d4a9" stroke-opacity=".4" stroke-width="2"/>
+</svg>
